@@ -20,7 +20,7 @@
 		[Triggers:MediumBase-ProximityTrigger-A]
 		[Triggers:MediumBase-ProximityTrigger-B]
 		[Triggers:MediumBase-ProximityTrigger-C]
-		[Triggers:MediumBase-UnderAttackTrigger]
+		[Triggers:MediumBase-UnderAttack-Trigger]
 
       </Description>
 	</EntityComponent>	
@@ -36,7 +36,7 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
-			[TargetDistance:2500]
+			[TargetDistance:2200]
 			[Actions:MediumBase-ProximityAction-A]
 			
 		  </Description>
@@ -75,12 +75,16 @@
 					[Author:{AntennaName}]
 					[Color:Red]
 				  
-					[ChatMessages:Hostiles detected approaching our position. We will deploy defenses if you come any closer!]
-					[ChatAudio:ProximityWarning]
+					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 				  
-					[ChatMessages:Warning! You do not have clearance for this zone! Leave immediatley or fighters will be scrambled!]
-					[ChatAudio:ProximityWarning]
+					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Hostiles sighted. Activating defense turrets.]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 
 				  </Description>
@@ -98,7 +102,7 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
-			[TargetDistance:1300]
+			[TargetDistance:1200]
 			[MaxActions:3]
 			[Actions:MediumBase-ProximityAction-B]
 			
@@ -138,7 +142,7 @@
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:{AntennaName}]
+					[Author:WARP HQ]
 					[Color:Red]
 				  
 					[ChatMessages:Defense Drone launched!]
@@ -229,11 +233,19 @@
 					[Author:{AntennaName}]
 					[Color:Red]
 				  
-					[ChatMessages:Installation turrets locked and loaded. Firing!]
+					[ChatMessages:Installation turrets locked on hostiles. Engaging]
 					[ChatAudio:TargetEnabled]
 					[BroadcastChatType:Chat]
 				  
-					[ChatMessages:Defensive Turrets engaging emeny hostiles! Weapons free!]
+					[ChatMessages:Defensive turrets engaging enemy hostiles!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Target in my sights. Opening fire!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Hostiles within weapon range. Weapons free!]
 					[ChatAudio:TargetEnabled]
 					[BroadcastChatType:Chat]
 
@@ -245,7 +257,7 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
 			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>MediumBase-UnderAttackTrigger</SubtypeId>
+			  <SubtypeId>MediumBase-UnderAttack-Trigger</SubtypeId>
 		  </Id>
 		  <Description>
 		
@@ -266,17 +278,17 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			  <Id>
 				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>MediumBase-UnderAttackAction</SubtypeId>
+				  <SubtypeId>MediumBase-UnderAttack-Action</SubtypeId>
 			  </Id>
 			  <Description>
 			
 				[RivalAI Action]
 				
 				[UseChatBroadcast:true]
-				[ChatData:MediumBase-UnderAttackChat]
+				[ChatData:MediumBase-UnderAttack-Chat]
 				
 				[SpawnEncounter:true]
-				[Spawner:MediumBase-AtmoDrone-UnderAttackSpawner]
+				[Spawner:MediumBase-AtmoDrone-UnderAttack-Spawner]
 				
 			  </Description>
 			</EntityComponent>
@@ -284,7 +296,7 @@
 				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 				  <Id>
 					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>MediumBase-UnderAttackChat</SubtypeId>
+					  <SubtypeId>MediumBase-UnderAttack-Chat</SubtypeId>
 				  </Id>
 				  <Description>
 
@@ -313,7 +325,7 @@
 					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 					  <Id>
 						  <TypeId>Inventory</TypeId>
-						  <SubtypeId>MediumBase-AtmoDrone-UnderAttackSpawner</SubtypeId>
+						  <SubtypeId>MediumBase-AtmoDrone-UnderAttack-Spawner</SubtypeId>
 					  </Id>
 					  <Description>.-
 

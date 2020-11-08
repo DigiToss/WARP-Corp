@@ -36,7 +36,7 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
-			[TargetDistance:2500]
+			[TargetDistance:2200]
 			[MaxActions:1]
 			[Actions:VeryEasyBase-ProximityAction-A]
 		
@@ -146,10 +146,18 @@
 					[ChatAudio:TargetEnabled]
 					[BroadcastChatType:Chat]
 				  
-					[ChatMessages:Defensive turrets engaging emeny hostiles!]
+					[ChatMessages:Defensive turrets engaging enemy hostiles!]
 					[ChatAudio:TargetEnabled]
 					[BroadcastChatType:Chat]
 
+					[ChatMessages:Target in my sights. Opening fire!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Hostiles within weapon range. Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+					
 				  </Description>
 				</EntityComponent>
 

@@ -19,6 +19,8 @@
 		
 		[Triggers:MediumBase-ProximityTrigger-A]
 		[Triggers:MediumBase-ProximityTrigger-B]
+		[Triggers:MediumBase-ProximityChatReply-Trigger]
+		[Triggers:MediumBase-ProximitySpawn-Trigger]
 		[Triggers:MediumBase-ProximityTrigger-C]
 		[Triggers:MediumBase-UnderAttack-Trigger]
 
@@ -102,8 +104,11 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
+			[StartsReady:true]
 			[TargetDistance:1200]
 			[MaxActions:3]
+			[MinCooldownMs:240000]
+			[MaxCooldownMs:300000]
 			[Actions:MediumBase-ProximityAction-B]
 			
 		  </Description>
@@ -120,9 +125,11 @@
 				
 				[UseChatBroadcast:true]
 				[ChatData:MediumBase-ProximityChat-B]
-				
-				[SpawnEncounter:true]
-				[Spawner:MediumBase-AtmoDrone-ProximitySpawner]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:MediumBase-ProximityChatReply-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:MediumBase-ProximityChatReply-Trigger]	
 				
 			  </Description>
 			</EntityComponent>
@@ -142,24 +149,130 @@
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:WARP HQ]
+					[Author:{AntennaName}]
 					[Color:Red]
 				  
-					[ChatMessages:Defense Drone launched!]
-					[ChatAudio:Notify2]
+					[ChatMessages:Hostiles are still approaching. Requesting defensive drones HQ!]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 				  
-					[ChatMessages:Defense drone has been scrambled!]
-					[ChatAudio:Notify2]
+					[ChatMessages:Defense drones requested to intercept incoming hostiles!]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 
 				  </Description>
 				</EntityComponent>
+				
 
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-ProximityChatReply-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:5000]
+			[Actions:MediumBase-ProximityChatReply-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-ProximityChatReply-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-ProximityChatReply-Chat]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:MediumBase-ProximitySpawn-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:MediumBase-ProximitySpawn-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-ProximityChatReply-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Roger roger! Drone enroute to your position!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Copy! Defensive drone deployed and enroute!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+				
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-ProximitySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MinCooldownMs:6000]
+			[MaxCooldownMs:9000]
+			[MaxActions:1]
+			[Actions:MediumBase-ProximitySpawn-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-ProximitySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[SpawnEncounter:true]
+				[Spawner:MediumBase-ProximitySpawn-Spawner]
+				
+			  </Description>
+			</EntityComponent>	
+							
 					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 					  <Id>
 						  <TypeId>Inventory</TypeId>
-						  <SubtypeId>MediumBase-AtmoDrone-ProximitySpawner</SubtypeId>
+						  <SubtypeId>MediumBase-ProximitySpawn-Spawner</SubtypeId>
 					  </Id>
 					  <Description>
 
@@ -169,7 +282,7 @@
 					  
 						[StartsReady:true]
 						[MaxSpawns:1]
-					  
+
 						[SpawnGroups:(NPC-WARP) Siberian Jay]
 						[SpawnGroups:(NPC-WARP) Jackdaw]
 						[SpawnGroups:(NPC-WARP) Crow]
@@ -181,8 +294,9 @@
 						[MaxAltitude:1100]
 						[IgnoreSafetyChecks:false]
 					  
-					  </Description>  
-					</EntityComponent>
+					  </Description>
+					</EntityComponent>				
+				
 					
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
@@ -209,6 +323,7 @@
 			
 				[RivalAI Action]
 				
+				[MaxActions:1]
 				[UseChatBroadcast:true]
 				[ChatData:MediumBase-ProximityChat-C]
 				
@@ -287,12 +402,32 @@
 				[UseChatBroadcast:true]
 				[ChatData:MediumBase-UnderAttack-Chat]
 				
+				[Conditions:MediumBase-UnderAttack-Condition]
+				
 				[SpawnEncounter:true]
 				[Spawner:MediumBase-AtmoDrone-UnderAttack-Spawner]
 				
 			  </Description>
 			</EntityComponent>
 
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				<Id>
+					<TypeId>Inventory</TypeId>
+					<SubtypeId>MediumBase-UnderAttack-Condition</SubtypeId>
+				</Id>
+				<Description>
+				
+					[RivalAI Condition]					
+					[UseConditions:true]	
+					
+					[CheckCustomCounters:true]
+					[CustomCounters:Damage]
+					[CustomCountersTargets:100]
+					[CounterCompareTypes:GreaterOrEqual]
+					
+				</Description>
+				</EntityComponent>
+		
 				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 				  <Id>
 					  <TypeId>Inventory</TypeId>

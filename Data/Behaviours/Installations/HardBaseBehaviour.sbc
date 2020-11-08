@@ -75,12 +75,16 @@
 					[Author:{AntennaName}]
 					[Color:Red]
 				  
-					[ChatMessages:Hostiles detected approaching our position. We will deploy defenses if you come any closer!]
-					[ChatAudio:ProximityWarning]
+					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 				  
-					[ChatMessages:Warning! You do not have clearance for this zone! Leave immediatley or fighters will be scrambled!]
-					[ChatAudio:ProximityWarning]
+					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Hostiles sighted. Activating defense turrets.]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 
 				  </Description>
@@ -98,7 +102,7 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
-			[TargetDistance:1300]
+			[TargetDistance:1200]
 			[MaxActions:3]
 			[Actions:HardBase-ProximityAction-B]
 			

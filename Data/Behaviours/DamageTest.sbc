@@ -17,7 +17,9 @@
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
 		
-		[Triggers:DamageTest-Counter-Trigger]
+		[Triggers:DamageTest-CounterA-Trigger]
+		[Triggers:DamageTest-CounterB-Trigger]
+		[Triggers:DamageTest-CounterC-Trigger]
 		[Triggers:DamageTest-Spawn-Trigger]
 
 
@@ -27,7 +29,7 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
 			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>DamageTest-Counter-Trigger</SubtypeId>
+			  <SubtypeId>DamageTest-CounterA-Trigger</SubtypeId>
 		  </Id>
 		  <Description>
 		
@@ -36,16 +38,104 @@
 			[Type:Timer]
 			[MinCooldownMs:1000]
 			[MaxCooldownMs:2000]
-			
+			[MaxActions:1]
 			[UseTrigger:true]
-			[Conditions:DamageTest-BlocksToCount-Condition]
+			[Conditions:DamageTest-BlocksToCountA-Condition]
 			
 			[Actions:DamageTest-Counter-Action]
-			
 			
 		  </Description>
 		</EntityComponent>
 		
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>DamageTest-BlocksToCountA-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					[UseConditions:true]
+					[UseRequiredFunctionalBlocks:true]
+					[RequiredNoneFunctionalBlockNames:Assembler]
+
+				  </Description>
+				</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>DamageTest-CounterB-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[MaxActions:1]
+			[UseTrigger:true]
+			[Conditions:DamageTest-BlocksToCountB-Condition]
+			
+			[Actions:DamageTest-Counter-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>DamageTest-BlocksToCountB-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					[UseConditions:true]
+					[UseRequiredFunctionalBlocks:true]
+					[RequiredNoneFunctionalBlockNames:Gatling Turret]
+
+				  </Description>
+				</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>DamageTest-CounterC-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[MaxActions:1]
+			[UseTrigger:true]
+			[Conditions:DamageTest-BlocksToCountC-Condition]
+			
+			[Actions:DamageTest-Counter-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>DamageTest-BlocksToCountC-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					[UseConditions:true]
+					[UseRequiredFunctionalBlocks:true]
+					[RequiredNoneFunctionalBlockNames:Small Cargo Container]
+
+				  </Description>
+				</EntityComponent>	
+				
+
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			  <Id>
 				  <TypeId>Inventory</TypeId>
@@ -54,29 +144,13 @@
 			  <Description>
 			
 				[RivalAI Action]
-		
+				
 				[IncreaseCounters:DamageCount]
 				
 			  </Description>
 			</EntityComponent>
-			
-				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-				  <Id>
-					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>DamageTest-BlocksToCount-Condition</SubtypeId>
-				  </Id>
-				  <Description>
-				
-					[RivalAI Condition]
-					[UseConditions:true]
-					[MatchAnyCondition:true]
-					[UseRequiredFunctionalBlocks:true]
-					[RequiredNoneFunctionalBlockNames:Battery]
-					[RequiredNoneFunctionalBlockNames:Gatling Turret]
-					[RequiredNoneFunctionalBlockNames:Small Cargo Container]
-					
-				  </Description>
-				</EntityComponent>
+
+
 
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
@@ -90,12 +164,14 @@
 			[Type:Timer]
 			[MinCooldownMs:1000]
 			[MaxCooldownMs:2000]
+			[StartsReady:true]
 			[UseTrigger:true]
 			[MaxActions:1]
 			
 			[Conditions:DamageTest-Spawn-Condition]
 			
 			[Actions:DamageTest-Spawn-Action]
+			
 			
 		  </Description>
 		</EntityComponent>
@@ -116,6 +192,12 @@
 				[SpawnEncounter:true]
 				[Spawner:DamageTest-Spawner]
 				
+				[DisableTriggers:true]
+				[DisableTriggerNames:DamageTest-CounterA-Trigger]
+				[DisableTriggerNames:DamageTest-CounterB-Trigger]
+				[DisableTriggerNames:DamageTest-CounterC-Trigger]
+				
+				
 			  </Description>
 			</EntityComponent>
 			
@@ -131,6 +213,7 @@
 					[UseConditions:true]
 					[MatchAnyCondition:true]
 					
+					[CheckCustomCounters:true]
 					[CustomCounters:DamageCount]
 					[CustomCountersTargets:2]
 					

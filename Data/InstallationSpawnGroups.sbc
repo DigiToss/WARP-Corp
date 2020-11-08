@@ -1561,7 +1561,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>1.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="DamageTest">
+				<Prefab SubtypeId="NonFunctionTest">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>

@@ -2,19 +2,19 @@
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
-      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="DamageTest" />
+      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="NonFunctionTest" />
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
-          <EntityId>116000097449590342</EntityId>
+          <EntityId>135845435959444423</EntityId>
           <PersistentFlags>CastShadows InScene</PersistentFlags>
           <PositionAndOrientation>
             <Position x="0" y="0" z="0" />
-            <Forward x="-0.03456217" y="-0.962066531" z="0.270616859" />
-            <Up x="0.124146372" y="-0.2728143" z="-0.954023063" />
+            <Forward x="-0.0345621631" y="-0.962066531" z="0.270616829" />
+            <Up x="0.12414638" y="-0.272814274" z="-0.954023063" />
             <Orientation>
               <X>-0.796098769</X>
-              <Y>-0.0391814969</Y>
+              <Y>-0.0391815044</Y>
               <Z>-0.0513216145</Z>
               <W>0.6017123</W>
             </Orientation>
@@ -131,7 +131,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
               <SubtypeName>LargeBlockSmallContainer</SubtypeName>
-              <EntityId>101248130883364700</EntityId>
+              <EntityId>100584645558026655</EntityId>
               <Min x="1" y="7" z="0" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
@@ -161,8 +161,10 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LargeGatlingTurret">
               <SubtypeName />
-              <EntityId>114039969670581962</EntityId>
+              <EntityId>116500217880013733</EntityId>
               <Min x="0" y="8" z="-1" />
+              <IntegrityPercent>0.75</IntegrityPercent>
+              <BuildPercent>0.75</BuildPercent>
               <BlockOrientation Forward="Left" Up="Up" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
@@ -226,7 +228,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
               <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
-              <EntityId>77355953241778012</EntityId>
+              <EntityId>104348082489707896</EntityId>
               <Min x="3" y="7" z="0" />
               <BlockOrientation Forward="Left" Up="Up" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
@@ -247,7 +249,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
               <SubtypeName>LargeBlockRadioAntenna</SubtypeName>
-              <EntityId>133187795498874892</EntityId>
+              <EntityId>75323435123615118</EntityId>
               <Min x="-2" y="7" z="0" />
               <BlockOrientation Forward="Left" Up="Up" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
@@ -267,11 +269,77 @@
               <IgnoreOther>true</IgnoreOther>
               <HudText />
             </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Assembler">
+              <SubtypeName>LargeAssembler</SubtypeName>
+              <EntityId>97045825465402075</EntityId>
+              <Min x="4" y="6" z="-1" />
+              <IntegrityPercent>0.90625</IntegrityPercent>
+              <BuildPercent>0.90625</BuildPercent>
+              <BlockOrientation Forward="Left" Up="Forward" />
+              <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
+              <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyInventoryBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_InventoryAggregate">
+                      <InventoryId>Inventory</InventoryId>
+                      <Inventories>
+                        <MyObjectBuilder_InventoryBase xsi:type="MyObjectBuilder_Inventory">
+                          <Items />
+                          <nextItemId>0</nextItemId>
+                          <Volume>4</Volume>
+                          <Mass>9223372036854.775807</Mass>
+                          <MaxItemCount>2147483647</MaxItemCount>
+                          <Size xsi:nil="true" />
+                          <InventoryFlags>CanReceive</InventoryFlags>
+                          <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                        </MyObjectBuilder_InventoryBase>
+                        <MyObjectBuilder_InventoryBase xsi:type="MyObjectBuilder_Inventory">
+                          <Items />
+                          <nextItemId>0</nextItemId>
+                          <Volume>4</Volume>
+                          <Mass>9223372036854.775807</Mass>
+                          <MaxItemCount>2147483647</MaxItemCount>
+                          <Size xsi:nil="true" />
+                          <InventoryFlags>CanSend</InventoryFlags>
+                          <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                        </MyObjectBuilder_InventoryBase>
+                      </Inventories>
+                    </Component>
+                  </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyTimerComponent</TypeId>
+                    <Component xsi:type="MyObjectBuilder_TimerComponent">
+                      <Repeat>true</Repeat>
+                      <TimeToEvent>0</TimeToEvent>
+                      <SetTimeMinutes>0</SetTimeMinutes>
+                      <TimerEnabled>true</TimerEnabled>
+                      <RemoveEntityOnTimer>false</RemoveEntityOnTimer>
+                      <TimerType>Frame10</TimerType>
+                      <FramesFromLastTrigger>40</FramesFromLastTrigger>
+                      <TimerTickInFrames>60</TimerTickInFrames>
+                      <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
+              <CustomName>Assembler</CustomName>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <Enabled>true</Enabled>
+              <CurrentProgress>0</CurrentProgress>
+              <DisassembleEnabled>false</DisassembleEnabled>
+              <RepeatAssembleEnabled>false</RepeatAssembleEnabled>
+              <RepeatDisassembleEnabled>false</RepeatDisassembleEnabled>
+              <SlaveEnabled>false</SlaveEnabled>
+            </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RemoteControl">
               <SubtypeName>LargeBlockRemoteControl</SubtypeName>
-              <EntityId>109196437379796294</EntityId>
+              <EntityId>109156301092971672</EntityId>
               <Min x="2" y="3" z="0" />
-              <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
@@ -311,25 +379,13 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="2" y="1" z="0" />
-              <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
-              <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
               <Min x="2" y="2" z="0" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="3" y="1" z="0" />
-              <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
-              <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="3" y="2" z="0" />
+              <Min x="2" y="1" z="0" />
               <ColorMaskHSV x="0.2777778" y="-0.8" z="-0.11" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
@@ -345,7 +401,7 @@
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>DamageTest</DisplayName>
+          <DisplayName>NonFunctionTest</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

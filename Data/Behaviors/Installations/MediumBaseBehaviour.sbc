@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** MEDIUM BASE INSTALLATION BEHAVIOUR *** -->
+<!-- -->	
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>MediumBase-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:MediumBase-ProximityTrigger-A]
+		[Triggers:MediumBase-ProximityTrigger-B]
+		[Triggers:MediumBase-ProximityTrigger-C]
+		[Triggers:MediumBase-UnderAttackTrigger]
+
+      </Description>
+	</EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-ProximityTrigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:2500]
+			[Actions:MediumBase-ProximityAction-A]
+			
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-ProximityAction-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-ProximityChat-A]
+				
+			  </Description>
+			</EntityComponent>	
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-ProximityChat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Hostiles detected approaching our position. We will deploy defenses if you come any closer!]
+					[ChatAudio:ProximityWarning]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Warning! You do not have clearance for this zone! Leave immediatley or fighters will be scrambled!]
+					[ChatAudio:ProximityWarning]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-ProximityTrigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:1300]
+			[MaxActions:3]
+			[Actions:MediumBase-ProximityAction-B]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-ProximityAction-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-ProximityChat-B]
+				
+				[SpawnEncounter:true]
+				[Spawner:MediumBase-AtmoDrone-ProximitySpawner]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-ProximityChat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Defense Drone launched!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defense drone has been scrambled!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>MediumBase-AtmoDrone-ProximitySpawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+					  
+						[SpawnGroups:(NPC-WARP) Siberian Jay]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Crow]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1600]
+						[MaxDistance:2100]
+						[MinAltitude:550]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>  
+					</EntityComponent>
+					
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-ProximityTrigger-C</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:TurretTarget]
+			[UseTrigger:true]
+			[Actions:MediumBase-ProximityAction-C]
+			
+		  </Description>
+		</EntityComponent>					
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-ProximityAction-C</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-ProximityChat-C]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-ProximityChat-C</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Installation turrets locked and loaded. Firing!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defensive Turrets engaging emeny hostiles! Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>		
+
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-UnderAttackTrigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Damage]
+			[DamageTypes:Any]
+			[UseTrigger:true]
+			[MaxActions:3]
+			[StartsReady:true]
+			[MinCooldownMs:60000]
+			[MaxCooldownMs:120000]
+			[Actions:MediumBase-UnderAttackAction]
+			
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-UnderAttackAction</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-UnderAttackChat]
+				
+				[SpawnEncounter:true]
+				[Spawner:MediumBase-AtmoDrone-UnderAttackSpawner]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-UnderAttackChat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:We are taking heavy fire. Scrambling reinforcements!]
+					[ChatAudio:TargetLocked]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Calling reinforcements! We are being attacked!]
+					[ChatAudio:TargetLocked]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>MediumBase-AtmoDrone-UnderAttackSpawner</SubtypeId>
+					  </Id>
+					  <Description>.-
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+					  
+						[SpawnGroups:(NPC-WARP) Siberian Jay]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Crow]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1500]
+						[MaxDistance:2100]
+						[MinAltitude:550]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>
+					
+			
+  </EntityComponents>
+</Definitions>					

@@ -1,0 +1,1283 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+  
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:TestHub-ProximityTrigger-A]
+		[Triggers:TestHub-Button1-Trigger]
+		[Triggers:TestHub-Trapped-Trigger]
+		[Triggers:Load-B-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-ProximityTrigger-A</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:0 Y:0 Z:-8}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:1]
+		[Actions:TestHub-ProximityAction-A]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-ProximityAction-A</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-ProximityChat-A]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-ProximityChat-A</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Welcome to Sintec.]
+				[ChatAudio:WelcomeToHub]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Button1-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:-2.5 Y:0 Z:1}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:-1]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Button1-Action]
+		
+	  </Description>
+	</EntityComponent>
+	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Button1-Action</SubtypeId>
+		  </Id>
+		 <Description>
+	
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Button1-Chat]
+		
+		 </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Button1-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+      
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Dont Press the Button.]
+				[ChatAudio:DontPressButton]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+       <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Trapped-Trigger</SubtypeId>
+      </Id>
+       <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:-2.5 Y:-5 Z:2.5}]
+		[UseTrigger:true]
+		[TargetDistance:3]
+		[MaxActions:-1]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Trapped-Action]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Trapped-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+		
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Trapped-Chat]
+		
+		</Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			 <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Trapped-Chat</SubtypeId>
+			</Id>
+			 <Description>
+
+				[RivalAI Chat]
+      
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Oops...]
+				[ChatAudio:OopsTrapped]
+				[BroadcastChatType:Chat]
+     
+			 </Description>
+			</EntityComponent>
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+       <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Load-B-Trigger</SubtypeId>
+      </Id>
+       <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:-2.5 Y:-7 Z:2.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:1]
+		[Actions:LoadTestHub-B-Action]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LoadTestHub-B-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+
+			[StartsReady:false]
+			[MinCooldownMs:2000]
+			[MaxCooldownMs:2100]
+			[SwitchToBehavior:true]
+			[NewBehavior:TestHub-B-Behavior]
+			[PreserveTriggersOnBehaviorSwitch:false]
+		
+		</Description>
+		</EntityComponent>
+	
+	
+<!-- -->
+<!-- *** BEHAVIOR B *** -->
+<!-- -->
+
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-B-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:TestHub-ProximityTrigger-B]
+		[Triggers:TestHub-Button1-Trigger]
+		[Triggers:TestHub-Trapped-Trigger]
+		[Triggers:TestHub-FallForThat-Trigger]
+		[Triggers:TestHub-WellDone-Trigger]	
+		[Triggers:TestHub-Failing-Trigger]
+		[Triggers:TestHub-Failing2-Trigger]
+		[Triggers:TestHub-Dancing-Trigger]
+		[Triggers:TestHub-Faster-Trigger]
+		[Triggers:TestHub-Dissapointed-Trigger]
+		[Triggers:TestHub-Abandon-Trigger]
+		[Triggers:TestHub-Vault-Trigger]		
+		
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-ProximityTrigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:0 Y:0 Z:-8}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:-1]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-ProximityAction-B]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-ProximityAction-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-ProximityChat-B]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-ProximityChat-B</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:5]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Back again?]
+				[ChatAudio:BackAgain]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-FallForThat-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:0 Y:-20 Z:-12.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-FallForThat-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-FallForThat-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-FallForThat-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-FallForThat-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:You fell for that?]
+				[ChatAudio:FallForThat]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-WellDone-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:95 Y:-20 Z:-35.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-WellDone-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-WellDone-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-WellDone-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-WellDone-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Well done.]
+				[ChatAudio:WellDone]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Failing-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:65 Y:-20 Z:-17.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Failing-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Failing-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Failing-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Failing-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:You really don't need to keep on failing.]
+				[ChatAudio:Failing]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Failing2-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:0 Y:-20 Z:30}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Failing2-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Failing2-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Failing2-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Failing2-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:You really don't need to keep on failing.]
+				[ChatAudio:Failing]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-SoClose-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:72.5 Y:-20 Z:15}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-SoClose-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-SoClose-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-SoClose-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-SoClose-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:We're so close. You cant fail now.]
+				[ChatAudio:SoClose]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Dancing-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:35 Y:-20 Z:-10}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Dancing-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Dancing-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Dancing-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Dancing-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Look at you...]
+				[ChatAudio:Dancing]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Faster-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:40 Y:-20 Z:15}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Faster-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Faster-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Faster-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Faster-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:I thought you'd be faster than this...]
+				[ChatAudio:Faster]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Dissapointed-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:30 Y:-20 Z:-35}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Dissapointed-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Dissapointed-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Dissapointed-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Dissapointed-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:You're doing a great job...]
+				[ChatAudio:Dissapointed]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Abandon-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:67.5 Y:-20 Z:-47.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Abandon-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Abandon-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Abandon-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Abandon-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:This course was created by humans...]
+				[ChatAudio:Abandon]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Vault-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:25 Y:-20 Z:2.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Vault-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Vault-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Vault-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Vault-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:To get to the vault...]
+				[ChatAudio:Vault]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+		
+<!-- -->
+<!-- *** TEST HUB SMALL BEHAVIOR *** -->
+<!-- -->			
+			
+			
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:TestHub-ProximityTrigger-A]
+		[Triggers:TestHub-Button1-Trigger]
+		[Triggers:TestHub-Trapped-Trigger]
+		[Triggers:Load-Small-B-Trigger]
+		
+      </Description>
+	</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+       <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Load-Small-B-Trigger</SubtypeId>
+      </Id>
+       <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:-2.5 Y:-7 Z:2.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:1]
+		[Actions:LoadTestHub-Small-B-Action]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LoadTestHub-Small-B-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+
+			[StartsReady:false]
+			[MinCooldownMs:2000]
+			[MaxCooldownMs:2100]
+			[SwitchToBehavior:true]
+			[NewBehavior:TestHub-Small-B-Behavior]
+			[PreserveTriggersOnBehaviorSwitch:false]
+		
+		</Description>
+		</EntityComponent>
+		
+		
+<!-- -->
+<!-- *** TEST HUB SMALL B BEHAVIOR *** -->
+<!-- -->
+	
+
+ 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-B-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:TestHub-ProximityTrigger-B]
+		[Triggers:TestHub-Button1-Trigger]
+		[Triggers:TestHub-Trapped-Trigger]
+		[Triggers:TestHub-FallForThat-Trigger]
+		[Triggers:TestHub-Small-WellDone-Trigger]
+		[Triggers:TestHub-Small-Killing-Trigger]
+		[Triggers:TestHub-Small-Killing2-Trigger]
+		[Triggers:TestHub-Small-Failing-Trigger]
+		[Triggers:TestHub-Small-Dancing-Trigger]
+		[Triggers:TestHub-Small-Faster-Trigger]
+		[Triggers:TestHub-Small-Dissapointed-Trigger]
+		[Triggers:TestHub-Small-Encourage-Trigger]	
+	
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-WellDone-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:60 Y:-20 Z:-5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-WellDone-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Faster-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:40 Y:-20 Z:20}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Faster-Action]
+
+	  </Description>
+	</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Dancing-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:25 Y:-20 Z:17.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Dancing-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Dissapointed-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:35 Y:-20 Z:0}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Dissapointed-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Encourage-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:30 Y:-20 Z:-17.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Encourage-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Encourage-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Encourage-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Encourage-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Do you need real encouragment?]
+				[ChatAudio:Encourage]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+		
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Killing-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:7.5 Y:-20 Z:17.5}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Small-Killing-Action]
+
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>TestHub-Small-Killing-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:TestHub-Small-Killing-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>TestHub-Small-Killing-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:3]
+				[MinTime:15]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Killing you, is hard.]
+				[ChatAudio:Killing]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>TestHub-Small-Killing2-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:30 Y:-20 Z:10}]
+		[UseTrigger:true]
+		[TargetDistance:2.5]
+		[MaxActions:3]
+		[MinCooldownMs:15000]
+		[MaxCooldownMs:15100]
+		[Actions:TestHub-Small-Killing-Action]
+
+	  </Description>
+	</EntityComponent>			
+			
+  </EntityComponents>
+</Definitions>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->	
+<!-- *** BOSS SPAWNER DRONE BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BossSpawner-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	    
+		[IdealPlanetAltitude:650]
+		[MinimumPlanetAltitude:250]
+	  
+		[Triggers:BossSpawner-SpawnBase-Trigger]
+
+      </Description>
+    </EntityComponent>
+
+
+<!-- -->	
+<!-- *** BOSS SPAWNER DRONE TRIGGERS *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BossSpawner-SpawnBase-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[StartsReady:true]
+		[UseTrigger:true]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[ActionExecution:Sequential]
+		[MaxActions:2]
+		[Actions:BossSpawner-SpawnBase-Action]
+		[Actions:BossSpawner-RemoveSpawnDrone-Action]
+
+      </Description>      
+    </EntityComponent>
+	
+	
+<!-- -->	
+<!-- *** BOSS SPAWNER DRONE ACTIONS *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BossSpawner-SpawnBase-Action</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Action]
+
+		[StartsReady:true]
+		[SpawnEncounter:true]
+		[Spawner:BossSpawner-Base-Spawn]
+		[MaxSpawns:1]
+
+      </Description>
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BossSpawner-RemoveSpawnDrone-Action</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Action]
+		[ForceDespawn:true]
+
+      </Description>
+    </EntityComponent>
+	
+
+<!-- -->	
+<!-- *** BOSS SPAWNER SPAWNERS *** -->
+<!-- -->
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BossSpawner-Base-Spawn</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Spawn]
+      
+		[UseSpawn:true]
+      
+		[StartsReady:true]
+		[MaxSpawns:1]
+      
+		[SpawnGroups:The Vault]
+      
+      </Description>
+      
+    </EntityComponent>
+
+	
+  </EntityComponents>
+</Definitions>

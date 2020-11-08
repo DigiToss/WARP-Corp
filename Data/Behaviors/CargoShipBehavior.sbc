@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+  
+<!-- -->
+<!-- *** ARCHANGEL BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:Archangel-ProximityTrigger-A]
+		[Triggers:Archangel-ProximityTrigger-B]
+		[Triggers:Archangel-OffLimits-Trigger]
+		[Triggers:Archangel-Compromised-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-ProximityTrigger-A</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:1200]
+		[MaxActions:1]
+		[Actions:Archangel-ProximityAction-A]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-ProximityAction-A</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-ProximityChat-A]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-ProximityChat-A</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Greetings {PlayerName}. We invite you onboard the Archangel. In clang we trust!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-ProximityTrigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:400]
+		[MaxActions:1]
+		[Actions:Archangel-ProximityAction-B]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-ProximityAction-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-ProximityChat-B]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-ProximityChat-B</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Please come on board and join in our worship to clang! ]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+			
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-OffLimits-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[PlayerNearPositionOffset:{X:0 Y:-10 Z:2.5}]
+		[TargetDistance:2.5]
+		[MaxActions:1]
+		[Actions:Archangel-OffLimits-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-OffLimits-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-OffLimits-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-OffLimits-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Please stay within the designated areas! ]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-Compromised-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:1000]		
+		[Conditions:Archangel-Compromised-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-Compromised-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-Compromised-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			
+			[UseConditions:true]	
+			[MatchAnyCondition:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:GatlingTurret1]
+			
+		</Description>
+		</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-Compromised-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-Compromised-Chat]
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Turrets]
+			[TimerBlockNames:Timer Block Warheads]			
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-Compromised-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[MinTime:1]
+				[MaxTime:2]
+				[BroadcastRandomly:false]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Why would you dis-respect the almighty Clang!! Turrets activated!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:You shall never take Clang from us! He will take it from you! Self-destruct initiated! ]
+				[ChatAudio:SelfDestructActive]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:5 minutes untill detonation! ]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>			
+<!--
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-Compromised2-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Damage]
+		[DamageTypes:Any]
+		[UseTrigger:true]
+		[Conditions:Archangel-Compromised2-Condition]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:Archangel-Compromised-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-Compromised2-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			
+			[UseConditions:true]	
+			[MatchAnyCondition:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Offset Hatch]
+
+
+		</Description>
+		</EntityComponent>
+-->
+
+			
+			
+  </EntityComponents>
+</Definitions>

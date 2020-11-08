@@ -1,0 +1,1533 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+<!-- -->
+<!-- *** SMALL INSTALLATIONS *** -->
+<!-- -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Parts Supplies Outpost</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]	
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+		
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Parts Supplies Outpost">
+					<Position>
+						<X>0.0</X>
+						<Y>-6.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Ingot Supplies Outpost</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT1]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Ingot Supplies Outpost">
+					<Position>
+						<X>0.0</X>
+						<Y>-6.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>(NPC-WARP) Ores Supplies Outpost</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Ores Supplies Outpost">
+					<Position>
+						<X>0.0</X>
+						<Y>-6.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Surface Mining Outpost</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:50]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT1]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Surface Mining Outpost">
+					<Position>
+						<X>0.0</X>
+						<Y>23.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>EasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Hab Tower House</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[FactionOwner:WARP]
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+		
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Hab Tower House">
+					<Position>
+						<X>0.0</X>
+						<Y>16.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Derelict Heavy Carrier</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			[RotateInstallations:{X:0 Y:-5 Z:-13}]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT1]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:false]
+			[InstallationSpawnsUnderwater:true]			
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Derelict Heavy Carrier">
+					<Position>
+						<X>0.0</X>
+						<Y>85.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour></Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Test Hub</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:SmallCargoMaze]
+			[ContainerTypeAssignSubtypeId:SmallCargoMaze]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[CutVoxelsAtAirtightCells:true]
+
+			[GridsAreDestructable:false]
+			[GridsAreEditable:false]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Test Hub">
+					<Position>
+						<X>0.0</X>
+						<Y>52.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>TestHub-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Test Hub 2</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:SmallCargoMaze]
+			[ContainerTypeAssignSubtypeId:SmallCargoMaze]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[CutVoxelsAtAirtightCells:true]
+
+			[GridsAreDestructable:false]
+			[GridsAreEditable:false]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Test Hub 2">
+					<Position>
+						<X>0.0</X>
+						<Y>-21.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>TestHub-Small-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+<!-- -->
+<!-- *** MEDIUM INSTALLATIONS *** -->
+<!-- -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Natilus</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[RotateInstallations:{X:0 Y:0 Z:-60}]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[PlanetaryInstallationType:Medium]
+			[ThreatScoreMinimum:150]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT3]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:false]
+			[InstallationSpawnsUnderwater:true]
+
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Natilus">
+					<Position>
+						<X>0.0</X>
+						<Y>23.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour></Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Comms Station</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Comms Station">
+					<Position>
+						<X>0.0</X>
+						<Y>-15.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>EasyBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Fuelling Hangar</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:LargeCargoOresT2]
+			[ContainerTypeAssignSubtypeId:LargeCargoOresT2]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+				
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Fuelling Hangar">
+					<Position>
+						<X>0.0</X>
+						<Y>5.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>MediumBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) The Abyss</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:false]
+			[InstallationSpawnsUnderwater:true]
+
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) The Abyss">
+					<Position>
+						<X>0.0</X>
+						<Y>20.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour></Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Silo 42 A</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			[CutVoxelsAtAirtightCells:true]	
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+			
+			[ContainerTypeAssignBlockName:SpecialCargo]
+			[ContainerTypeAssignSubtypeId:SpecialCargo]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Silo 42 A">
+					<Position>
+						<X>0.0</X>
+						<Y>-50.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>MediumBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+	<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Silo 42 B</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Medium]
+			[CutVoxelsAtAirtightCells:true]	
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+]			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:SpecialCargo]
+			[ContainerTypeAssignSubtypeId:SpecialCargo]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Silo 42 B">
+					<Position>
+						<X>0.0</X>
+						<Y>-53.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>MediumBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+<!-- -->
+<!-- *** LARGE INSTALLATIONS *** -->
+<!-- -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Abandoned Test Facility</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Large]
+			[InstallationSpawnsOnDryLand:true]
+			[CutVoxelsAtAirtightCells:true]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+			
+			[FactionOwner:WARP]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseContainerTypeAssignment:true]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[ContainerTypeAssignBlockName:SpecialCargo]
+			[ContainerTypeAssignSubtypeId:SpecialCargo]
+			
+			[ContainerTypeAssignBlockName:UndergroundSmallParts]
+			[ContainerTypeAssignSubtypeId:UndergroundSmallParts]
+
+			[ContainerTypeAssignBlockName:UndergroundSmallOres]
+			[ContainerTypeAssignSubtypeId:UndergroundSmallOres]
+
+			[ContainerTypeAssignBlockName:UndergroundSmallIngots]
+			[ContainerTypeAssignSubtypeId:UndergroundSmallIngots]
+			
+			[ContainerTypeAssignBlockName:UndergroundLargeParts]
+			[ContainerTypeAssignSubtypeId:UndergroundLargeParts]
+
+			[ContainerTypeAssignBlockName:UndergroundLargeOres]
+			[ContainerTypeAssignSubtypeId:UndergroundLargeOres]
+
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+		
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Abandoned Test Facility">
+					<Position>
+						<X>0.0</X>
+						<Y>-17.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>HardBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+	<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Organics Depot</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Large]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT3]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Organics Depot">
+					<Position>
+						<X>0.0</X>
+						<Y>-5.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>HardBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+	<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Storage Depot</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Large]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SpecialCargo]
+			[ContainerTypeAssignSubtypeId:SpecialCargo]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Storage Depot">
+					<Position>
+						<X>0.0</X>
+						<Y>-5.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>HardBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+	<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) Processing Depot</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+				
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Large]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+	
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT3]
+			
+			[ContainerTypeAssignBlockName:LargeCargoIce]
+			[ContainerTypeAssignSubtypeId:LargeCargoIce]
+			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Processing Depot">
+					<Position>
+						<X>0.0</X>
+						<Y>-5.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>HardBase-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+<!-- -->
+<!-- *** BOSS SPAWNS *** -->
+<!-- -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) The Vault</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			
+			[FactionOwner:WARP]
+			
+			[PlanetaryInstallation:true]			
+			[InstallationSpawnsOnDryLand:true]
+			[CutVoxelsAtAirtightCells:true]
+			[AdminSpawnOnly:true]
+
+			[RivalAiSpawn:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+			
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]
+			
+			[ContainerTypeAssignBlockName:CrateItemsSpecial]
+			[ContainerTypeAssignSubtypeId:CrateItemsSpecial]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoBoss]
+			[ContainerTypeAssignSubtypeId:SmallCargoBoss]
+			
+			[ContainerTypeAssignBlockName:CargoWelder]
+			[ContainerTypeAssignSubtypeId:CargoWelder]
+
+			[ContainerTypeAssignBlockName:LargeCargoVault]
+			[ContainerTypeAssignSubtypeId:LargeCargoVault]
+
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoAmmo]
+			[ContainerTypeAssignSubtypeId:LargeCargoAmmo]
+			
+			[ContainerTypeAssignBlockName:GatlingWelderCargo]
+			[ContainerTypeAssignSubtypeId:GatlingWelderCargo]
+
+			[ContainerTypeAssignBlockName:MissileWelderCargo]
+			[ContainerTypeAssignSubtypeId:MissileWelderCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) The Vault">
+					<Position>
+						<X>0.0</X>
+						<Y>2.5</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>Vault-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) SAM</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[PlanetaryInstallation:true]
+			[AdminSpawnOnly:true]
+
+			[RivalAiSpawn:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) SAM">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>SAM-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>Vault Perimiter</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[PlanetaryInstallation:true]
+			[AdminSpawnOnly:true]
+
+			[RivalAiSpawn:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseBlockReplacerProfile:true]
+			[IgnoreGlobalBlockReplacer:true]
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:GatlingWelderCargo]
+			[ContainerTypeAssignSubtypeId:GatlingWelderCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+			
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Perimiter Tower">
+					<Position>
+						<X>900.0</X>
+						<Y>40.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Perimiter Tower">
+					<Position>
+						<X>-900.0</X>
+						<Y>40.0</Y>
+						<Z>0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Perimiter Tower">
+					<Position>
+						<X>0.0</X>
+						<Y>40.0</Y>
+						<Z>900.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Perimiter Tower">
+					<Position>
+						<X>0.0</X>
+						<Y>40.0</Y>
+						<Z>-900.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) SAM">
+					<Position>
+						<X>700.0</X>
+						<Y>30.0</Y>
+						<Z>700.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) SAM">
+					<Position>
+						<X>700.0</X>
+						<Y>30.0</Y>
+						<Z>-700.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) SAM">
+					<Position>
+						<X>-700.0</X>
+						<Y>30.0</Y>
+						<Z>700.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) SAM">
+					<Position>
+						<X>-700.0</X>
+						<Y>30.0</Y>
+						<Z>-700.0</Z>
+					</Position>
+					<Behaviour>Perimiter-Tower-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		
+	</SpawnGroups>
+</Definitions>

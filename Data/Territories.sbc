@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>WarpTerritory</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters Territory]
+			[Name:WARPHQ]
+			[Type:Planetary]
+			[Active:true]
+			
+			[Radius:35000]
+			[CoordsX:0.156931965349709]
+			[CoordsY:0.987562795453859]
+			[CoordsZ:0.00959600369094119]
+			
+			[AnnounceArriveDepart:true]
+			[CustomArriveMessage:YOU HAVE ENTERED WARP CORPS RESTRICTED AIR ZONE. BEWARE THERE IS A LARGE MILITARY PRESENCE IN THIS AREA!]
+			[CustomDepartMessage:YOU HAVE LEFT WARP CORPS RESTRICTED AIR ZONE]
+			[PlanetGeneratorName:TerraAqua]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>
+			<IsPirate>true</IsPirate>
+			<Frequency>30.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Boss Spawner">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+	</SpawnGroups>
+</Definitions>

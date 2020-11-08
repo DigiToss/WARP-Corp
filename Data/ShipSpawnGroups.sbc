@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+<!-- -->
+<!-- *** DRONES *** -->
+<!-- -->
+
+
+<!-- LEVEL 1 DRONES -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Siberian Jay</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:DroneGatlingCargo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Siberian Jay">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallFixedAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Jackdaw</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:DroneGatlingCargo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Jackdaw">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallFixedAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Magpie</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:DroneGatlingCargo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Magpie">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallTurretAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+	
+		
+<!-- LEVEL 2 DRONES -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Crow</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:DroneAmmoCargo]
+			[ContainerTypeAssignSubtypeId:DroneAmmoCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Crow">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallFixedAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Rook</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:DroneAmmoCargo]
+			[ContainerTypeAssignSubtypeId:DroneAmmoCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Rook">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallHardAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+		
+<!-- LEVEL 3 DRONES -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Rook Heavy</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+
+			[UseBlockReplacerProfile:true]
+			[ConvertToHeavyArmor:true]
+			[UseBlockReplacerProfile:MES-NpcThrusters-Atmo]
+			[ConfigureSpecialNpcThrusters:true]
+			[NpcAtmoThrustForceMultiply:1.5]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:DroneAmmoCargo]
+			[ContainerTypeAssignSubtypeId:DroneAmmoCargo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Rook">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallHardAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+	
+<!-- -->
+<!-- *** ATMO CARGO SHIPS *** -->
+<!-- -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Archangel</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[FactionOwner:WARP]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Archangel">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>Archangel-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) DHL Cargo 1</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoOresT1]
+			[ContainerTypeAssignSubtypeId:LargeCargoOresT1]
+
+			[ContainerTypeAssignBlockName:LargeCargoIce]
+			[ContainerTypeAssignSubtypeId:LargeCargoIce]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]	
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 1">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>30</Speed>
+					<Behaviour>EasyCargo-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) DHL Cargo 2</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]	
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 2">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>30</Speed>
+					<Behaviour>EasyCargo-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+
+<!-- -->
+<!-- *** BOSS SPAWNER *** -->
+<!-- -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>BossSpawnerDrone</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[Territory:WARPHQ]
+			[MinDistanceFromTerritoryCenter:4000]
+			[MaxDistanceFromTerritoryCenter:7000]
+
+			[BossEncounterAtmo:true]
+			[BossEncounterChance:100]
+			[BossCustomAnnounceEnable:true]
+			[BossCustomAnnounceAuthor:MLTC Command]
+			[BossCustomAnnounceMessage:Our intel suggests a WARP Corp. high-security installation with rare components is located in this area.]
+			[BossCustomGPSLabel:High-Security Installation]
+			
+			
+			[SpaceCargoShip:false]
+			[LunarCargoShip:false]
+			[SpaceRandomEncounter:false]
+			[AtmosphericCargoShip:false]
+			[PlanetaryInstallation:false]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>10.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Boss Spawner">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>BossSpawner-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+	</SpawnGroups>
+</Definitions>

@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sounds>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Notify1</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>1</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Notify1.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+        <TypeId>SoundCategoryDefinition</TypeId>
+        <SubtypeId>Notify1</SubtypeId>
+      </Id>
+      <Sounds>
+        <SoundDesc Id="Notify1" SoundName="Notify1" />
+      </Sounds>
+    </SoundCategory>
+	
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Notify2</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>0.8</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\Notify2.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>Notify2</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="Notify2" SoundName="Notify2" />
+		</Sounds>
+    </SoundCategory>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>TargetEnabled</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>0.8</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\TargetEnabled.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>TargetEnabled</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="TargetEnabled" SoundName="TargetEnabled" />
+		</Sounds>
+    </SoundCategory>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>MissileLock</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>0.8</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\MissileLock.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>MissileLock</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="MissileLock" SoundName="MissileLock" />
+		</Sounds>
+    </SoundCategory>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>SelfDestructActive</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>0.8</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\SelfDestructActive.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>SelfDestructActive</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="SelfDestructActive" SoundName="SelfDestructActive" />
+		</Sounds>
+    </SoundCategory>
+	
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>WelcomeToHub</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\WelcomeToHub.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>DontPressButton</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\DontPressButton.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>OopsTrapped</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\OopsTrapped.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>BackAgain</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\BackAgain.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>FallForThat</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\FallForThat.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>WellDone</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\WellDone.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Failing</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Failing.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Dancing</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Dancing.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Faster</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\FasterThanThis.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Dissapointed</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Dissapointed.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Abandon</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\AbandonedHumans.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Vault</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Vault.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Killing</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Killing.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Encourage</SubtypeId>
+      </Id>
+      <Category>HUD</Category>
+      <Volume>0.6</Volume>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\Encourage.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>WallMoving</SubtypeId>
+      </Id>
+      <Category>Sb</Category>
+	  <Volume>1.5</Volume>
+      <MaxDistance>100</MaxDistance>
+      <Waves>
+        <Wave Type="D2">
+          <Start>Audio\WallMoving.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+</Sounds>
+
+  <SoundCategories>
+    <SoundCategory>
+      <Id>
+        <TypeId>SoundCategoryDefinition</TypeId>
+        <SubtypeId>DefaultCategory</SubtypeId>
+      </Id>
+      <Sounds>
+        <SoundDesc Id="SoundBlockLightsOn" SoundName="SoundBlock_SoundName_LightsOn" />
+        <SoundDesc Id="SoundBlockLightsOff" SoundName="SoundBlock_SoundName_LightsOff" />
+        <SoundDesc Id="SoundBlockEnemyDetected" SoundName="SoundBlock_SoundName_EnemyDetected" />
+        <SoundDesc Id="SoundBlockObjectiveComplete" SoundName="SoundBlock_SoundName_ObjectiveComplete" />
+        <SoundDesc Id="SoundBlockAlert1" SoundName="SoundBlock_SoundName_Alert1" />
+        <SoundDesc Id="SoundBlockAlert2" SoundName="SoundBlock_SoundName_Alert2" />
+        <SoundDesc Id="SoundBlockAlert3" SoundName="SoundBlock_SoundName_Alert3" />
+        <SoundDesc Id="DroneLoopSmall" SoundName="SoundBlock_SoundName_Drone_Small" />
+        <SoundDesc Id="DroneLoopMedium" SoundName="SoundBlock_SoundName_Drone_Medium" />
+        <SoundDesc Id="DroneLoopLarge" SoundName="SoundBlock_SoundName_Drone_Large" />
+        <SoundDesc Id="DroneLoopHuge" SoundName="SoundBlock_SoundName_Drone_Huge" />
+        <SoundDesc Id="WallMoving" SoundName="WallMoving" />
+      </Sounds>
+    </SoundCategory>
+  </SoundCategories>
+  
+</Definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Factions>
+	<!--Do Not Edit Above Here-->
+
+		<!--Copy From This Line-->
+		<Faction Tag="WARP" Founder="Zefram Cochrane">
+			<Id>
+				<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>WarpCorp</SubtypeId> <!--Must Be Unique-->
+			</Id>
+			<Description>This mega conglomerate has a tight control over all the rare parts needed to build a Jump Drive. The exact location of this facility is unknown.</Description>
+			<DisplayName>WARP Corp.</DisplayName>
+			<IsDefault>true</IsDefault>
+			<DefaultRelation>Enemies</DefaultRelation> <!--Enemies, Neutral, Friends-->
+			<AcceptHumans>false</AcceptHumans>
+			<AutoAcceptMember>false</AutoAcceptMember>
+			<StartingBalance>1000000</StartingBalance>
+			<Type>None</Type> <!--None, Miner, Trader, Builder-->
+			<DiscoveredByDefault>false</DiscoveredByDefault>
+			<FactionIcon>Textures\FactionLogo\Others\OtherIcon_18.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+		</Faction>
+		<!--Copy To This Line And Paste Directly Below-->
+
+
+
+	<!--Do Not Edit Below Here-->
+	</Factions>
+</Definitions>

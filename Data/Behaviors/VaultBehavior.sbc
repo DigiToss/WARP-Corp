@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->	
+<!-- *** THE VAULT BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	    	  
+		[Triggers:Vault-Towers-Trigger]
+		[Triggers:Vault-PerimiterProximity-Trigger]
+		[Triggers:Vault-Compromised-Trigger]
+		
+
+      </Description>
+    </EntityComponent>
+
+
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-Towers-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[StartsReady:true]
+		[UseTrigger:true]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[MaxActions:1]
+		[Actions:Vault-Towers-Action]
+
+      </Description>      
+    </EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-Towers-Action</SubtypeId>
+		</Id>
+		<Description>
+
+			[RivalAI Action]
+
+			[StartsReady:true]
+			[SpawnEncounter:true]
+			[Spawner:Vault-Towers-Spawn]
+			[MaxSpawns:1]
+
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Vault-Towers-Spawn</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Spawn]
+				
+				[UseSpawn:true]
+				[StartsReady:true]
+				[MaxSpawns:1]
+				[SpawnGroups:Vault Perimiter]
+      
+			</Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-PerimiterProximity-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:2400]
+		[Actions:Vault-PerimiterProximity-Action]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-PerimiterProximity-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Vault-PerimiterProximity-Chat]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Vault-PerimiterProximity-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+      
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Perimiter defenses activated!]
+				[ChatAudio:ProximityWarning]
+				[BroadcastChatType:Chat]
+			
+      </Description>
+    </EntityComponent>
+
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-Compromised-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Compromised]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:Vault-Compromised-Action]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-Compromised-Action</SubtypeId>
+		</Id>
+		<Description>
+
+			[RivalAI Action]
+
+			[UseChatBroadcast:true]
+			[ChatData:Vault-Compromised-Chat]
+			
+			[StartsReady:true]
+			[SpawnEncounter:true]
+			[Spawner:Vault-Warship-Spawn]
+			[MaxSpawns:1]
+
+		</Description>      
+		</EntityComponent>	
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Vault-Compromised-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+      
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:{AntennaName}]
+				[Color:Red]      
+				[ChatMessages:Mayday Mayday! Our facility is being run over, we require immediate assistance!]
+				[ChatAudio:TargetLocked]
+				[BroadcastChatType:Chat]
+			
+      </Description>
+    </EntityComponent>
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				<Id>
+					<TypeId>Inventory</TypeId>
+					<SubtypeId>Vault-Warship-Spawn</SubtypeId>
+				</Id>
+				<Description>
+
+					[RivalAI Spawn]
+      
+					[UseSpawn:true]      
+					[StartsReady:true]
+					[MaxSpawns:1]     
+					[SpawnGroups:Vault Warship]
+					[UseRelativeSpawnPosition:false]
+					[MinDistance:5500]
+					[MaxDistance:7500]
+					[MinAltitude:1400]
+					[MaxAltitude:2000]
+					[IgnoreSafetyChecks:false]
+      
+				</Description>
+				</EntityComponent>
+				
+  </EntityComponents>
+</Definitions>

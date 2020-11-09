@@ -22,6 +22,18 @@
 		</Faction>
 		<!--Copy To This Line And Paste Directly Below-->
 
+    <Faction Tag="SPRT" Founder="Space Pirates">
+      <Id>
+        <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+        <SubtypeId>SpacePirates</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Faction_SpacePirates</DisplayName>
+      <IsDefault>false</IsDefault>
+      <StartingBalance>100000000</StartingBalance>
+      <Type>Trader</Type>
+      <DiscoveredByDefault>true</DiscoveredByDefault>
+      <FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon>
+    </Faction>
 
 
 	<!--Do Not Edit Below Here-->

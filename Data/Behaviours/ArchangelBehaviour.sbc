@@ -1,0 +1,1335 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+  
+<!-- -->
+<!-- *** ARCHANGEL BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:Archangel-EnableCounters-Trigger]
+		[Triggers:Archangel-ProximityTrigger-A]
+		[Triggers:Archangel-ProximityTrigger-B]
+		[Triggers:Archangel-OffLimits-Trigger]
+		[Triggers:Archangel-CounterA-Trigger]
+		[Triggers:Archangel-CounterB-Trigger]
+		[Triggers:Archangel-CountFull-Trigger]
+		[Triggers:Archangel-Compromised-B-Trigger]
+		[Triggers:Archangel-Compromised-C-Trigger]
+		[Triggers:Archangel-DamageAddCount-Trigger]
+		[Triggers:Archangel-DamageCountFull-Trigger]
+
+		
+      </Description>
+	</EntityComponent>
+	
+		<!--
+		[Triggers:Archangel-TurretCountA-Trigger]
+		[Triggers:Archangel-TurretCountB-Trigger]
+		[Triggers:Archangel-TurretCountC-Trigger]
+		[Triggers:Archangel-TurretCountD-Trigger]
+		[Triggers:Archangel-TurretCountE-Trigger]
+		[Triggers:Archangel-TurretCountF-Trigger]
+		[Triggers:Archangel-TurretCountG-Trigger]
+		[Triggers:Archangel-TurretCountH-Trigger]
+		[Triggers:Archangel-TurretCountI-Trigger]
+		[Triggers:Archangel-TurretCountJ-Trigger]
+		[Triggers:Archangel-TurretCountK-Trigger]
+		[Triggers:Archangel-TurretCountL-Trigger]
+		[Triggers:Archangel-TurretCountM-Trigger]
+		[Triggers:Archangel-TurretCountN-Trigger]
+		[Triggers:Archangel-TurretCountO-Trigger]
+		[Triggers:Archangel-TurretCountFull-Trigger]
+		-->
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-EnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:900]
+		[MaxActions:1]
+		[Actions:Archangel-EnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:Archangel-CounterA-Trigger]
+			[EnableTriggerNames:Archangel-CounterB-Trigger]
+			[EnableTriggerNames:Archangel-CountFull-Trigger]
+			[EnableTriggerNames:Archangel-DamageAddCount-Trigger]
+			[EnableTriggerNames:Archangel-DamageCountFull-Trigger]
+
+		</Description>
+		</EntityComponent>
+
+			<!--
+			[EnableTriggerNames:Archangel-TurretCountA-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountB-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountC-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountD-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountE-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountF-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountG-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountH-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountI-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountJ-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountK-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountL-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountM-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountN-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountO-Trigger]
+			[EnableTriggerNames:Archangel-TurretCountFull-Trigger]
+			-->
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-ProximityTrigger-A</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:1200]
+		[MaxActions:1]
+		[Actions:Archangel-ProximityAction-A]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-ProximityAction-A</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-ProximityChat-A]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-ProximityChat-A</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Greetings {PlayerName}. We invite you onboard the Archangel. This is a weapons free zone. In clang we trust!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-ProximityTrigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:300]
+		[MaxActions:1]
+		[Actions:Archangel-ProximityAction-B]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-ProximityAction-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-ProximityChat-B]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-ProximityChat-B</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Please come on board and join in our worship to clang! ]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+			
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-OffLimits-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[PlayerNearPositionOffset:{X:0 Y:-10 Z:2.5}]
+		[TargetDistance:2.5]
+		[MaxActions:1]
+		[Actions:Archangel-OffLimits-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-OffLimits-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:Archangel-OffLimits-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-OffLimits-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Please stay within the designated areas. ]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>	
+
+<!-- -->
+<!-- *** VAULT DOOR FUNCTION CHECK COUNT *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CounterA-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-CounterA-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-BlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CounterA-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Rotary Airlock Door Vault]
+			
+		</Description>
+		</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CounterB-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-CounterB-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-BlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CounterB-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Offset Hatch Vault]
+			
+		</Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-BlockCounter-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+				[IncreaseCounters:Archangel-BlockCount]
+				
+			  </Description>
+			</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	  <Id>
+		  <TypeId>Inventory</TypeId>
+		  <SubtypeId>Archangel-CountFull-Trigger</SubtypeId>
+	  </Id>
+	  <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[StartsReady:true]
+		[UseTrigger:false]
+		[MaxActions:1]
+		
+		[Conditions:Archangel-CountFull-Condition]
+		[Actions:Archangel-CountFull-Action]
+		
+	  </Description>
+	</EntityComponent>	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-CountFull-Condition</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Condition]
+			
+			[UseConditions:true]
+			[MatchAnyCondition:true]
+			[CheckCustomCounters:true]
+			[CustomCounters:Archangel-BlockCount]
+			[CustomCountersTargets:2]
+			
+		  </Description>
+		</EntityComponent>
+				
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-CountFull-Action</SubtypeId>
+			</Id>
+			<Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Archangel-Compromised-Chat]
+				[TriggerTimerBlocks:true]
+				[TimerBlockNames:Timer Block Turrets]
+				[TimerBlockNames:Timer Block Warheads]
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:Archangel-CounterA-Trigger]
+				[DisableTriggerNames:Archangel-CounterB-Trigger]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Archangel-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Archangel-Compromised-B-Trigger]					
+		
+			</Description>
+			</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-Compromised-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Why would you dis-respect the almighty Clang!?]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>			
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-Compromised-B-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[Actions:Archangel-Compromised-B-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-Compromised-B-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Archangel-Compromised-B-Chat]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Archangel-Compromised-C-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Archangel-Compromised-C-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Archangel-Compromised-B-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:You have left us with no choice. Self-destruct initiated! ]
+					[ChatAudio:SelfDestructActive]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-Compromised-C-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:6000]
+			[Actions:Archangel-Compromised-C-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-Compromised-C-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Archangel-Compromised-C-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Archangel-Compromised-C-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:You shall never take Clang from us! Forever Clang lives! 5 minutes untill detonation! ]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+		
+		
+<!-- -->
+<!-- *** GRID DAMAGE CHECK COUNT *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-DamageAddCount-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Damage]
+			[DamageTypes:Any]
+			[UseTrigger:false]
+			[MaxActions:-1]
+
+			[Actions:Archangel-DamageAddCount-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-DamageAddCount-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[IncreaseCounters:DamageAddCount]
+				
+			  </Description>
+			</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-DamageCountFull-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[StartsReady:true]
+			[UseTrigger:false]
+			[MaxActions:1]
+			
+			[Conditions:Archangel-DamageCountFull-Condition]
+			
+			[Actions:Archangel-DamageCountFull-Action]
+			
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-DamageCountFull-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+	
+				[MaxActions:1]	
+
+				[UseChatBroadcast:true]
+				[ChatData:Archangel-Compromised-Chat]
+				[TriggerTimerBlocks:true]
+				[TimerBlockNames:Timer Block Turrets]
+				[TimerBlockNames:Timer Block Warheads]
+							
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Archangel-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Archangel-Compromised-B-Trigger]			
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:Archangel-DamageAddCount-Trigger]
+				[DisableTriggerNames:Archangel-DamageCountFull-Trigger]
+
+			  </Description>
+			</EntityComponent>
+			
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Archangel-DamageCountFull-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					
+					[UseConditions:true]
+					[MatchAnyCondition:true]
+					
+					[CheckCustomCounters:true]
+					[CustomCounters:DamageAddCount]
+					[CustomCountersTargets:50]
+					
+				  </Description>
+				</EntityComponent>
+
+		
+<!-- -->
+<!-- *** TURRETS FUNCTION CHECK COUNT *** -->
+<!-- -->
+
+		
+<!--
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountA-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountA-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountA-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 1]
+			
+		</Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Archangel-TurretBlockCounter-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+				[IncreaseCounters:Archangel-Turret-AddCount]
+				
+			  </Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountB-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountB-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountB-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 2]
+			
+		</Description>
+		</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountC-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountC-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountC-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 3]
+			
+		</Description>
+		</EntityComponent>				
+			
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountD-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountD-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountD-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 4]
+			
+		</Description>
+		</EntityComponent>			
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountE-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountE-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountE-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 5]
+			
+		</Description>
+		</EntityComponent>	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountF-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountF-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountF-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Gatling Turret 6]
+			
+		</Description>
+		</EntityComponent>	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountG-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountG-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountG-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 1]
+			
+		</Description>
+		</EntityComponent>	
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountH-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountH-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountH-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 2]
+			
+		</Description>
+		</EntityComponent>	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountI-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountI-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountI-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 3]
+			
+		</Description>
+		</EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountJ-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountJ-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountJ-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 4]
+			
+		</Description>
+		</EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountK-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountK-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountK-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 5]
+			
+		</Description>
+		</EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountL-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountL-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountL-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 6]
+			
+		</Description>
+		</EntityComponent>	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountM-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountM-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountM-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Interior Turret 7]
+			
+		</Description>
+		</EntityComponent>	
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountN-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountN-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountN-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Missile Turret 1]
+			
+		</Description>
+		</EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-TurretCountO-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-TurretCountO-Condition]
+		[MaxActions:1]
+		[Actions:Archangel-TurretBlockCounter-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-TurretCountO-Condition</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:Missile Turret 2]
+			
+		</Description>
+		</EntityComponent>	
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	  <Id>
+		  <TypeId>Inventory</TypeId>
+		  <SubtypeId>Archangel-TurretCountFull-Trigger</SubtypeId>
+	  </Id>
+	  <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[StartsReady:true]
+		[UseTrigger:false]
+		[MaxActions:1]
+		
+		[Conditions:Archangel-TurretCountFull-Condition]
+		[Actions:Archangel-TurretCountFull-Action]
+		
+	  </Description>
+	</EntityComponent>	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Archangel-TurretCountFull-Condition</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Condition]
+			
+			[UseConditions:true]
+			[CheckCustomCounters:true]
+			[CustomCounters:Archangel-Turret-AddCount]
+			[CustomCountersTargets:1]
+			
+		  </Description>
+		</EntityComponent>
+				
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Archangel-TurretCountFull-Action</SubtypeId>
+			</Id>
+			<Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Archangel-Compromised-Chat]
+				[TriggerTimerBlocks:true]
+				[TimerBlockNames:Timer Block Turrets]
+				[TimerBlockNames:Timer Block Warheads]
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:Archangel-TurretCountA-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountB-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountC-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountD-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountE-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountF-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountG-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountH-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountI-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountJ-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountK-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountL-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountM-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountN-Trigger]
+				[DisableTriggerNames:Archangel-TurretCountO-Trigger]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Archangel-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Archangel-Compromised-B-Trigger]					
+		
+			</Description>
+			</EntityComponent>	
+-->
+
+  </EntityComponents>
+</Definitions>

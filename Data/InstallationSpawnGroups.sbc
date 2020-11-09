@@ -1567,7 +1567,7 @@
 						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>DamageTest-Behavior</Behaviour>
+					<Behaviour>DamageTest2-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>	

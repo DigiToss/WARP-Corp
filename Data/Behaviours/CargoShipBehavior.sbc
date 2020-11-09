@@ -4,31 +4,31 @@
   <EntityComponents>
   
 <!-- -->
-<!-- *** ARCHANGEL BEHAVIOR *** -->
+<!-- *** CARGOSHIP BEHAVIOR *** -->
 <!-- -->
 
   	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-Behavior</SubtypeId>
+          <SubtypeId>EasyCargo-Behavior</SubtypeId>
       </Id>
       <Description>
 	  
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
 		
-		[Triggers:Archangel-ProximityTrigger-A]
-		[Triggers:Archangel-ProximityTrigger-B]
-		[Triggers:Archangel-OffLimits-Trigger]
-		[Triggers:Archangel-Compromised-Trigger]
-		
+		[Triggers:EasyCargo-ProximityTrigger-A]
+		[Triggers:EasyCargo-ProximityTrigger-B]
+		[Triggers:EasyCargo-ProximityReply-B-Trigger]
+		[Triggers:EasyCargo-PoximitySpawn-Trigger]
+
       </Description>
 	</EntityComponent>
 	
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-ProximityTrigger-A</SubtypeId>
+          <SubtypeId>EasyCargo-ProximityTrigger-A</SubtypeId>
       </Id>
       <Description>
 	
@@ -36,9 +36,9 @@
 		
 		[Type:PlayerNear]
 		[UseTrigger:true]
-		[TargetDistance:1200]
+		[TargetDistance:2200]
 		[MaxActions:1]
-		[Actions:Archangel-ProximityAction-A]
+		[Actions:EasyCargo-ProximityAction-A]
 
 	  </Description>
 	</EntityComponent>
@@ -46,14 +46,14 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-ProximityAction-A</SubtypeId>
+			<SubtypeId>EasyCargo-ProximityAction-A</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
 			
 			[UseChatBroadcast:true]
-			[ChatData:Archangel-ProximityChat-A]
+			[ChatData:EasyCargo-ProximityChat-A]
 		
 		</Description>
 		</EntityComponent>
@@ -61,7 +61,7 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-ProximityChat-A</SubtypeId>
+				<SubtypeId>EasyCargo-ProximityChat-A</SubtypeId>
 			</Id>
 			<Description>
 
@@ -76,7 +76,7 @@
 				[Author:{AntennaName}]
 				[Color:Red]
       
-				[ChatMessages:Greetings {PlayerName}. We invite you onboard the Archangel. In clang we trust!]
+				[ChatMessages:Please be advised, this Cargo ship is being monitored by HQ. Any hostile actions will not be tolerated]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
@@ -87,7 +87,7 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-ProximityTrigger-B</SubtypeId>
+          <SubtypeId>EasyCargo-ProximityTrigger-B</SubtypeId>
       </Id>
       <Description>
 	
@@ -95,9 +95,9 @@
 		
 		[Type:PlayerNear]
 		[UseTrigger:true]
-		[TargetDistance:400]
+		[TargetDistance:1000]
 		[MaxActions:1]
-		[Actions:Archangel-ProximityAction-B]
+		[Actions:EasyCargo-ProximityAction-B]
 
 	  </Description>
 	</EntityComponent>
@@ -105,22 +105,27 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-ProximityAction-B</SubtypeId>
+			<SubtypeId>EasyCargo-ProximityAction-B</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
 			
 			[UseChatBroadcast:true]
-			[ChatData:Archangel-ProximityChat-B]
-		
+			[ChatData:EasyCargo-ProximityChat-B]
+
+			[ResetCooldownTimeOfTriggers:true]
+			[ResetTriggerCooldownNames:EasyCargo-ProximityReply-B-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:EasyCargo-ProximityReply-B-Trigger]
+	
 		</Description>
 		</EntityComponent>
 
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-ProximityChat-B</SubtypeId>
+				<SubtypeId>EasyCargo-ProximityChat-B</SubtypeId>
 			</Id>
 			<Description>
 
@@ -135,7 +140,7 @@
 				[Author:{AntennaName}]
 				[Color:Red]
       
-				[ChatMessages:Please come on board and join in our worship to clang! ]
+				[ChatMessages:Command, we have a possible hostile on an engagment course. Please advise! ]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
@@ -143,195 +148,136 @@
 			</EntityComponent>	
 			
 			
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-OffLimits-Trigger</SubtypeId>
-      </Id>
-      <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:PlayerNear]
-		[UseTrigger:true]
-		[PlayerNearPositionOffset:{X:0 Y:-10 Z:2.5}]
-		[TargetDistance:2.5]
-		[MaxActions:1]
-		[Actions:Archangel-OffLimits-Action]
-
-	  </Description>
-	</EntityComponent>
-	
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-OffLimits-Action</SubtypeId>
-		</Id>
-		<Description>
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>EasyCargo-ProximityReply-B-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
 		
-			[RivalAI Action]
+			[RivalAI Trigger]
 			
-			[UseChatBroadcast:true]
-			[ChatData:Archangel-OffLimits-Chat]
-		
-		</Description>
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:3000]
+			[MaxCooldownMs:4000]
+			[Actions:EasyCargo-ProximityReply-B-Action]
+			
+			
+		  </Description>
 		</EntityComponent>
-
+	
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-OffLimits-Chat</SubtypeId>
-			</Id>
-			<Description>
-
-				[RivalAI Chat]
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>EasyCargo-ProximityReply-B-Action</SubtypeId>
+			  </Id>
+			  <Description>
 			
-				[UseChat:true]
-				[StartsReady:true]
-				[Chance:100]
-				[MaxChats:1]
-				[BroadcastRandomly:true]
-      
-				[Author:{AntennaName}]
-				[Color:Red]
-      
-				[ChatMessages:Please stay within the designated areas! ]
-				[ChatAudio:Notify1]
-				[BroadcastChatType:Chat]
-     
-			</Description>
-			</EntityComponent>	
-
-
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-Compromised-Trigger</SubtypeId>
-      </Id>
-      <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:PlayerNear]
-		[UseTrigger:true]
-		[TargetDistance:1000]		
-		[Conditions:Archangel-Compromised-Condition]
-		[MaxActions:1]
-		[Actions:Archangel-Compromised-Action]
-
-	  </Description>
-	</EntityComponent>
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-Compromised-Condition</SubtypeId>
-		</Id>
-		<Description>
-		
-			[RivalAI Condition]
-			
-			[UseConditions:true]	
-			[MatchAnyCondition:true]
-			[UseRequiredFunctionalBlocks:true]
-			[RequiredNoneFunctionalBlockNames:GatlingTurret1]
-			
-		</Description>
-		</EntityComponent>
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-Compromised-Action</SubtypeId>
-		</Id>
-		<Description>
-		
-			[RivalAI Action]
-			
-			[UseChatBroadcast:true]
-			[ChatData:Archangel-Compromised-Chat]
-			[TriggerTimerBlocks:true]
-			[TimerBlockNames:Timer Block Turrets]
-			[TimerBlockNames:Timer Block Warheads]			
-	
-		</Description>
-		</EntityComponent>
-
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-Compromised-Chat</SubtypeId>
-			</Id>
-			<Description>
-
-				[RivalAI Chat]
-			
-				[UseChat:true]
-				[StartsReady:true]
-				[Chance:100]
-				[MaxChats:1]
-				[MinTime:1]
-				[MaxTime:2]
-				[BroadcastRandomly:false]
-      
-				[Author:{AntennaName}]
-				[Color:Red]
-      
-				[ChatMessages:Why would you dis-respect the almighty Clang!! Turrets activated!]
-				[ChatAudio:Notify2]
-				[BroadcastChatType:Chat]
+				[RivalAI Action]
 				
-				[ChatMessages:You shall never take Clang from us! He will take it from you! Self-destruct initiated! ]
-				[ChatAudio:SelfDestructActive]
-				[BroadcastChatType:Chat]
+				[UseChatBroadcast:true]
+				[ChatData:EasyCargo-ProximityReply-B-Chat]
 				
-				[ChatMessages:5 minutes untill detonation! ]
-				[ChatAudio:Notify2]
-				[BroadcastChatType:Chat]
-     
-			</Description>
-			</EntityComponent>			
-<!--
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-Compromised2-Trigger</SubtypeId>
-      </Id>
-      <Description>
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:EasyCargo-PoximitySpawn-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:EasyCargo-PoximitySpawn-Trigger]	
+					
+			  </Description>
+			</EntityComponent>	
 	
-		[RivalAI Trigger]
-		
-		[Type:Damage]
-		[DamageTypes:Any]
-		[UseTrigger:true]
-		[Conditions:Archangel-Compromised2-Condition]
-		[StartsReady:true]
-		[MaxActions:1]
-		[Actions:Archangel-Compromised-Action]
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>EasyCargo-ProximityReply-B-Chat</SubtypeId>
+				  </Id>
+				  <Description>
 
-	  </Description>
-	</EntityComponent>
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Roger roger. Rapid support has been deployed enroute to your position ]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
 	
+
+				  </Description>
+				</EntityComponent>
+				
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-Compromised2-Condition</SubtypeId>
-		</Id>
-		<Description>
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>EasyCargo-PoximitySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
 		
-			[RivalAI Condition]
+			[RivalAI Trigger]
 			
-			[UseConditions:true]	
-			[MatchAnyCondition:true]
-			[UseRequiredFunctionalBlocks:true]
-			[RequiredNoneFunctionalBlockNames:Offset Hatch]
-
-
-		</Description>
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:3000]
+			[MaxCooldownMs:4000]
+			[Actions:EasyCargo-PoximitySpawn-Action]	
+			
+		  </Description>
 		</EntityComponent>
--->
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>EasyCargo-PoximitySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[SpawnEncounter:true]
+				[Spawner:EasyCargo-Proximity-Spawner]				
+				
+			  </Description>
+			</EntityComponent>					
+				
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>EasyCargo-Proximity-Spawner</SubtypeId>
+					  </Id>
+					  <Description>
 
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+
+						[SpawnGroups:(NPC-WARP) Siberian Jay]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Magpie]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1500]
+						[MaxDistance:2100]
+						[MinAltitude:550]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>
 			
-			
+
   </EntityComponents>
 </Definitions>

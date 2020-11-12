@@ -416,6 +416,7 @@
 			[EnableTriggers:true]
 			[EnableTriggerNames:MediumBase-DamageAddCount-Trigger]
 			[EnableTriggerNames:MediumBase-DamageCountFull-Trigger]
+			[EnableTriggerNames:HardBase-DisableCounters-Trigger]
 			[DisableTriggers:true]
 			[DisableTriggerNames:MediumBase-EnableCounters-Trigger]
 		
@@ -439,6 +440,8 @@
 		[UseTrigger:true]
 		[TargetDistance:1000]
 		[MaxActions:-1]
+		[MinCooldownMs:4000]
+		[MaxCooldownMs:5000]
 		[Actions:MediumBase-DisableCounters-Action]
 
 	  </Description>
@@ -457,7 +460,9 @@
 			[DisableTriggerNames:MediumBase-DamageAddCount-Trigger]
 			[DisableTriggerNames:MediumBase-DamageCountFull-Trigger]
 			[DisableTriggerNames:MediumBase-DisableCounters-Trigger]
-		
+			[EnableTriggers:true]
+			[EnableTriggerNames:MediumBase-ReEnableCounters-Trigger]
+			
 		</Description>
 		</EntityComponent>
 		
@@ -476,8 +481,10 @@
 		
 		[Type:PlayerNear]
 		[TargetDistance:1000]
-		[UseTrigger:true]
+		[UseTrigger:false]
 		[MaxActions:-1]
+		[MinCooldownMs:3000]
+		[MaxCooldownMs:4000]
 		[Actions:MediumBase-ReEnableCounters-Action]
 
 	  </Description>
@@ -495,6 +502,7 @@
 			[EnableTriggers:true]
 			[EnableTriggerNames:MediumBase-DamageAddCount-Trigger]
 			[EnableTriggerNames:MediumBase-DamageCountFull-Trigger]
+			[EnableTriggerNames:MediumBase-DisableCounters-Trigger]
 			[DisableTriggers:true]
 			[DisableTriggerNames:MediumBase-ReEnableCounters-Trigger]
 		
@@ -589,8 +597,6 @@
 				[DisableTriggerNames:MediumBase-DamageAddCount-Trigger]
 				[DisableTriggerNames:MediumBase-DamageCountFull-Trigger]
 				
-				[ResetCounters:MediumBase-DamageAddCount]
-
 			  </Description>
 			</EntityComponent>
 			
@@ -608,7 +614,7 @@
 					
 					[CheckCustomCounters:true]
 					[CustomCounters:MediumBase-DamageAddCount]
-					[CustomCountersTargets:200]
+					[CustomCountersTargets:75]
 					
 				  </Description>
 				</EntityComponent>
@@ -723,7 +729,7 @@
 						  <TypeId>Inventory</TypeId>
 						  <SubtypeId>MediumBase-AtmoDrone-UnderAttackSpawner</SubtypeId>
 					  </Id>
-					  <Description>.-
+					  <Description>
 
 						[RivalAI Spawn]
 					  

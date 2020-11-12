@@ -27,6 +27,7 @@
 		[Triggers:HardBase-DamageAddCount-Trigger]
 		[Triggers:HardBase-DamageCountFull-Trigger]
 		[Triggers:HardBase-Compromised-B-Trigger]
+		[Triggers:HardBase-TurretsDestroyed-Trigger]
 		
       </Description>
 	</EntityComponent>	
@@ -303,6 +304,8 @@
 			[EnableTriggerNames:HardBase-DamageAddCount-Trigger]
 			[EnableTriggerNames:HardBase-DamageCountFull-Trigger]
 			[EnableTriggerNames:HardBase-DisableCounters-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:HardBase-EnableCounters-Trigger]
 		
 		</Description>
 		</EntityComponent>
@@ -501,7 +504,7 @@
 					
 					[CheckCustomCounters:true]
 					[CustomCounters:HardBase-DamageAddCount]
-					[CustomCountersTargets:300]
+					[CustomCountersTargets:100]
 					
 				  </Description>
 				</EntityComponent>
@@ -616,7 +619,7 @@
 						  <TypeId>Inventory</TypeId>
 						  <SubtypeId>HardBase-AtmoDrone-UnderAttackSpawner</SubtypeId>
 					  </Id>
-					  <Description>.-
+					  <Description>
 
 						[RivalAI Spawn]
 					  
@@ -640,6 +643,72 @@
 					  </Description>
 					</EntityComponent>
 
+<!-- -->
+<!-- *** ALL TURRETS DESTROYED *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HardBase-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:HardBase-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HardBase-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:HardBase-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>HardBase-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:1500]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
 
 
   </EntityComponents>

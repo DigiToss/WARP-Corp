@@ -567,6 +567,9 @@
 			[UseContainerTypeAssignment:true]			
 			[ContainerTypeAssignBlockName:GatlingCargo]
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
 			
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
@@ -610,6 +613,9 @@
 			[ContainerTypeAssignBlockName:GatlingCargo]
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
 			
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
@@ -621,7 +627,7 @@
 						<Y>30.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Speed>15</Speed>
+					<Speed>10</Speed>
 					<Behaviour>BoatDrone-Behavior</Behaviour>
 				</Prefab>
 				<Prefab SubtypeId="(NPC-WARP) CB90">
@@ -630,7 +636,7 @@
 						<Y>30.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Speed>15</Speed>
+					<Speed>10</Speed>
 					<Behaviour>BoatDrone-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>   
+  
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GravityGeneratorComponent</SubtypeId>
+      </Id>
+	  <Public>false</Public>
+      <DisplayName>DisplayName_Item_GravityGeneratorComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\gravity_generator_components_component.dds</Icon>
+      <Prerequisites>
+		<Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />
+		<Item Amount="10" TypeId="Ingot" SubtypeId="Gold" />
+		<Item Amount="220" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="600" TypeId="Ingot" SubtypeId="Iron" />
+       </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="GravityGenerator" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   </Blueprints>
+	
+</Definitions>

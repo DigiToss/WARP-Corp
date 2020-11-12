@@ -276,11 +276,9 @@
 		
 			[ContainerTypeAssignBlockName:CrateItems1]
 			[ContainerTypeAssignSubtypeId:CrateItems1]
-			
-
+		
 			[ShiftBlockColorsHue:true]
 			[RandomHueShift:true]
-			
 
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 

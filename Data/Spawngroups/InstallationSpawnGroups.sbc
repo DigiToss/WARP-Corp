@@ -268,8 +268,8 @@
 			
 			[UseContainerTypeAssignment:true]
 			
-			[ContainerTypeAssignBlockName:LockerWeapons]
-			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
 
 			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
 			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
@@ -290,7 +290,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Hab Tower House">
 					<Position>
 						<X>0.0</X>
-						<Y>16.0</Y>
+						<Y>9.5</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>VeryEasyBase-Behavior</Behaviour>
@@ -405,7 +405,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Test Hub">
 					<Position>
 						<X>0.0</X>
-						<Y>52.0</Y>
+						<Y>54.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>TestHub-Behavior</Behaviour>
@@ -441,8 +441,8 @@
 			[ContainerTypeAssignBlockName:SmallCargoMaze]
 			[ContainerTypeAssignSubtypeId:SmallCargoMaze]
 
-			[ContainerTypeAssignBlockName:CrateItems1]
-			[ContainerTypeAssignSubtypeId:CrateItems1]
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
 			
 			[FactionOwner:WARP]
 			
@@ -460,7 +460,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Test Hub 2">
 					<Position>
 						<X>0.0</X>
-						<Y>-21.0</Y>
+						<Y>-23.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>TestHub-Small-Behavior</Behaviour>
@@ -539,6 +539,7 @@
 			
 			[InstallationSpawnsOnDryLand:false]
 			[InstallationSpawnsUnderwater:true]
+			[MinWaterDepth:37]
 
 
 			</Description>
@@ -548,10 +549,10 @@
 				<Prefab SubtypeId="(NPC-WARP) Natilus">
 					<Position>
 						<X>0.0</X>
-						<Y>23.0</Y>
+						<Y>33.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour></Behaviour>
+					<Behaviour>Natilus-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -616,7 +617,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Comms Station">
 					<Position>
 						<X>0.0</X>
-						<Y>-15.0</Y>
+						<Y>-4.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>EasyBase-Behavior</Behaviour>
@@ -670,9 +671,12 @@
 
 			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
 			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
 			
-			[ContainerTypeAssignBlockName:LargeCargoOresT2]
-			[ContainerTypeAssignSubtypeId:LargeCargoOresT2]
+			[ContainerTypeAssignBlockName:LargeCargoOresT3]
+			[ContainerTypeAssignSubtypeId:LargeCargoOresT3]
 			
 			[ContainerTypeAssignBlockName:GatlingCargo]
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
@@ -692,7 +696,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Fuelling Hangar">
 					<Position>
 						<X>0.0</X>
-						<Y>5.0</Y>
+						<Y>-3.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>MediumBase-Behavior</Behaviour>
@@ -763,6 +767,7 @@
 			
 			[InstallationSpawnsOnDryLand:false]
 			[InstallationSpawnsUnderwater:true]
+			[MinWaterDepth:37]
 
 
 			</Description>
@@ -772,10 +777,10 @@
 				<Prefab SubtypeId="(NPC-WARP) The Abyss">
 					<Position>
 						<X>0.0</X>
-						<Y>20.0</Y>
+						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour></Behaviour>
+					<Behaviour>Abyss-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -809,6 +814,9 @@
 			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
 			
 			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+
 			[ContainerTypeAssignBlockName:LockerParts]
 			[ContainerTypeAssignSubtypeId:LockerParts]
 			
@@ -872,7 +880,7 @@
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 
-]			[UseThreatLevelCheck:true]
+			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
 			[ThreatScoreMinimum:200]
 			
@@ -918,7 +926,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Silo 42 B">
 					<Position>
 						<X>0.0</X>
-						<Y>-53.0</Y>
+						<Y>-50.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>MediumBase-Behavior</Behaviour>
@@ -1009,7 +1017,7 @@
 				<Prefab SubtypeId="(NPC-WARP) Abandoned Test Facility">
 					<Position>
 						<X>0.0</X>
-						<Y>-17.0</Y>
+						<Y>13.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>HardBase-Behavior</Behaviour>
@@ -1530,46 +1538,5 @@
 
 <!-- -->
 
-
-		<SpawnGroup>
-			<Id>
-				<TypeId>SpawnGroupDefinition</TypeId>
-				<SubtypeId>DamageTest</SubtypeId>
-			</Id>
-			<Description>
-
-			[Modular Encounters SpawnGroup]
-			[PlanetaryInstallation:true]
-			[AdminSpawnOnly:true]
-
-			[RivalAiSpawn:true]
-			[UseRivalAi:true]
-			[RivalAiReplaceRemoteControl:true]
-			
-			[UseBlockReplacerProfile:true]
-			[IgnoreGlobalBlockReplacer:true]
-			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
-			
-		
-			[FactionOwner:WARP]
-			
-			[InstallationSpawnsOnDryLand:true]
-
-
-			</Description>
-			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
-			<IsPirate>true</IsPirate>
-			<Frequency>1.0</Frequency>
-			<Prefabs>
-				<Prefab SubtypeId="NonFunctionTest">
-					<Position>
-						<X>0.0</X>
-						<Y>0.0</Y>
-						<Z>0.0</Z>
-					</Position>
-					<Behaviour>DamageTest2-Behavior</Behaviour>
-				</Prefab>
-			</Prefabs>
-		</SpawnGroup>	
 	</SpawnGroups>
 </Definitions>

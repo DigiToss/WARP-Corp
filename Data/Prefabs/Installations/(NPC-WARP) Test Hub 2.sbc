@@ -6,7 +6,7 @@
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
-          <EntityId>126738832365690960</EntityId>
+          <EntityId>111747400685928317</EntityId>
           <PersistentFlags>CastShadows InScene</PersistentFlags>
           <PositionAndOrientation>
             <Position x="0" y="0" z="0" />
@@ -594,7 +594,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>90159285836120413</EntityId>
+              <EntityId>101876149802892641</EntityId>
               <Min x="0" y="5" z="-1" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -1704,7 +1704,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>100251336785553975</EntityId>
+              <EntityId>84636985840800850</EntityId>
               <Min x="-1" y="5" z="-9" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -2908,7 +2908,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorTurret">
               <SubtypeName>LargeInteriorTurret</SubtypeName>
-              <EntityId>120795501061496701</EntityId>
+              <EntityId>82997782119646073</EntityId>
               <Min x="-15" y="6" z="-3" />
               <BlockOrientation Forward="Down" Up="Left" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -2956,7 +2956,7 @@
               </ComponentContainer>
               <CustomName>Interior Turret 2</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -3080,14 +3080,14 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SensorBlock">
               <SubtypeName>LargeBlockSensor</SubtypeName>
-              <EntityId>99076246884001421</EntityId>
+              <EntityId>130509685740675921</EntityId>
               <Min x="-1" y="6" z="1" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
               <CustomName>Sensor</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -3102,7 +3102,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>TriggerNow</Action>
-                      <BlockEntityId>140339734872884961</BlockEntityId>
+                      <BlockEntityId>110934967916519525</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -3205,7 +3205,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>115198835420703481</EntityId>
+              <EntityId>87427447664853260</EntityId>
               <Min x="-1" y="6" z="0" />
               <BlockOrientation Forward="Up" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -4292,7 +4292,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ExtendedPistonBase">
               <SubtypeName>LargePistonBase</SubtypeName>
-              <EntityId>97247443756522299</EntityId>
+              <EntityId>99507583261468946</EntityId>
               <Min x="2" y="6" z="-6" />
               <BlockOrientation Forward="Forward" Up="Left" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -4304,7 +4304,7 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
-              <TopBlockId>131706221144099668</TopBlockId>
+              <TopBlockId>93527335314562519</TopBlockId>
               <ShareInertiaTensor>false</ShareInertiaTensor>
               <SafetyDetach>5</SafetyDetach>
               <Velocity>-0.1</Velocity>
@@ -4348,7 +4348,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TimerBlock">
               <SubtypeName>TimerBlockLarge</SubtypeName>
-              <EntityId>140339734872884961</EntityId>
+              <EntityId>110934967916519525</EntityId>
               <Min x="4" y="6" z="-7" />
               <BlockOrientation Forward="Up" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -4356,7 +4356,7 @@
               <ShareMode>Faction</ShareMode>
               <CustomName>Timer Block 1</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -4369,7 +4369,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Extend</Action>
-                      <BlockEntityId>97247443756522299</BlockEntityId>
+                      <BlockEntityId>99507583261468946</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -4377,7 +4377,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>PlaySound</Action>
-                      <BlockEntityId>76164482726048011</BlockEntityId>
+                      <BlockEntityId>128406304447136197</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -4385,7 +4385,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Start</Action>
-                      <BlockEntityId>140084776593433196</BlockEntityId>
+                      <BlockEntityId>120257088386243192</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -4537,7 +4537,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TimerBlock">
               <SubtypeName>TimerBlockLarge</SubtypeName>
-              <EntityId>140084776593433196</EntityId>
+              <EntityId>120257088386243192</EntityId>
               <Min x="4" y="6" z="-5" />
               <BlockOrientation Forward="Up" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -4545,7 +4545,7 @@
               <ShareMode>Faction</ShareMode>
               <CustomName>Timer Block 2</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -4558,7 +4558,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Retract</Action>
-                      <BlockEntityId>97247443756522299</BlockEntityId>
+                      <BlockEntityId>99507583261468946</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -5422,7 +5422,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>81753711266303373</EntityId>
+              <EntityId>91804719610037740</EntityId>
               <Min x="-21" y="17" z="-11" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5430,7 +5430,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>107440524402147629</EntityId>
+              <EntityId>120432700374143998</EntityId>
               <Min x="-19" y="15" z="-10" />
               <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5438,7 +5438,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>140756049223454807</EntityId>
+              <EntityId>140652949610366325</EntityId>
               <Min x="-21" y="17" z="-10" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5593,7 +5593,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_AirVent">
               <SubtypeName />
-              <EntityId>133882254119109645</EntityId>
+              <EntityId>95164421507081760</EntityId>
               <Min x="-17" y="16" z="-11" />
               <BlockOrientation Forward="Up" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5663,7 +5663,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTubeCurved</SubtypeName>
-              <EntityId>119798183003994073</EntityId>
+              <EntityId>126758534158319602</EntityId>
               <Min x="-8" y="8" z="-9" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5696,7 +5696,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OreDetector">
               <SubtypeName>LargeOreDetector</SubtypeName>
-              <EntityId>94746151489437455</EntityId>
+              <EntityId>104606490551426747</EntityId>
               <Min x="-21" y="14" z="-9" />
               <BlockOrientation Forward="Down" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5782,7 +5782,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TimerBlock">
               <SubtypeName>TimerBlockLarge</SubtypeName>
-              <EntityId>101164668124150820</EntityId>
+              <EntityId>115652238660417135</EntityId>
               <Min x="-18" y="8" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5790,7 +5790,7 @@
               <ShareMode>Faction</ShareMode>
               <CustomName>Timer Block 4</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -5803,7 +5803,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>OnOff_On</Action>
-                      <BlockEntityId>85775045475595544</BlockEntityId>
+                      <BlockEntityId>96478810325986705</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -5811,7 +5811,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>OnOff_On</Action>
-                      <BlockEntityId>89348530515858150</BlockEntityId>
+                      <BlockEntityId>112188786635672064</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -5842,7 +5842,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TimerBlock">
               <SubtypeName>TimerBlockLarge</SubtypeName>
-              <EntityId>109358199080639463</EntityId>
+              <EntityId>132412190271374402</EntityId>
               <Min x="-18" y="8" z="-8" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -5850,7 +5850,7 @@
               <ShareMode>Faction</ShareMode>
               <CustomName>Timer Block 3</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -5863,7 +5863,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Open_Off</Action>
-                      <BlockEntityId>138221019625276979</BlockEntityId>
+                      <BlockEntityId>108130656366925042</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -5872,7 +5872,7 @@
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalGroup">
                       <Action>Depressurize_On</Action>
                       <GridEntityId>0</GridEntityId>
-                      <BlockEntityId>109358199080639463</BlockEntityId>
+                      <BlockEntityId>132412190271374402</BlockEntityId>
                       <GroupName>Vents Inside</GroupName>
                     </Data>
                   </Slot>
@@ -5882,7 +5882,7 @@
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalGroup">
                       <Action>Depressurize_Off</Action>
                       <GridEntityId>0</GridEntityId>
-                      <BlockEntityId>109358199080639463</BlockEntityId>
+                      <BlockEntityId>132412190271374402</BlockEntityId>
                       <GroupName>Vents Outside</GroupName>
                     </Data>
                   </Slot>
@@ -5891,7 +5891,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Open_Off</Action>
-                      <BlockEntityId>118672975866442832</BlockEntityId>
+                      <BlockEntityId>119134833808411109</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -5899,7 +5899,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>OnOff_Off</Action>
-                      <BlockEntityId>89348530515858150</BlockEntityId>
+                      <BlockEntityId>112188786635672064</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -5907,7 +5907,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>OnOff_Off</Action>
-                      <BlockEntityId>85775045475595544</BlockEntityId>
+                      <BlockEntityId>96478810325986705</BlockEntityId>
                     </Data>
                   </Slot>
                   <Slot>
@@ -5915,7 +5915,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Start</Action>
-                      <BlockEntityId>101164668124150820</BlockEntityId>
+                      <BlockEntityId>115652238660417135</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -5946,7 +5946,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_AirVent">
               <SubtypeName />
-              <EntityId>123129914727191759</EntityId>
+              <EntityId>108100068405845063</EntityId>
               <Min x="-8" y="7" z="-9" />
               <BlockOrientation Forward="Down" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6173,7 +6173,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
               <SubtypeName>SmallLight</SubtypeName>
-              <EntityId>128499848237588990</EntityId>
+              <EntityId>74342184130164392</EntityId>
               <Min x="-3" y="6" z="-9" />
               <BlockOrientation Forward="Right" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6232,7 +6232,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>89852614960265457</EntityId>
+              <EntityId>118506112219502935</EntityId>
               <Min x="7" y="6" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6297,7 +6297,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>92854280138926311</EntityId>
+              <EntityId>116394354897199626</EntityId>
               <Min x="0" y="6" z="0" />
               <BlockOrientation Forward="Down" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6848,7 +6848,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>103645445859911350</EntityId>
+              <EntityId>75528643047396829</EntityId>
               <Min x="7" y="7" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6856,7 +6856,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>108803455828134673</EntityId>
+              <EntityId>89767705047545876</EntityId>
               <Min x="7" y="8" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6864,7 +6864,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>132988975327043947</EntityId>
+              <EntityId>93244844468691328</EntityId>
               <Min x="7" y="9" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6872,7 +6872,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>89198859391447444</EntityId>
+              <EntityId>130303717012844279</EntityId>
               <Min x="7" y="10" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6880,7 +6880,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>115098473978174040</EntityId>
+              <EntityId>89638680774829337</EntityId>
               <Min x="7" y="11" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6888,7 +6888,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>120921269177292359</EntityId>
+              <EntityId>114589291338639437</EntityId>
               <Min x="7" y="12" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6896,7 +6896,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>109652611403400357</EntityId>
+              <EntityId>94705144143330020</EntityId>
               <Min x="7" y="13" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6904,7 +6904,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>134431592831155021</EntityId>
+              <EntityId>97881674248614602</EntityId>
               <Min x="7" y="15" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6912,7 +6912,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_AirtightSlideDoor">
               <SubtypeName>LargeBlockSlideDoor</SubtypeName>
-              <EntityId>96471028071324750</EntityId>
+              <EntityId>134968575716918633</EntityId>
               <Min x="7" y="14" z="-17" />
               <BlockOrientation Forward="Up" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -6936,14 +6936,14 @@
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
-              <SubtypeName>LargeSciFiButtonTerminal</SubtypeName>
-              <EntityId>96239559921217736</EntityId>
+              <SubtypeName>LargeSciFiButtonPanel</SubtypeName>
+              <EntityId>137595045633764899</EntityId>
               <Min x="7" y="6" z="-15" />
-              <BlockOrientation Forward="Left" Up="Up" />
+              <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
-              <CustomName>Sci-Fi One-Button Terminal 4</CustomName>
+              <CustomName>Sci-Fi Four-Button Panel 3</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -6958,7 +6958,7 @@
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Open</Action>
-                      <BlockEntityId>96471028071324750</BlockEntityId>
+                      <BlockEntityId>134968575716918633</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -6977,9 +6977,9 @@
                 <MySerializedTextPanelData>
                   <ChangeInterval>0</ChangeInterval>
                   <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
-                  <FontSize>2</FontSize>
-                  <Text>EXIT DOOR
-BUTTON</Text>
+                  <FontSize>4.5</FontSize>
+                  <Text>EXIT
+DOOR</Text>
                   <ShowText>NONE</ShowText>
                   <FontColor>
                     <PackedValue>4294967295</PackedValue>
@@ -7005,7 +7005,166 @@ BUTTON</Text>
                   <Alignment>2</Alignment>
                   <ContentType>TEXT_AND_IMAGE</ContentType>
                   <SelectedScript />
-                  <TextPadding>35.017</TextPadding>
+                  <TextPadding>13</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
                   <ScriptBackgroundColor>
                     <PackedValue>4288108544</PackedValue>
                     <X>0</X>
@@ -7137,7 +7296,7 @@ BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>117978152234519044</EntityId>
+              <EntityId>94615032044279575</EntityId>
               <Min x="-17" y="17" z="-9" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7164,7 +7323,7 @@ BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>136884382873512725</EntityId>
+              <EntityId>82479701380177813</EntityId>
               <Min x="-20" y="12" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -7252,7 +7411,7 @@ BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>105585325914517048</EntityId>
+              <EntityId>137989434397894733</EntityId>
               <Min x="-17" y="9" z="-11" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7273,118 +7432,28 @@ BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>134781566077362798</EntityId>
+              <EntityId>117172317675062746</EntityId>
               <Min x="-17" y="14" z="-11" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>120399159416409893</EntityId>
+              <EntityId>92196612023041545</EntityId>
               <Min x="-17" y="10" z="-11" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
-              <SubtypeName>LargeSciFiButtonTerminal</SubtypeName>
-              <EntityId>85775045475595544</EntityId>
-              <Min x="-20" y="14" z="-13" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="6" y="7" z="-12" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
-              <CustomName>Front Door Button</CustomName>
-              <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
-              <ShowInToolbarConfig>true</ShowInToolbarConfig>
-              <ShowInInventory>true</ShowInInventory>
-              <Enabled>true</Enabled>
-              <Toolbar>
-                <ToolbarType>Character</ToolbarType>
-                <SelectedSlot xsi:nil="true" />
-                <Slots>
-                  <Slot>
-                    <Index>0</Index>
-                    <Item />
-                    <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
-                      <Action>Open</Action>
-                      <BlockEntityId>118672975866442832</BlockEntityId>
-                    </Data>
-                  </Slot>
-                </Slots>
-                <SlotsGamepad />
-              </Toolbar>
-              <AnyoneCanUse>true</AnyoneCanUse>
-              <CustomButtonNames>
-                <dictionary>
-                  <item>
-                    <Key>0</Key>
-                    <Value>Door Entry -  Open/Closed</Value>
-                  </item>
-                </dictionary>
-              </CustomButtonNames>
-              <TextPanels>
-                <MySerializedTextPanelData>
-                  <ChangeInterval>0</ChangeInterval>
-                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
-                  <FontSize>4.5</FontSize>
-                  <Text>OPEN
-DOOR</Text>
-                  <ShowText>NONE</ShowText>
-                  <FontColor>
-                    <PackedValue>4294967295</PackedValue>
-                    <X>255</X>
-                    <Y>255</Y>
-                    <Z>255</Z>
-                    <R>255</R>
-                    <G>255</G>
-                    <B>255</B>
-                    <A>255</A>
-                  </FontColor>
-                  <BackgroundColor>
-                    <PackedValue>4278190080</PackedValue>
-                    <X>0</X>
-                    <Y>0</Y>
-                    <Z>0</Z>
-                    <R>0</R>
-                    <G>0</G>
-                    <B>0</B>
-                    <A>255</A>
-                  </BackgroundColor>
-                  <CurrentShownTexture>0</CurrentShownTexture>
-                  <Alignment>2</Alignment>
-                  <ContentType>TEXT_AND_IMAGE</ContentType>
-                  <SelectedScript />
-                  <TextPadding>6.833</TextPadding>
-                  <ScriptBackgroundColor>
-                    <PackedValue>4288108544</PackedValue>
-                    <X>0</X>
-                    <Y>88</Y>
-                    <Z>151</Z>
-                    <R>0</R>
-                    <G>88</G>
-                    <B>151</B>
-                    <A>255</A>
-                  </ScriptBackgroundColor>
-                  <ScriptForegroundColor>
-                    <PackedValue>4294962611</PackedValue>
-                    <X>179</X>
-                    <Y>237</Y>
-                    <Z>255</Z>
-                    <R>179</R>
-                    <G>237</G>
-                    <B>255</B>
-                    <A>255</A>
-                  </ScriptForegroundColor>
-                  <Sprites>
-                    <Length>0</Length>
-                  </Sprites>
-                </MySerializedTextPanelData>
-              </TextPanels>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>136054949510022712</EntityId>
+              <EntityId>86107763868290613</EntityId>
               <Min x="-21" y="17" z="-9" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7436,12 +7505,12 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
               <SubtypeName>LargeBlockRadioAntenna</SubtypeName>
-              <EntityId>121862487660675786</EntityId>
+              <EntityId>86716050321394569</EntityId>
               <Min x="-19" y="17" z="-10" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
-              <CustomName>The Hub</CustomName>
+              <CustomName>Test Hub</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -7476,7 +7545,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
               <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
-              <EntityId>119868575638964370</EntityId>
+              <EntityId>74358441723037293</EntityId>
               <Min x="-17" y="15" z="-9" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7617,7 +7686,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Door">
               <SubtypeName />
-              <EntityId>118672975866442832</EntityId>
+              <EntityId>119134833808411109</EntityId>
               <Min x="-19" y="14" z="-12" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7660,7 +7729,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>92355718192240012</EntityId>
+              <EntityId>88558953330114174</EntityId>
               <Min x="-17" y="13" z="-11" />
               <BlockOrientation Forward="Right" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7748,7 +7817,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
               <SubtypeName>LargeBlockConveyor</SubtypeName>
-              <EntityId>119626464666285634</EntityId>
+              <EntityId>131964995534571232</EntityId>
               <Min x="-17" y="12" z="-11" />
               <BlockOrientation Forward="Down" Up="Left" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -7756,7 +7825,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>79497307866650111</EntityId>
+              <EntityId>84109939309243347</EntityId>
               <Min x="-17" y="11" z="-11" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8124,7 +8193,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_AirtightSlideDoor">
               <SubtypeName>LargeBlockSlideDoor</SubtypeName>
-              <EntityId>138221019625276979</EntityId>
+              <EntityId>108130656366925042</EntityId>
               <Min x="-20" y="13" z="-9" />
               <BlockOrientation Forward="Up" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8208,7 +8277,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>95714742545768094</EntityId>
+              <EntityId>120029936191292810</EntityId>
               <Min x="-20" y="11" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8320,7 +8389,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>103464637615979740</EntityId>
+              <EntityId>87002149901727429</EntityId>
               <Min x="-20" y="10" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8358,7 +8427,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>91457127321566073</EntityId>
+              <EntityId>100305641254353681</EntityId>
               <Min x="-20" y="9" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8432,7 +8501,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>134067704785969311</EntityId>
+              <EntityId>127149243411792945</EntityId>
               <Min x="-20" y="8" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8446,7 +8515,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>102785545300647931</EntityId>
+              <EntityId>83858131046692051</EntityId>
               <Min x="-20" y="7" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8454,7 +8523,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
               <SubtypeName>SmallLight</SubtypeName>
-              <EntityId>109911667984879138</EntityId>
+              <EntityId>139968105078298139</EntityId>
               <Min x="-19" y="6" z="-9" />
               <BlockOrientation Forward="Down" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8477,7 +8546,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>103098187683811430</EntityId>
+              <EntityId>108693199341334837</EntityId>
               <Min x="-20" y="6" z="-9" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.4" />
@@ -8497,7 +8566,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>107897745028588057</EntityId>
+              <EntityId>105969185084637665</EntityId>
               <Min x="-17" y="17" z="-10" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8505,7 +8574,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>Catwalk</SubtypeName>
-              <EntityId>127442073127275615</EntityId>
+              <EntityId>99806544693881267</EntityId>
               <Min x="-17" y="17" z="-11" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8587,7 +8656,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_AirVent">
               <SubtypeName />
-              <EntityId>107767549708531598</EntityId>
+              <EntityId>96937651816856785</EntityId>
               <Min x="-17" y="7" z="-13" />
               <BlockOrientation Forward="Down" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8603,7 +8672,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTubeCurved</SubtypeName>
-              <EntityId>134394867711816474</EntityId>
+              <EntityId>128690675783452691</EntityId>
               <Min x="-17" y="8" z="-13" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8611,7 +8680,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>128353329281694768</EntityId>
+              <EntityId>74475218340372850</EntityId>
               <Min x="-17" y="8" z="-12" />
               <BlockOrientation Forward="Left" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -8619,7 +8688,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTubeCurved</SubtypeName>
-              <EntityId>110227467822061647</EntityId>
+              <EntityId>87511815512918046</EntityId>
               <Min x="-17" y="8" z="-11" />
               <BlockOrientation Forward="Left" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10387,7 +10456,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorTurret">
               <SubtypeName>LargeInteriorTurret</SubtypeName>
-              <EntityId>121447202329957003</EntityId>
+              <EntityId>137260005400123470</EntityId>
               <Min x="-9" y="6" z="-7" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10435,7 +10504,7 @@ DOOR</Text>
               </ComponentContainer>
               <CustomName>Interior Turret 3</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -10480,26 +10549,24 @@ DOOR</Text>
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockInteriorWall</SubtypeName>
-              <Min x="8" y="6" z="-13" />
-              <BlockOrientation Forward="Left" Up="Up" />
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="9" y="7" z="-14" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockInteriorWall</SubtypeName>
-              <Min x="8" y="6" z="-14" />
-              <BlockOrientation Forward="Left" Up="Up" />
+              <Min x="9" y="6" z="-14" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
-              <SubtypeName>LargeBlockSmallContainer</SubtypeName>
-              <EntityId>82175004662389796</EntityId>
-              <Min x="8" y="6" z="-12" />
-              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
+              <SubtypeName>Large_MediumCrate1_3223</SubtypeName>
+              <EntityId>112476191775993384</EntityId>
+              <Min x="8" y="6" z="-14" />
+              <BlockOrientation Forward="Left" Up="Up" />
+              <ColorMaskHSV x="0.0111111114" y="-0.04" z="-0.07" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
               <ComponentContainer>
                 <Components>
                   <ComponentData>
@@ -10507,7 +10574,7 @@ DOOR</Text>
                     <Component xsi:type="MyObjectBuilder_Inventory">
                       <Items />
                       <nextItemId>0</nextItemId>
-                      <Volume>15.625</Volume>
+                      <Volume>8</Volume>
                       <Mass>9223372036854.775807</Mass>
                       <MaxItemCount>2147483647</MaxItemCount>
                       <Size xsi:nil="true" />
@@ -10519,7 +10586,7 @@ DOOR</Text>
               </ComponentContainer>
               <CustomName>SmallCargoMaze</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
             </MyObjectBuilder_CubeBlock>
@@ -10932,7 +10999,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>117796392582872303</EntityId>
+              <EntityId>95523187128209184</EntityId>
               <Min x="-1" y="5" z="-1" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10940,7 +11007,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>132353538963005998</EntityId>
+              <EntityId>100208490097624691</EntityId>
               <Min x="-1" y="5" z="-2" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10948,7 +11015,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>80382683112404652</EntityId>
+              <EntityId>102846622837332242</EntityId>
               <Min x="-1" y="5" z="-3" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10956,7 +11023,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>77281027233502797</EntityId>
+              <EntityId>81600356971987578</EntityId>
               <Min x="-1" y="5" z="-4" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10964,7 +11031,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>104041158112976437</EntityId>
+              <EntityId>129216047327071352</EntityId>
               <Min x="-1" y="5" z="-5" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10972,7 +11039,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>99928911153678832</EntityId>
+              <EntityId>100672276658357188</EntityId>
               <Min x="-1" y="5" z="-6" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10980,7 +11047,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>92406186016363141</EntityId>
+              <EntityId>75200028973355722</EntityId>
               <Min x="-1" y="5" z="-7" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10988,7 +11055,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>134635601920589919</EntityId>
+              <EntityId>82104384014175138</EntityId>
               <Min x="-1" y="5" z="-8" />
               <BlockOrientation Forward="Left" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -10996,7 +11063,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>116256714750511567</EntityId>
+              <EntityId>134241355886377253</EntityId>
               <Min x="-2" y="6" z="-9" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
@@ -11157,7 +11224,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>137756129674982788</EntityId>
+              <EntityId>136924862825341069</EntityId>
               <Min x="-1" y="7" z="-8" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11165,7 +11232,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>102824132110595059</EntityId>
+              <EntityId>107799254320855004</EntityId>
               <Min x="-1" y="7" z="-7" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11173,7 +11240,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>121199196265053397</EntityId>
+              <EntityId>103644808674179009</EntityId>
               <Min x="-1" y="7" z="-6" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11181,7 +11248,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>76747627573901931</EntityId>
+              <EntityId>96575473581254496</EntityId>
               <Min x="-1" y="7" z="-5" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11189,7 +11256,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>136500391352172852</EntityId>
+              <EntityId>94040724455558517</EntityId>
               <Min x="-1" y="7" z="-4" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11197,7 +11264,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>117095270363648279</EntityId>
+              <EntityId>122264429377542116</EntityId>
               <Min x="-1" y="7" z="-3" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11205,7 +11272,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>73672320847481308</EntityId>
+              <EntityId>115220114144065723</EntityId>
               <Min x="-1" y="7" z="-2" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11213,7 +11280,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>123957308792916551</EntityId>
+              <EntityId>139676051739544623</EntityId>
               <Min x="-1" y="7" z="-1" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11221,7 +11288,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
               <SubtypeName>LargeBlockLight_2corner</SubtypeName>
-              <EntityId>111027646915627554</EntityId>
+              <EntityId>126969823775095135</EntityId>
               <Min x="7" y="6" z="-16" />
               <BlockOrientation Forward="Down" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11285,7 +11352,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeSteelCatwalkPlate</SubtypeName>
-              <EntityId>78394834217957912</EntityId>
+              <EntityId>88285842612660264</EntityId>
               <Min x="-1" y="7" z="-9" />
               <BlockOrientation Forward="Left" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11552,7 +11619,7 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LaserAntenna">
               <SubtypeName>LargeBlockLaserAntenna</SubtypeName>
-              <EntityId>137975261838337242</EntityId>
+              <EntityId>128635784121067700</EntityId>
               <Min x="-19" y="14" z="-9" />
               <ColorMaskHSV x="0.858333349" y="-0.09" z="0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
@@ -11582,14 +11649,14 @@ DOOR</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RemoteControl">
               <SubtypeName>LargeBlockRemoteControl</SubtypeName>
-              <EntityId>104680138774565244</EntityId>
+              <EntityId>111541644971950963</EntityId>
               <Min x="-19" y="14" z="-10" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
               <CustomName>Remote Control</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <UseSingleWeaponMode>false</UseSingleWeaponMode>
@@ -11622,13 +11689,14 @@ DOOR</Text>
               <WaitForFreeWay>false</WaitForFreeWay>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
-              <SubtypeName>LargeSciFiButtonTerminal</SubtypeName>
-              <EntityId>89348530515858150</EntityId>
+              <SubtypeName>LargeSciFiButtonPanel</SubtypeName>
+              <EntityId>112188786635672064</EntityId>
               <Min x="-20" y="14" z="-9" />
+              <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
-              <CustomName>Button</CustomName>
+              <CustomName>Sci-Fi Four-Button Panel Shaft</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -11639,11 +11707,11 @@ DOOR</Text>
                 <SelectedSlot xsi:nil="true" />
                 <Slots>
                   <Slot>
-                    <Index>0</Index>
+                    <Index>3</Index>
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Open_On</Action>
-                      <BlockEntityId>138221019625276979</BlockEntityId>
+                      <BlockEntityId>108130656366925042</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -11654,6 +11722,18 @@ DOOR</Text>
                 <dictionary>
                   <item>
                     <Key>0</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>1</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>2</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>3</Key>
                     <Value>Shaft Entry -  Open</Value>
                   </item>
                 </dictionary>
@@ -11662,9 +11742,8 @@ DOOR</Text>
                 <MySerializedTextPanelData>
                   <ChangeInterval>0</ChangeInterval>
                   <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
-                  <FontSize>2.002</FontSize>
-                  <Text>DO NOT PRESS 
-THIS BUTTON</Text>
+                  <FontSize>4.5</FontSize>
+                  <Text>DO</Text>
                   <ShowText>NONE</ShowText>
                   <FontColor>
                     <PackedValue>4294967295</PackedValue>
@@ -11690,7 +11769,172 @@ THIS BUTTON</Text>
                   <Alignment>2</Alignment>
                   <ContentType>TEXT_AND_IMAGE</ContentType>
                   <SelectedScript />
-                  <TextPadding>29.75</TextPadding>
+                  <TextPadding>25</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>4.5</FontSize>
+                  <Text>NOT</Text>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <Alignment>2</Alignment>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>25</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>4.5</FontSize>
+                  <Text>PRESS</Text>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <Alignment>2</Alignment>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>25</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>4.5</FontSize>
+                  <Text>BUTTON</Text>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <Alignment>2</Alignment>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>25</TextPadding>
                   <ScriptBackgroundColor>
                     <PackedValue>4288108544</PackedValue>
                     <X>0</X>
@@ -11725,7 +11969,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Door">
               <SubtypeName>LargeBlockOffsetDoor</SubtypeName>
-              <EntityId>104463883502591384</EntityId>
+              <EntityId>128887020203996391</EntityId>
               <Min x="-21" y="14" z="-10" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
@@ -11743,21 +11987,21 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeWindowSquare</SubtypeName>
-              <EntityId>89598047667355903</EntityId>
+              <EntityId>131742080600761012</EntityId>
               <Min x="-21" y="15" z="-10" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeWindowSquare</SubtypeName>
-              <EntityId>109408794829815604</EntityId>
+              <EntityId>85997520170487378</EntityId>
               <Min x="-20" y="15" z="-10" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
               <SubtypeName>ConveyorTube</SubtypeName>
-              <EntityId>133827885562736480</EntityId>
+              <EntityId>80718301610062128</EntityId>
               <Min x="-17" y="15" z="-11" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11765,7 +12009,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_MyProgrammableBlock">
               <SubtypeName>LargeProgrammableBlock</SubtypeName>
-              <EntityId>76800316273333254</EntityId>
+              <EntityId>140273758818071836</EntityId>
               <Min x="-18" y="14" z="-9" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11887,7 +12131,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
               <SubtypeName>Large_MediumCrate1_3223</SubtypeName>
-              <EntityId>109439231734465008</EntityId>
+              <EntityId>100025680971189214</EntityId>
               <Min x="-17" y="14" z="-10" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.04" z="0.05" />
@@ -11917,7 +12161,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TextPanel">
               <SubtypeName>LargeBlockCorner_LCD_Flat_2</SubtypeName>
-              <EntityId>143082486960877331</EntityId>
+              <EntityId>99241867877265262</EntityId>
               <Min x="-19" y="15" z="-13" />
               <BlockOrientation Forward="Up" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11991,7 +12235,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SensorBlock">
               <SubtypeName>LargeBlockSensor</SubtypeName>
-              <EntityId>119265259622700056</EntityId>
+              <EntityId>127696794559581379</EntityId>
               <Min x="-20" y="11" z="-7" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -11999,7 +12243,7 @@ THIS BUTTON</Text>
               <ShareMode>Faction</ShareMode>
               <CustomName>Sensor 2</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
@@ -12014,7 +12258,7 @@ THIS BUTTON</Text>
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>TriggerNow</Action>
-                      <BlockEntityId>109358199080639463</BlockEntityId>
+                      <BlockEntityId>132412190271374402</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -12864,12 +13108,6 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockArmorBlock</SubtypeName>
-              <Min x="6" y="7" z="-12" />
-              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
-              <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
               <Min x="6" y="7" z="-14" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
@@ -12880,11 +13118,35 @@ THIS BUTTON</Text>
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
-              <Min x="7" y="7" z="-11" />
-              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
+              <SubtypeName>Large_MediumCrate2_3223</SubtypeName>
+              <EntityId>92965231840480195</EntityId>
+              <Min x="8" y="6" z="-13" />
+              <BlockOrientation Forward="Backward" Up="Up" />
+              <ColorMaskHSV x="0.0111111114" y="-0.04" z="-0.07" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyInventoryBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_Inventory">
+                      <Items />
+                      <nextItemId>0</nextItemId>
+                      <Volume>4</Volume>
+                      <Mass>9223372036854.775807</Mass>
+                      <MaxItemCount>2147483647</MaxItemCount>
+                      <Size xsi:nil="true" />
+                      <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                      <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
+              <CustomName>SmallCargoMaze</CustomName>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>false</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockArmorBlock</SubtypeName>
@@ -12906,13 +13168,13 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockArmorBlock</SubtypeName>
-              <Min x="8" y="7" z="-11" />
+              <Min x="8" y="7" z="-12" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockArmorBlock</SubtypeName>
-              <Min x="8" y="7" z="-12" />
+              <Min x="7" y="7" z="-11" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
@@ -12929,13 +13191,13 @@ THIS BUTTON</Text>
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <SubtypeName>LargeBlockInteriorWall</SubtypeName>
               <Min x="9" y="6" z="-13" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <SubtypeName>LargeBlockInteriorWall</SubtypeName>
               <Min x="9" y="6" z="-12" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
@@ -12978,7 +13240,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>RailingStraight</SubtypeName>
-              <EntityId>92371298442057509</EntityId>
+              <EntityId>111044983525115292</EntityId>
               <Min x="7" y="16" z="-16" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -12986,7 +13248,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>RailingDouble</SubtypeName>
-              <EntityId>111674838232230510</EntityId>
+              <EntityId>139088329087905486</EntityId>
               <Min x="7" y="16" z="-17" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -12994,7 +13256,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>102829157035595178</EntityId>
+              <EntityId>89531768101226388</EntityId>
               <Min x="7" y="15" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13002,7 +13264,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>115378341015074327</EntityId>
+              <EntityId>74201695548851334</EntityId>
               <Min x="7" y="14" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13010,7 +13272,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>142045610028006041</EntityId>
+              <EntityId>112136409612923749</EntityId>
               <Min x="7" y="13" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13018,7 +13280,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>88248063165564583</EntityId>
+              <EntityId>132459250815326849</EntityId>
               <Min x="7" y="12" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13026,7 +13288,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>142380220089780616</EntityId>
+              <EntityId>93477717368948573</EntityId>
               <Min x="7" y="11" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13034,7 +13296,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>98482371699368233</EntityId>
+              <EntityId>128073962192627526</EntityId>
               <Min x="7" y="10" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13042,7 +13304,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>132781560509101264</EntityId>
+              <EntityId>76702787576629478</EntityId>
               <Min x="7" y="9" z="-15" />
               <BlockOrientation Forward="Backward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13050,7 +13312,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>111486326010462685</EntityId>
+              <EntityId>87430986298526137</EntityId>
               <Min x="7" y="15" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13058,7 +13320,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>84248329149391356</EntityId>
+              <EntityId>120168298429697261</EntityId>
               <Min x="7" y="14" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13066,7 +13328,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>123280393404599424</EntityId>
+              <EntityId>119487139366294887</EntityId>
               <Min x="7" y="13" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13074,7 +13336,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>87546032917352744</EntityId>
+              <EntityId>132417262487986195</EntityId>
               <Min x="7" y="12" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13082,7 +13344,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>115385684963588465</EntityId>
+              <EntityId>109066515267059639</EntityId>
               <Min x="7" y="11" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13090,7 +13352,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>80969146786985172</EntityId>
+              <EntityId>126526125716244400</EntityId>
               <Min x="7" y="10" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13098,7 +13360,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>83174847721642697</EntityId>
+              <EntityId>91618292224917213</EntityId>
               <Min x="7" y="9" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13106,7 +13368,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Ladder2">
               <SubtypeName />
-              <EntityId>138304868940211211</EntityId>
+              <EntityId>81842028370800609</EntityId>
               <Min x="7" y="8" z="-19" />
               <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13114,7 +13376,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
               <SubtypeName>SmallLight</SubtypeName>
-              <EntityId>78776589038457449</EntityId>
+              <EntityId>135308698809355893</EntityId>
               <Min x="-19" y="15" z="-11" />
               <BlockOrientation Forward="Down" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13137,7 +13399,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
               <SubtypeName>SmallLight</SubtypeName>
-              <EntityId>126986968717562163</EntityId>
+              <EntityId>119448063011028561</EntityId>
               <Min x="-20" y="15" z="-9" />
               <BlockOrientation Forward="Down" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13322,7 +13584,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OxygenTank">
               <SubtypeName />
-              <EntityId>123535992088364914</EntityId>
+              <EntityId>109181991287963423</EntityId>
               <Min x="-10" y="8" z="-9" />
               <BlockOrientation Forward="Forward" Up="Left" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13352,8 +13614,371 @@ THIS BUTTON</Text>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
               <IsStockpiling>false</IsStockpiling>
-              <FilledRatio>0.495015621</FilledRatio>
+              <FilledRatio>0.48948437</FilledRatio>
               <AutoRefill>false</AutoRefill>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_TextPanel">
+              <SubtypeName>LargeLCDPanel</SubtypeName>
+              <EntityId>127331955817654714</EntityId>
+              <Min x="-13" y="6" z="-9" />
+              <BlockOrientation Forward="Left" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.4" />
+              <SkinSubtypeId>Rusty_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <CustomName>LCD Panel 2</CustomName>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <Enabled>true</Enabled>
+              <Description />
+              <Title>Title</Title>
+              <AccessFlag>READ_AND_WRITE_FACTION</AccessFlag>
+              <ChangeInterval>0</ChangeInterval>
+              <SelectedImages>
+                <string>spider</string>
+              </SelectedImages>
+              <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+              <FontSize>1</FontSize>
+              <PublicDescription />
+              <PublicTitle>Public title</PublicTitle>
+              <ShowText>NONE</ShowText>
+              <FontColor>
+                <PackedValue>4294967295</PackedValue>
+                <X>255</X>
+                <Y>255</Y>
+                <Z>255</Z>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <A>255</A>
+              </FontColor>
+              <BackgroundColor>
+                <PackedValue>4278190080</PackedValue>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <R>0</R>
+                <G>0</G>
+                <B>0</B>
+                <A>255</A>
+              </BackgroundColor>
+              <CurrentShownTexture>0</CurrentShownTexture>
+              <ContentType>TEXT_AND_IMAGE</ContentType>
+              <SelectedScript />
+              <TextPadding>2</TextPadding>
+              <Version>1</Version>
+              <ScriptBackgroundColor>
+                <PackedValue>4288108544</PackedValue>
+                <X>0</X>
+                <Y>88</Y>
+                <Z>151</Z>
+                <R>0</R>
+                <G>88</G>
+                <B>151</B>
+                <A>255</A>
+              </ScriptBackgroundColor>
+              <ScriptForegroundColor>
+                <PackedValue>4294962611</PackedValue>
+                <X>179</X>
+                <Y>237</Y>
+                <Z>255</Z>
+                <R>179</R>
+                <G>237</G>
+                <B>255</B>
+                <A>255</A>
+              </ScriptForegroundColor>
+              <Sprites>
+                <Length>0</Length>
+              </Sprites>
+              <SelectedRotationIndex>0</SelectedRotationIndex>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="8" y="7" z="-11" />
+              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
+              <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="9" y="5" z="-14" />
+              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
+              <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
+              <SubtypeName>LargeSciFiButtonPanel</SubtypeName>
+              <EntityId>96478810325986705</EntityId>
+              <Min x="-18" y="14" z="-13" />
+              <BlockOrientation Forward="Backward" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
+              <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <CustomName>Sci-Fi Four-Button Panel</CustomName>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <Enabled>true</Enabled>
+              <Toolbar>
+                <ToolbarType>Character</ToolbarType>
+                <SelectedSlot xsi:nil="true" />
+                <Slots>
+                  <Slot>
+                    <Index>3</Index>
+                    <Item />
+                    <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
+                      <Action>Open</Action>
+                      <BlockEntityId>119134833808411109</BlockEntityId>
+                    </Data>
+                  </Slot>
+                </Slots>
+                <SlotsGamepad />
+              </Toolbar>
+              <AnyoneCanUse>true</AnyoneCanUse>
+              <CustomButtonNames>
+                <dictionary>
+                  <item>
+                    <Key>0</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>1</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>2</Key>
+                    <Value>Empty</Value>
+                  </item>
+                  <item>
+                    <Key>3</Key>
+                    <Value>Door Entry -  Open/Closed</Value>
+                  </item>
+                </dictionary>
+              </CustomButtonNames>
+              <TextPanels>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>1</FontSize>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>2</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+                <MySerializedTextPanelData>
+                  <ChangeInterval>0</ChangeInterval>
+                  <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+                  <FontSize>4.5</FontSize>
+                  <Text>OPEN
+DOOR</Text>
+                  <ShowText>NONE</ShowText>
+                  <FontColor>
+                    <PackedValue>4294967295</PackedValue>
+                    <X>255</X>
+                    <Y>255</Y>
+                    <Z>255</Z>
+                    <R>255</R>
+                    <G>255</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </FontColor>
+                  <BackgroundColor>
+                    <PackedValue>4278190080</PackedValue>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <R>0</R>
+                    <G>0</G>
+                    <B>0</B>
+                    <A>255</A>
+                  </BackgroundColor>
+                  <CurrentShownTexture>0</CurrentShownTexture>
+                  <Alignment>2</Alignment>
+                  <ContentType>TEXT_AND_IMAGE</ContentType>
+                  <SelectedScript />
+                  <TextPadding>13</TextPadding>
+                  <ScriptBackgroundColor>
+                    <PackedValue>4288108544</PackedValue>
+                    <X>0</X>
+                    <Y>88</Y>
+                    <Z>151</Z>
+                    <R>0</R>
+                    <G>88</G>
+                    <B>151</B>
+                    <A>255</A>
+                  </ScriptBackgroundColor>
+                  <ScriptForegroundColor>
+                    <PackedValue>4294962611</PackedValue>
+                    <X>179</X>
+                    <Y>237</Y>
+                    <Z>255</Z>
+                    <R>179</R>
+                    <G>237</G>
+                    <B>255</B>
+                    <A>255</A>
+                  </ScriptForegroundColor>
+                  <Sprites>
+                    <Length>0</Length>
+                  </Sprites>
+                </MySerializedTextPanelData>
+              </TextPanels>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHalfArmorBlock</SubtypeName>
+              <Min x="6" y="8" z="-12" />
+              <BlockOrientation Forward="Down" Up="Forward" />
+              <ColorMaskHSV x="0.575" y="-0.43" z="0.2" />
+              <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
           </CubeBlocks>
           <IsStatic>true</IsStatic>
@@ -13425,18 +14050,11 @@ THIS BUTTON</Text>
           <LocalCoordSys>13</LocalCoordSys>
           <TargetingTargets />
           <OxygenRooms>
-            <OxygenRoom OxygenAmount="41625">
+            <OxygenRoom OxygenAmount="54495.3125">
               <StartingPosition>
                 <X>-23</X>
                 <Y>-1</Y>
                 <Z>-22</Z>
-              </StartingPosition>
-            </OxygenRoom>
-            <OxygenRoom OxygenAmount="4984.375">
-              <StartingPosition>
-                <X>-8</X>
-                <Y>7</Y>
-                <Z>-9</Z>
               </StartingPosition>
             </OxygenRoom>
             <OxygenRoom OxygenAmount="62.5">
@@ -13448,26 +14066,33 @@ THIS BUTTON</Text>
             </OxygenRoom>
             <OxygenRoom OxygenAmount="407.8125">
               <StartingPosition>
-                <X>-17</X>
-                <Y>13</Y>
+                <X>-19</X>
+                <Y>14</Y>
                 <Z>-11</Z>
+              </StartingPosition>
+            </OxygenRoom>
+            <OxygenRoom OxygenAmount="5031.25">
+              <StartingPosition>
+                <X>6</X>
+                <Y>6</Y>
+                <Z>-12</Z>
               </StartingPosition>
             </OxygenRoom>
           </OxygenRooms>
         </CubeGrid>
         <CubeGrid>
           <SubtypeName />
-          <EntityId>110884696589699153</EntityId>
+          <EntityId>103391427162317412</EntityId>
           <PersistentFlags>CastShadows InScene</PersistentFlags>
           <PositionAndOrientation>
-            <Position x="-13.983913510484854" y="-8.2126971296966076" z="-14.547560371924192" />
-            <Forward x="-0.987588048" y="0.0870264" z="-0.130752742" />
-            <Up x="0.123829305" y="0.943519354" z="-0.307306826" />
+            <Position x="-13.983607443951769" y="-8.2172874847892672" z="-14.550616951892152" />
+            <Forward x="-0.98760283" y="0.08718775" z="-0.130533218" />
+            <Up x="0.123870507" y="0.9436469" z="-0.306898355" />
             <Orientation>
-              <X>-0.07475262</X>
-              <Y>0.6550082</Y>
-              <Z>-0.150507</Z>
-              <W>0.736698031</W>
+              <X>-0.07456434</X>
+              <Y>0.6551134</Y>
+              <Z>-0.150388509</Z>
+              <W>0.7366477</W>
             </Orientation>
           </PositionAndOrientation>
           <LocalPositionAndOrientation xsi:nil="true" />
@@ -13475,7 +14100,7 @@ THIS BUTTON</Text>
           <CubeBlocks>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_PistonTop">
               <SubtypeName>LargePistonTop</SubtypeName>
-              <EntityId>131706221144099668</EntityId>
+              <EntityId>93527335314562519</EntityId>
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
               <SkinSubtypeId>Battered_Armor</SkinSubtypeId>
               <ParentEntityId>109756531394843931</ParentEntityId>
@@ -13546,7 +14171,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
               <SubtypeName>LargeSciFiButtonTerminal</SubtypeName>
-              <EntityId>116302388350290761</EntityId>
+              <EntityId>132541307148047261</EntityId>
               <Min x="0" y="1" z="-1" />
               <BlockOrientation Forward="Down" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13567,7 +14192,7 @@ THIS BUTTON</Text>
                     <Item />
                     <Data xsi:type="MyObjectBuilder_ToolbarItemTerminalBlock">
                       <Action>Reverse</Action>
-                      <BlockEntityId>97247443756522299</BlockEntityId>
+                      <BlockEntityId>99507583261468946</BlockEntityId>
                     </Data>
                   </Slot>
                 </Slots>
@@ -13645,7 +14270,7 @@ THIS BUTTON</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SoundBlock">
               <SubtypeName>LargeBlockSoundBlock</SubtypeName>
-              <EntityId>76164482726048011</EntityId>
+              <EntityId>128406304447136197</EntityId>
               <Min x="0" y="1" z="1" />
               <BlockOrientation Forward="Down" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.13" />
@@ -13659,7 +14284,7 @@ THIS BUTTON</Text>
               <Enabled>true</Enabled>
               <Range>50</Range>
               <Volume>1</Volume>
-              <CueName>WallMoving</CueName>
+              <CueName />
               <LoopPeriod>25.5529919</LoopPeriod>
               <IsPlaying>false</IsPlaying>
               <ElapsedSoundSeconds>0</ElapsedSoundSeconds>

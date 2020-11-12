@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** NATILUS BEHAVIOUR *** -->
+<!-- -->
+
+ <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Natilus-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:Natilus-Drone-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Natilus-Drone-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[StartsReady:true]
+		[UseTrigger:true]
+		[TargetDistance:2200]
+		[MaxActions:1]
+		[Actions:Natilus-Drone-Action]
+
+      </Description>      
+    </EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Natilus-Drone-Action</SubtypeId>
+		</Id>
+		<Description>
+
+			[RivalAI Action]
+
+			[StartsReady:true]
+			[UseChatBroadcast:true]
+			[ChatData:Natilus-Drone-Chat]
+			[SpawnEncounter:true]
+			[Spawner:Natilus-Drone-Spawn]
+			[MaxSpawns:1]
+
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Natilus-Drone-Spawn</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Spawn]
+				
+				[UseSpawn:true]
+				[StartsReady:true]
+				[MaxSpawns:1]
+				[SpawnGroups:Natilus-Drone]
+      
+			</Description>
+			</EntityComponent>
+		
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Natilus-Drone-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:MLTC Command]
+					[Color:Blue]
+				  
+					[ChatMessages:Be advised, detecting a Search + Rescue operation. Enemy vessels in the area]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+
+				  </Description>
+				</EntityComponent>
+			
+  </EntityComponents>
+</Definitions>

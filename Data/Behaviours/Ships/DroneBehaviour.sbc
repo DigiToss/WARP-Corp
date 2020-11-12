@@ -22,6 +22,7 @@
 	  
 		[Triggers:SmallEasyAtmoDrone-TriggerDeath]
 		[Triggers:SmallEasyAtmoDrone-TriggerRefuel]
+		[Triggers:DroneOnSpawn-Trigger]
 
       </Description>
     </EntityComponent>
@@ -42,6 +43,7 @@
 	  
 		[Triggers:SmallEasyAtmoDrone-TriggerDeath]
 		[Triggers:SmallEasyAtmoDrone-TriggerRefuel]
+		[Triggers:DroneOnSpawn-Trigger]
 
       </Description>
     </EntityComponent>
@@ -62,7 +64,8 @@
 	  
 		[Triggers:SmallEasyAtmoDrone-TriggerDeath]
 		[Triggers:SmallEasyAtmoDrone-TriggerRefuel]
-
+		[Triggers:DroneOnSpawn-Trigger]
+		
       </Description>
     </EntityComponent>
 
@@ -106,6 +109,24 @@
       </Description>      
     </EntityComponent>	
 
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawn-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Timer]
+		[MaxActions:1]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:2000]
+		[MaxCooldownMs:4000]
+		[Actions:DroneOnSpawn-Action]
+
+      </Description>      
+    </EntityComponent>	
 
 <!-- -->
 <!-- *** ATMOSPHERIC DRONE ACTIONS *** -->
@@ -122,8 +143,8 @@
 		[UseChatBroadcast:true]
 		[ChatData:Drone-ChatExplode]
 		[GenerateExplosion:true]
-		[ExplosionRange:2]
-		[ExplosionDamage:10]
+		[ExplosionRange:5]
+		[ExplosionDamage:20]
 		[ExplosionIgnoresVoxels:true]
 		[ForceDespawn:true]
 	  
@@ -150,6 +171,22 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawn-Action</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Action]
+
+		[UseChatBroadcast:true]
+		[ChatData:DroneOnSpawn-Chat]
+	 
+      </Description>
+    </EntityComponent>
+	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
           <SubtypeId>Drone-ChatRefuel</SubtypeId>
       </Id>
       <Description>
@@ -157,6 +194,8 @@
 		[RivalAI Chat]
     
 		[UseChat:true]
+		[IgnoreAntennaRequirement:true]
+		[IgnoredAntennaRangeOverride:3000]
 		[StartsReady:true]
 		[Chance:100]
 		[MaxChats:1]
@@ -184,6 +223,8 @@
 		[RivalAI Chat]
     
 		[UseChat:true]
+		[IgnoreAntennaRequirement:true]
+		[IgnoredAntennaRangeOverride:3000]
 		[StartsReady:true]
 		[Chance:100]
 		[MaxChats:1]
@@ -200,6 +241,41 @@
       </Description>	
     </EntityComponent>
 
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawn-Chat</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Chat]
+    
+		[UseChat:true]
+		[IgnoreAntennaRequirement:true]
+		[IgnoredAntennaRangeOverride:3000]
+		[StartsReady:true]
+		[Chance:100]
+		[MaxChats:1]
+		[BroadcastRandomly:true]
+      
+		[Author:{AntennaName}]
+		[Color:Red]
+      
+		[ChatMessages:Inbound, acquiring targets!]
+		[ChatAudio:ArcHudGPSNotification2]
+		[BroadcastChatType:Chat]
+		
+		[ChatMessages:Inbound! Coming in hot!]
+		[ChatAudio:ArcHudGPSNotification2]
+		[BroadcastChatType:Chat]
+		
+		[ChatMessages:Inbound, Weapons hot! ]
+		[ChatAudio:ArcHudGPSNotification2]
+		[BroadcastChatType:Chat]
+
+      </Description>	
+    </EntityComponent>
 
   </EntityComponents>
 </Definitions>

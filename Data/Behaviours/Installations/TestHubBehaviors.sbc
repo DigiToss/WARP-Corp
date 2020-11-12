@@ -66,6 +66,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
@@ -130,6 +132,8 @@
 				[RivalAI Chat]
       
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
@@ -192,6 +196,8 @@
 				[RivalAI Chat]
       
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
@@ -324,6 +330,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -386,6 +394,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -412,8 +422,9 @@
 		[RivalAI Trigger]
 		
 		[Type:PlayerNear]
-		[PlayerNearPositionOffset:{X:95 Y:-20 Z:-35.5}]
+		[PlayerNearPositionOffset:{X:97.5 Y:-20 Z:-25}]
 		[UseTrigger:true]
+		[StartsReady:true]
 		[TargetDistance:2.5]
 		[MaxActions:3]
 		[MinCooldownMs:15000]
@@ -448,6 +459,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -510,6 +523,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -571,6 +586,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -632,6 +649,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -693,6 +712,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -754,6 +775,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -815,6 +838,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -876,6 +901,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -937,6 +964,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -1057,7 +1086,7 @@
 		[RivalAI Trigger]
 		
 		[Type:PlayerNear]
-		[PlayerNearPositionOffset:{X:60 Y:-20 Z:-5}]
+		[PlayerNearPositionOffset:{X:62.5 Y:-20 Z:-5}]
 		[UseTrigger:true]
 		[TargetDistance:2.5]
 		[MaxActions:3]
@@ -1180,6 +1209,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
@@ -1243,6 +1274,8 @@
 				[RivalAI Chat]
 			
 				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:100]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]

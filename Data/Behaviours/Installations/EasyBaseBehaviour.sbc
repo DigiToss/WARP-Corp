@@ -70,6 +70,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -136,6 +138,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -213,6 +217,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -283,6 +289,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -356,8 +364,8 @@
 						[SpawnGroups:(NPC-WARP) Jackdaw]
 					  
 						[UseRelativeSpawnPosition:false]
-						[MinDistance:1400]
-						[MaxDistance:1900]
+						[MinDistance:1900]
+						[MaxDistance:1400]
 						[MinAltitude:500]
 						[MaxAltitude:800]
 						[IgnoreSafetyChecks:false]
@@ -407,6 +415,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]

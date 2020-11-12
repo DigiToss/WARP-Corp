@@ -18,7 +18,7 @@
 			<StartingBalance>1000000</StartingBalance>
 			<Type>None</Type> <!--None, Miner, Trader, Builder-->
 			<DiscoveredByDefault>false</DiscoveredByDefault>
-			<FactionIcon>Textures\FactionLogo\Others\OtherIcon_18.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+			<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
 		</Faction>
 		<!--Copy To This Line And Paste Directly Below-->
 

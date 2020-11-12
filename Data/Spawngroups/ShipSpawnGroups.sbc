@@ -483,6 +483,158 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
+
+<!-- -->
+<!-- *** BOATS *** -->
+<!-- -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Barge</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[InstallationSpawnsOnWaterSurface:true]
+			[PlanetaryInstallationType:Small]
+			[RivalAiSpawn:false]
+			[FactionOwner:WARP]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+	
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Barge">
+					<Position>
+						<X>600.0</X>
+						<Y>25.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>5</Speed>
+					<Behaviour>Boat-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>Natilus-Drone</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[InstallationSpawnsOnWaterSurface:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			
+			[AdminSpawnOnly:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) CB90">
+					<Position>
+						<X>100.0</X>
+						<Y>5.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>5</Speed>
+					<Behaviour>BoatDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>Abyss-Drones</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[InstallationSpawnsOnWaterSurface:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			
+			[AdminSpawnOnly:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) CB90">
+					<Position>
+						<X>100.0</X>
+						<Y>30.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>15</Speed>
+					<Behaviour>BoatDrone-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) CB90">
+					<Position>
+						<X>-100.0</X>
+						<Y>30.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>15</Speed>
+					<Behaviour>BoatDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
 		
 
 <!-- -->

@@ -955,8 +955,79 @@
             <SubtypeId>Thrust</SubtypeId>
           </Id>
         </Item>		
-
 	   </Items>
+    </ContainerType>
+	
+ 	<ContainerType CountMin="2" CountMax="4">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>LargeCargoOresT3</SubtypeId>
+      </Id>
+	  <Items>
+	  		<Item AmountMin="5000" AmountMax="14000">
+			<Frequency>5</Frequency>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>Platinum</SubtypeId>
+			</Id>
+		</Item>
+		<Item AmountMin="4000" AmountMax="11000">
+			<Frequency>5</Frequency>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>Gold</SubtypeId>
+			</Id>
+		</Item>
+	     <Item AmountMin="5000" AmountMax="12000">
+			<Frequency>1</Frequency>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>Silver</SubtypeId>
+			</Id>
+		</Item>
+		<Item AmountMin="2000" AmountMax="5850">
+			<Frequency>1</Frequency>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>Magnesium</SubtypeId>
+			</Id>
+		</Item>		
+		<Item AmountMin="21000" AmountMax="45000">
+			<Frequency>1</Frequency>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>Iron</SubtypeId>
+			</Id>
+		</Item>
+		<Item AmountMin="6500" AmountMax="11500">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ore</TypeId>
+		<SubtypeId>Nickel</SubtypeId>
+		</Id>
+        </Item>	
+		<Item AmountMin="3150" AmountMax="6400">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ore</TypeId>
+		<SubtypeId>Cobalt</SubtypeId>
+		</Id>
+        </Item>	
+		<Item AmountMin="8350" AmountMax="15500">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ore</TypeId>
+		<SubtypeId>Silicon</SubtypeId>
+		</Id>
+        </Item>	
+		<Item AmountMin="49000" AmountMax="135000">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ore</TypeId>
+		<SubtypeId>Ice</SubtypeId>
+		</Id>
+        </Item>			
+	</Items>
     </ContainerType>
 
    <ContainerType CountMin="5" CountMax="5">
@@ -1048,6 +1119,57 @@
         </Item>
 			
 	   </Items>
+    </ContainerType>
+	
+ 	<ContainerType CountMin="4" CountMax="4">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>SmallCargoMaze</SubtypeId>
+      </Id>
+	  <Items>
+       <Item AmountMin="275" AmountMax="550">
+			<Frequency>5</Frequency>
+			<Id>
+				<TypeId>Ingot</TypeId>
+				<SubtypeId>Gold</SubtypeId>
+			</Id>
+		</Item>
+       <Item AmountMin="225" AmountMax="520">
+			<Frequency>3</Frequency>
+			<Id>
+				<TypeId>Ingot</TypeId>
+				<SubtypeId>Silver</SubtypeId>
+			</Id>
+		</Item>
+		<Item AmountMin="350" AmountMax="950">
+			<Frequency>1</Frequency>
+			<Id>
+				<TypeId>Ingot</TypeId>
+				<SubtypeId>Magnesium</SubtypeId>
+			</Id>
+		</Item>		
+		<Item AmountMin="500" AmountMax="2500">
+			<Frequency>1</Frequency>
+			<Id>
+				<TypeId>Ingot</TypeId>
+				<SubtypeId>Cobalt</SubtypeId>
+			</Id>
+		</Item>
+		<Item AmountMin="5000" AmountMax="7000">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ingot</TypeId>
+		<SubtypeId>Iron</SubtypeId>
+		</Id>
+        </Item>	
+		<Item AmountMin="950" AmountMax="2480">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ingot</TypeId>
+		<SubtypeId>Nickel</SubtypeId>
+		</Id>
+        </Item>		
+	</Items>
     </ContainerType>
 	
 <!-- -->
@@ -1667,7 +1789,8 @@
 				<TypeId>ConsumableItem</TypeId>
 				<SubtypeId>Powerkit</SubtypeId>
 			</Id>
-        </Item>	
+        </Item>
+<!--		
 		<Item AmountMin="5" AmountMax="15">
           <Frequency>1</Frequency>
 			<Id>
@@ -1675,6 +1798,7 @@
 				<SubtypeId>Explosives</SubtypeId>
 			</Id>
         </Item>
+-->
 		<Item AmountMin="1" AmountMax="1">
           <Frequency>1</Frequency>
 			<Id>

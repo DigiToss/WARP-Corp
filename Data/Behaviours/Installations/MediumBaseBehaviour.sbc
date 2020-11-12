@@ -22,7 +22,14 @@
 		[Triggers:MediumBase-ProximityChatReply-Trigger]
 		[Triggers:MediumBase-ProximitySpawn-Trigger]
 		[Triggers:MediumBase-ProximityTrigger-C]
-		[Triggers:MediumBase-UnderAttack-Trigger]
+		[Triggers:MediumBase-EnableCounters-Trigger]
+		[Triggers:MediumBase-DisableCounters-Trigger]
+		[Triggers:MediumBase-ReEnableCounters-Trigger]
+		[Triggers:MediumBase-DamageAddCount-Trigger]
+		[Triggers:MediumBase-DamageCountFull-Trigger]
+		[Triggers:MediumBase-Compromised-B-Trigger]
+		[Triggers:MediumBase-TurretsDestroyed-Trigger]
+	
 
       </Description>
 	</EntityComponent>	
@@ -69,6 +76,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -144,6 +153,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -214,6 +225,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -340,6 +353,8 @@
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -366,13 +381,134 @@
 
 				  </Description>
 				</EntityComponent>		
+					
+<!-- -->
+<!-- *** ENABLE COUNTERS ON ANY DAMAGE *** -->
+<!-- -->
 
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>MediumBase-EnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Damage]
+		[DamageTypes:Any]
+		[UseTrigger:true]
+		[MaxActions:1]
+		[Actions:MediumBase-EnableCounters-Action]
 
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>MediumBase-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:MediumBase-DamageAddCount-Trigger]
+			[EnableTriggerNames:MediumBase-DamageCountFull-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:MediumBase-EnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+		
+<!-- -->
+<!-- *** DISABLE COUNTERS WHEN PLAYER IS GREATER THAN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>MediumBase-DisableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerFar]
+		[UseTrigger:true]
+		[TargetDistance:1000]
+		[MaxActions:-1]
+		[Actions:MediumBase-DisableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>MediumBase-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:MediumBase-DamageAddCount-Trigger]
+			[DisableTriggerNames:MediumBase-DamageCountFull-Trigger]
+			[DisableTriggerNames:MediumBase-DisableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+		
+<!-- -->
+<!-- *** RE-ENABLE COUNTERS WHEN PLAYER IS WITHIN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>MediumBase-ReEnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[TargetDistance:1000]
+		[UseTrigger:true]
+		[MaxActions:-1]
+		[Actions:MediumBase-ReEnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>MediumBase-ReEnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:MediumBase-DamageAddCount-Trigger]
+			[EnableTriggerNames:MediumBase-DamageCountFull-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:MediumBase-ReEnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+
+<!-- -->
+<!-- *** GRID DAMAGE CHECK COUNT *** -->
+<!-- -->
 
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
 			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>MediumBase-UnderAttack-Trigger</SubtypeId>
+			  <SubtypeId>MediumBase-DamageAddCount-Trigger</SubtypeId>
 		  </Id>
 		  <Description>
 		
@@ -380,64 +516,115 @@
 			
 			[Type:Damage]
 			[DamageTypes:Any]
-			[UseTrigger:true]
-			[MaxActions:3]
-			[StartsReady:true]
-			[MinCooldownMs:60000]
-			[MaxCooldownMs:120000]
-			[Actions:MediumBase-UnderAttackAction]
+			[UseTrigger:false]
+			[MaxActions:-1]
+
+			[Actions:MediumBase-DamageAddCount-Action]
 			
 		  </Description>
 		</EntityComponent>
+		
 
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			  <Id>
 				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>MediumBase-UnderAttack-Action</SubtypeId>
+				  <SubtypeId>MediumBase-DamageAddCount-Action</SubtypeId>
 			  </Id>
 			  <Description>
 			
 				[RivalAI Action]
 				
-				[UseChatBroadcast:true]
-				[ChatData:MediumBase-UnderAttack-Chat]
-				
-				[Conditions:MediumBase-UnderAttack-Condition]
-				
-				[SpawnEncounter:true]
-				[Spawner:MediumBase-AtmoDrone-UnderAttack-Spawner]
+				[IncreaseCounters:MediumBase-DamageAddCount]
 				
 			  </Description>
 			</EntityComponent>
+			
+<!-- -->
+<!-- *** GRID DAMAGE COUNT FULL *** -->
+<!-- -->
 
-				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-				<Id>
-					<TypeId>Inventory</TypeId>
-					<SubtypeId>MediumBase-UnderAttack-Condition</SubtypeId>
-				</Id>
-				<Description>
-				
-					[RivalAI Condition]					
-					[UseConditions:true]	
-					
-					[CheckCustomCounters:true]
-					[CustomCounters:Damage]
-					[CustomCountersTargets:100]
-					[CounterCompareTypes:GreaterOrEqual]
-					
-				</Description>
-				</EntityComponent>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-DamageCountFull-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
 		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[StartsReady:true]
+			[UseTrigger:false]
+			[MaxActions:1]
+			
+			[Conditions:MediumBase-DamageCountFull-Condition]
+			
+			[Actions:MediumBase-DamageCountFull-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-DamageCountFull-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+	
+				[MaxActions:1]	
+
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-Compromised-Chat]
+							
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:MediumBase-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:MediumBase-Compromised-B-Trigger]			
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:MediumBase-DamageAddCount-Trigger]
+				[DisableTriggerNames:MediumBase-DamageCountFull-Trigger]
+				
+				[ResetCounters:MediumBase-DamageAddCount]
+
+			  </Description>
+			</EntityComponent>
+			
 				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 				  <Id>
 					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>MediumBase-UnderAttack-Chat</SubtypeId>
+					  <SubtypeId>MediumBase-DamageCountFull-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					
+					[UseConditions:true]
+					[MatchAnyCondition:true]
+					
+					[CheckCustomCounters:true]
+					[CustomCounters:MediumBase-DamageAddCount]
+					[CustomCountersTargets:200]
+					
+				  </Description>
+				</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-Compromised-Chat</SubtypeId>
 				  </Id>
 				  <Description>
 
 					[RivalAI Chat]
 				  
 					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -446,21 +633,95 @@
 					[Author:{AntennaName}]
 					[Color:Red]
 				  
-					[ChatMessages:We are taking heavy fire. Scrambling reinforcements!]
-					[ChatAudio:TargetLocked]
+					[ChatMessages:We are taking significant damage. Requesting assistance! ]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
-				  
-					[ChatMessages:Calling reinforcements! We are being attacked!]
-					[ChatAudio:TargetLocked]
+					
+					[ChatMessages:Requesting support! Taking heavy fire from unknown hostiles! ]
+					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 
 				  </Description>
-				</EntityComponent>
+				</EntityComponent>	
 
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-Compromised-B-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:6000]
+			[Actions:MediumBase-Compromised-B-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-Compromised-B-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-Compromised-B-Chat]
+				
+				[SpawnEncounter:true]
+				[Spawner:MediumBase-AtmoDrone-UnderAttackSpawner]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:MediumBase-DamageAddCount-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:MediumBase-DamageAddCount-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-Compromised-B-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Copy that, loud and clear. Reinforcements are on the way!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Affirm. Sending drone support!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
 					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 					  <Id>
 						  <TypeId>Inventory</TypeId>
-						  <SubtypeId>MediumBase-AtmoDrone-UnderAttack-Spawner</SubtypeId>
+						  <SubtypeId>MediumBase-AtmoDrone-UnderAttackSpawner</SubtypeId>
 					  </Id>
 					  <Description>.-
 
@@ -471,20 +732,88 @@
 						[StartsReady:true]
 						[MaxSpawns:1]
 					  
-						[SpawnGroups:(NPC-WARP) Siberian Jay]
-						[SpawnGroups:(NPC-WARP) Jackdaw]
 						[SpawnGroups:(NPC-WARP) Crow]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Magpie]
 					  
 						[UseRelativeSpawnPosition:false]
 						[MinDistance:1500]
 						[MaxDistance:2100]
-						[MinAltitude:550]
+						[MinAltitude:650]
 						[MaxAltitude:1100]
 						[IgnoreSafetyChecks:false]
 					  
 					  </Description>
 					</EntityComponent>
-					
+
+
+<!-- -->
+<!-- *** ALL TURRETS DESTROYED *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>MediumBase-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
 			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:MediumBase-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>MediumBase-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:MediumBase-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>MediumBase-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:1500]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+				
   </EntityComponents>
 </Definitions>					

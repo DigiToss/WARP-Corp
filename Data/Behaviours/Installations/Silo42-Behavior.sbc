@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** MEDIUM BASE INSTALLATION BEHAVIOUR *** -->
+<!-- -->	
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Silo42-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:Silo42-ProximityTrigger-A]
+		[Triggers:Silo42-ProximityTrigger-B]
+		[Triggers:Silo42-ProximityChatReply-Trigger]
+		[Triggers:Silo42-ProximitySpawn-Trigger]
+		[Triggers:Silo42-ProximityTrigger-C]
+		[Triggers:Silo42-EnableCounters-Trigger]
+		[Triggers:Silo42-DisableCounters-Trigger]
+		[Triggers:Silo42-ReEnableCounters-Trigger]
+		[Triggers:Silo42-DamageAddCount-Trigger]
+		[Triggers:Silo42-DamageCountFull-Trigger]
+		[Triggers:Silo42-Compromised-B-Trigger]
+		[Triggers:Silo42-TurretsDestroyed-Trigger]
+	
+
+      </Description>
+	</EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-ProximityTrigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:2200]
+			[Actions:Silo42-ProximityAction-A]
+			
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-ProximityAction-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-ProximityChat-A]
+				
+			  </Description>
+			</EntityComponent>	
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-ProximityChat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Silo 42]
+					[Color:Red]
+				  
+					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Hostiles sighted. Activating defense turrets.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-ProximityTrigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[StartsReady:true]
+			[TargetDistance:1200]
+			[MaxActions:3]
+			[MinCooldownMs:240000]
+			[MaxCooldownMs:300000]
+			[Actions:Silo42-ProximityAction-B]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-ProximityAction-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-ProximityChat-B]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Silo42-ProximityChatReply-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Silo42-ProximityChatReply-Trigger]	
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-ProximityChat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Silo 42]
+					[Color:Red]
+				  
+					[ChatMessages:Hostiles are still approaching. Requesting defensive drones HQ!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defense drones requested to intercept incoming hostiles!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+				
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-ProximityChatReply-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:5000]
+			[Actions:Silo42-ProximityChatReply-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-ProximityChatReply-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-ProximityChatReply-Chat]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Silo42-ProximitySpawn-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Silo42-ProximitySpawn-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-ProximityChatReply-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Roger roger! Drone enroute to your position!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Copy! Defensive drone deployed and enroute!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+				
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-ProximitySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MinCooldownMs:6000]
+			[MaxCooldownMs:9000]
+			[MaxActions:1]
+			[Actions:Silo42-ProximitySpawn-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-ProximitySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[SpawnEncounter:true]
+				[Spawner:Silo42-ProximitySpawn-Spawner]
+				
+			  </Description>
+			</EntityComponent>	
+							
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>Silo42-ProximitySpawn-Spawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+
+						[SpawnGroups:(NPC-WARP) Siberian Jay]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Crow]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1600]
+						[MaxDistance:2100]
+						[MinAltitude:550]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>				
+				
+					
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-ProximityTrigger-C</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:TurretTarget]
+			[UseTrigger:true]
+			[Actions:Silo42-ProximityAction-C]
+			
+		  </Description>
+		</EntityComponent>					
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-ProximityAction-C</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[MaxActions:1]
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-ProximityChat-C]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-ProximityChat-C</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Silo 42]
+					[Color:Red]
+				  
+					[ChatMessages:Installation turrets locked on hostiles. Engaging]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defensive turrets engaging enemy hostiles!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Target in my sights. Opening fire!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Hostiles within weapon range. Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>		
+					
+<!-- -->
+<!-- *** ENABLE COUNTERS ON ANY DAMAGE *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Silo42-EnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Damage]
+		[DamageTypes:Any]
+		[UseTrigger:true]
+		[MaxActions:1]
+		[Actions:Silo42-EnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Silo42-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:Silo42-DamageAddCount-Trigger]
+			[EnableTriggerNames:Silo42-DamageCountFull-Trigger]
+			[EnableTriggerNames:HardBase-DisableCounters-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:Silo42-EnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+		
+<!-- -->
+<!-- *** DISABLE COUNTERS WHEN PLAYER IS GREATER THAN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Silo42-DisableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerFar]
+		[UseTrigger:true]
+		[TargetDistance:1000]
+		[MaxActions:-1]
+		[MinCooldownMs:4000]
+		[MaxCooldownMs:5000]
+		[Actions:Silo42-DisableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Silo42-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:Silo42-DamageAddCount-Trigger]
+			[DisableTriggerNames:Silo42-DamageCountFull-Trigger]
+			[DisableTriggerNames:Silo42-DisableCounters-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:Silo42-ReEnableCounters-Trigger]
+			
+		</Description>
+		</EntityComponent>
+		
+<!-- -->
+<!-- *** RE-ENABLE COUNTERS WHEN PLAYER IS WITHIN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Silo42-ReEnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[TargetDistance:1000]
+		[UseTrigger:false]
+		[MaxActions:-1]
+		[MinCooldownMs:3000]
+		[MaxCooldownMs:4000]
+		[Actions:Silo42-ReEnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Silo42-ReEnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:Silo42-DamageAddCount-Trigger]
+			[EnableTriggerNames:Silo42-DamageCountFull-Trigger]
+			[EnableTriggerNames:Silo42-DisableCounters-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:Silo42-ReEnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+
+<!-- -->
+<!-- *** GRID DAMAGE CHECK COUNT *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-DamageAddCount-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Damage]
+			[DamageTypes:Any]
+			[UseTrigger:false]
+			[MaxActions:-1]
+
+			[Actions:Silo42-DamageAddCount-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-DamageAddCount-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[IncreaseCounters:Silo42-DamageAddCount]
+				
+			  </Description>
+			</EntityComponent>
+			
+<!-- -->
+<!-- *** GRID DAMAGE COUNT FULL *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-DamageCountFull-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[StartsReady:true]
+			[UseTrigger:false]
+			[MaxActions:1]
+			
+			[Conditions:Silo42-DamageCountFull-Condition]
+			
+			[Actions:Silo42-DamageCountFull-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-DamageCountFull-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+	
+				[MaxActions:1]	
+
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-Compromised-Chat]
+							
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Silo42-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Silo42-Compromised-B-Trigger]			
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:Silo42-DamageAddCount-Trigger]
+				[DisableTriggerNames:Silo42-DamageCountFull-Trigger]
+				
+			  </Description>
+			</EntityComponent>
+			
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-DamageCountFull-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					
+					[UseConditions:true]
+					[MatchAnyCondition:true]
+					
+					[CheckCustomCounters:true]
+					[CustomCounters:Silo42-DamageAddCount]
+					[CustomCountersTargets:50]
+					
+				  </Description>
+				</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-Compromised-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Silo 42]
+					[Color:Red]
+				  
+					[ChatMessages:We are taking significant damage. Requesting assistance! ]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Requesting support! Taking heavy fire from unknown hostiles! ]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-Compromised-B-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:6000]
+			[Actions:Silo42-Compromised-B-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-Compromised-B-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-Compromised-B-Chat]
+				
+				[SpawnEncounter:true]
+				[Spawner:Silo42-AtmoDrone-UnderAttackSpawner]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Silo42-DamageAddCount-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:Silo42-DamageAddCount-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-Compromised-B-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Copy that, loud and clear. Reinforcements are on the way!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Affirm. Sending drone support!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>Silo42-AtmoDrone-UnderAttackSpawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+					  
+						[SpawnGroups:(NPC-WARP) Crow]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+						[SpawnGroups:(NPC-WARP) Magpie]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1500]
+						[MaxDistance:2100]
+						[MinAltitude:650]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>
+
+
+<!-- -->
+<!-- *** ALL TURRETS DESTROYED *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Silo42-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:Silo42-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>Silo42-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:Silo42-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Silo42-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:1500]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Silo 42]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+				
+  </EntityComponents>
+</Definitions>					

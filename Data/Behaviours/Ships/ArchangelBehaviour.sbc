@@ -197,13 +197,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
+				[IgnoredAntennaRangeOverride:1800]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:Archangel]
 				[Color:Red]
       
 				[ChatMessages:Greetings {PlayerName}. We invite you onboard the Archangel. This is a weapons free zone. In clang we trust!]
@@ -258,13 +258,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
+				[IgnoredAntennaRangeOverride:1800]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:Archangel]
 				[Color:Red]
       
 				[ChatMessages:Please come on board and join in our worship to clang! ]
@@ -320,13 +320,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
+				[IgnoredAntennaRangeOverride:1800]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:Archangel]
 				[Color:Red]
       
 				[ChatMessages:Please stay within the designated areas. ]
@@ -417,13 +417,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
+				[IgnoredAntennaRangeOverride:1800]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:Archangel]
 				[Color:Red]
       
 				[ChatMessages:Intruder Alert! Our Vault has been compromised! Defense protocols initiated!]
@@ -599,12 +599,12 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
+				[IgnoredAntennaRangeOverride:1800]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
       
-				[Author:{AntennaName}]
+				[Author:Archangel]
 				[Color:Red]
       
 				[ChatMessages:Why would you dis-respect the almighty Clang!?]
@@ -665,13 +665,13 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:{AntennaName}]
+					[Author:Archangel]
 					[Color:Red]
 				  
 					[ChatMessages:You have left us with no choice. Self-destruct sequence initiated! ]
@@ -729,13 +729,13 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:{AntennaName}]
+					[Author:Archangel]
 					[Color:Red]
 				  
 					[ChatMessages:You shall never take Clang from us! Forever Clang lives! 5 minutes untill detonation! ]
@@ -1296,7 +1296,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1381,7 +1381,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1465,7 +1465,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1549,7 +1549,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1633,7 +1633,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1717,7 +1717,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
@@ -1801,7 +1801,7 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:1800]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]

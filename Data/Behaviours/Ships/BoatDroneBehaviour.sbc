@@ -16,10 +16,139 @@
 		[RivalAI Behavior]
 		[BehaviorName:Horsefly]
 		
-		[HorseflyWaypointWaitTimeTrigger:10]
+		[Triggers:BoatDrone-TriggerDeath]
+		[Triggers:BoatDrone-TriggerRefuel]
+		
+		[HorseflyWaypointWaitTimeTrigger:10]	
 
       </Description>
     </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BoatDrone-TriggerDeath</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Compromised]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:BoatDrone-ActionDeath]
+	  
+      </Description>    
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>BoatDrone-ActionDeath</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+			[UseChatBroadcast:true]
+			[ChatData:BoatDrone-ChatExplode]
+			[GenerateExplosion:true]
+			[ExplosionRange:5]
+			[ExplosionDamage:20]
+			[ExplosionIgnoresVoxels:true]
+			[ForceDespawn:true]
+		  
+		  </Description>     
+		</EntityComponent>	
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>BoatDrone-ChatExplode</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:2000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+			  
+				[Author:CB90]
+				[Color:Red]
+			  
+				[ChatMessages:Systems critical! Aggghhh!]
+				[ChatAudio:ArcHudGPSNotification2]
+				[BroadcastChatType:Chat]
+
+			  </Description>	
+			</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>BoatDrone-TriggerRefuel</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:360000]
+		[MaxCooldownMs:420000]
+		[Actions:BoatDrone-ActionRefuel]
+
+      </Description>      
+    </EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>BoatDrone-ActionRefuel</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+			[Retreat:true]
+			[UseChatBroadcast:true]
+			[ChatData:BoatDrone-ChatRefuel]
+		  
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>BoatDrone-ChatRefuel</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:2000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+			  
+				[Author:CB90]
+				[Color:Red]
+			  
+				[ChatMessages:Bingo fuel, BINGO fuel, returning to base immediatley!]
+				[ChatAudio:ArcHudGPSNotification2]
+				[BroadcastChatType:Chat]
+
+
+			  </Description>	
+			</EntityComponent>		
 	
 	
   </EntityComponents>

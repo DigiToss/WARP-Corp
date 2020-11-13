@@ -77,7 +77,7 @@
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:{AntennaName}]
+					[Author:The Abyss]
 					[Color:Red]
 				  
 					[ChatMessages:You are approaching a restrictred military zone. Please turn around immediatley.]
@@ -154,13 +154,13 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
+					[IgnoredAntennaRangeOverride:2000]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:{AntennaName}]
+					[Author:The Abyss]
 					[Color:Red]
 				  
 					[ChatMessages:Unauthorized entry detected! Engaging hostiles!]

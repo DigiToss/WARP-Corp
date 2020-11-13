@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** VERY EASY INSTALLATION BEHAVIOUR *** -->
+<!-- -->
+
+ <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HabTowerHouse-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+
+		[Triggers:HabTowerHouse-ProximityTrigger-A]
+		[Triggers:HabTowerHouse-ProximityTrigger-B]
+		[Triggers:HabTowerHouse-TurretsDestroyed-Trigger]
+
+      </Description>
+	</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HabTowerHouse-ProximityTrigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:2200]
+			[MaxActions:1]
+			[Actions:HabTowerHouse-ProximityAction-A]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HabTowerHouse-ProximityAction-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:HabTowerHouse-ProximityChat-A]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>HabTowerHouse-ProximityChat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:2600]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Tower House]
+					[Color:Red]
+				  
+					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Hostiles sighted. Activating defense turrets.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HabTowerHouse-ProximityTrigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:TurretTarget]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:HabTowerHouse-ProximityAction-B]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HabTowerHouse-ProximityAction-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:HabTowerHouse-ProximityChat-B]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>HabTowerHouse-ProximityChat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:2600]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Tower House]
+					[Color:Red]
+				  
+					[ChatMessages:Installation turrets locked on hostiles. Engaging]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defensive turrets engaging enemy hostiles!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Target in my sights. Opening fire!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Hostiles within weapon range. Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+					
+				  </Description>
+				</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HabTowerHouse-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:HabTowerHouse-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HabTowerHouse-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:HabTowerHouse-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>HabTowerHouse-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:2600]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Tower House]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+			
+  </EntityComponents>
+</Definitions>					

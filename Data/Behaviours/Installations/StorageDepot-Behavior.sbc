@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+				
+<!-- -->
+<!-- *** HARD BASE INSTALLATION BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>StorageDepot-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:StorageDepot-ProximityTrigger-A]
+		[Triggers:StorageDepot-ProximityTrigger-B]
+		[Triggers:StorageDepot-ProximityTrigger-C]
+		[Triggers:StorageDepot-UnderAttackTrigger]
+		[Triggers:StorageDepot-EnableCounters-Trigger]
+		[Triggers:StorageDepot-DisableCounters-Trigger]
+		[Triggers:StorageDepot-ReEnableCounters-Trigger]
+		[Triggers:StorageDepot-DamageAddCount-Trigger]
+		[Triggers:StorageDepot-DamageCountFull-Trigger]
+		[Triggers:StorageDepot-Compromised-B-Trigger]
+		[Triggers:StorageDepot-TurretsDestroyed-Trigger]
+		
+      </Description>
+	</EntityComponent>	
+
+
+<!-- -->
+<!-- *** PROXIMITY EVENTS *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-ProximityTrigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:2500]
+			[MaxActions:1]
+			[Actions:StorageDepot-ProximityAction-A]
+			
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-ProximityAction-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-ProximityChat-A]
+				
+			  </Description>
+			</EntityComponent>	
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-ProximityChat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Storage Depot]
+					[Color:Red]
+				  
+					[ChatMessages:This is a restricted miltiary area. Leave immediatley!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:This is a restricted miltary area. Vacate immediatley!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:You do not have authorization to be in this Military Zone. Leave immediatley!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-ProximityTrigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:1400]
+			[StartsReady:true]
+			[MinCooldownMs:120000]
+			[MaxCooldownMs:150000]
+			[MaxActions:3]
+			[Actions:StorageDepot-ProximityAction-B]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-ProximityAction-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-ProximityChat-B]
+				
+				[SpawnEncounter:true]
+				[Spawner:StorageDepot-AtmoDrone-ProximitySpawner]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-ProximityChat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Storage Depot]
+					[Color:Red]
+				  
+					[ChatMessages:You were warned! Defense Drone launched!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:You should have listened! Defense drone has been scrambled!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>StorageDepot-AtmoDrone-ProximitySpawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+
+						[SpawnGroups:(NPC-WARP) Rook]
+						[SpawnGroups:(NPC-WARP) Magpie]
+						[SpawnGroups:(NPC-WARP) Crow]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1600]
+						[MaxDistance:2100]
+						[MinAltitude:550]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>  
+					</EntityComponent>
+					
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-ProximityTrigger-C</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:TurretTarget]
+			[UseTrigger:true]
+			[Actions:StorageDepot-ProximityAction-C]
+			[MaxActions:1]
+			
+		  </Description>
+		</EntityComponent>					
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-ProximityAction-C</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-ProximityChat-C]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-ProximityChat-C</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Storage Depot]
+					[Color:Red]
+				  
+					[ChatMessages:Installation turrets locked and loaded. Firing!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defensive Turrets engaging emeny hostiles! Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>		
+
+
+					
+<!-- -->
+<!-- *** ENABLE COUNTERS ON ANY DAMAGE *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>StorageDepot-EnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Damage]
+		[DamageTypes:Any]
+		[UseTrigger:true]
+		[MaxActions:1]
+		[Actions:StorageDepot-EnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>StorageDepot-EnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:StorageDepot-DamageAddCount-Trigger]
+			[EnableTriggerNames:StorageDepot-DamageCountFull-Trigger]
+			[EnableTriggerNames:StorageDepot-DisableCounters-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:StorageDepot-EnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+
+<!-- -->
+<!-- *** DISABLE COUNTERS WHEN PLAYER IS GREATER THAN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>StorageDepot-DisableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerFar]
+		[UseTrigger:false]
+		[TargetDistance:1000]
+		[MaxActions:-1]
+		[MinCooldownMs:4000]
+		[MaxCooldownMs:5000]
+		[Actions:StorageDepot-DisableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>StorageDepot-DisableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:StorageDepot-DamageAddCount-Trigger]
+			[DisableTriggerNames:StorageDepot-DamageCountFull-Trigger]
+			[DisableTriggerNames:StorageDepot-DisableCounters-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:StorageDepot-ReEnableCounters-Trigger]
+		
+		</Description>
+		</EntityComponent>
+		
+<!-- -->
+<!-- *** RE-ENABLE COUNTERS WHEN PLAYER IS WITHIN 1000m *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>StorageDepot-ReEnableCounters-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[TargetDistance:1000]
+		[UseTrigger:false]
+		[MaxActions:-1]
+		[MinCooldownMs:3000]
+		[MaxCooldownMs:4000]
+		[Actions:StorageDepot-ReEnableCounters-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>StorageDepot-ReEnableCounters-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:StorageDepot-DamageAddCount-Trigger]
+			[EnableTriggerNames:StorageDepot-DamageCountFull-Trigger]
+			[EnableTriggerNames:StorageDepot-DisableCounters-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:StorageDepot-ReEnableCounters-Trigger]
+
+		</Description>
+		</EntityComponent>
+		
+		
+<!-- -->
+<!-- *** GRID DAMAGE CHECK COUNT *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-DamageAddCount-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Damage]
+			[DamageTypes:Any]
+			[UseTrigger:false]
+			[MaxActions:-1]
+
+			[Actions:StorageDepot-DamageAddCount-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-DamageAddCount-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[IncreaseCounters:StorageDepot-DamageAddCount]
+				
+			  </Description>
+			</EntityComponent>
+
+<!-- -->
+<!-- *** GRID DAMAGE COUNT FULL *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-DamageCountFull-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[StartsReady:true]
+			[UseTrigger:false]
+			[MaxActions:1]
+			
+			[Conditions:StorageDepot-DamageCountFull-Condition]
+			
+			[Actions:StorageDepot-DamageCountFull-Action]
+			
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-DamageCountFull-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+	
+				[MaxActions:3]	
+
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-Compromised-Chat]
+							
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:StorageDepot-Compromised-B-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:StorageDepot-Compromised-B-Trigger]			
+				
+				[DisableTriggers:true]
+				[DisableTriggerNames:StorageDepot-DamageAddCount-Trigger]
+				[DisableTriggerNames:StorageDepot-DamageCountFull-Trigger]
+				[ResetCounters:StorageDepot-DamageAddCount]
+
+
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-DamageCountFull-Condition</SubtypeId>
+				  </Id>
+				  <Description>
+				
+					[RivalAI Condition]
+					
+					[UseConditions:true]
+					[MatchAnyCondition:true]
+					
+					[CheckCustomCounters:true]
+					[CustomCounters:StorageDepot-DamageAddCount]
+					[CustomCountersTargets:100]
+					
+				  </Description>
+				</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-Compromised-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Storage Depot]
+					[Color:Red]
+				  
+					[ChatMessages:We are taking significant damage. Requesting assistance! ]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Requesting support! Taking heavy fire from unknown hostiles! ]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-Compromised-B-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:3]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:6000]
+			[Actions:StorageDepot-Compromised-B-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-Compromised-B-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-Compromised-B-Chat]
+				
+				[SpawnEncounter:true]
+				[Spawner:StorageDepot-AtmoDrone-UnderAttackSpawner]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:StorageDepot-DamageAddCount-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:StorageDepot-DamageAddCount-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-Compromised-B-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Copy that, loud and clear. Reinforcements are on the way!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Affirm. Sending drone support!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>StorageDepot-AtmoDrone-UnderAttackSpawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:3]
+					  
+						[SpawnGroups:(NPC-WARP) Crow]
+						[SpawnGroups:(NPC-WARP) Rook]
+						[SpawnGroups:(NPC-WARP) Magpie]
+						[SpawnGroups:(NPC-WARP) Rook Heavy]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1500]
+						[MaxDistance:2100]
+						[MinAltitude:650]
+						[MaxAltitude:1100]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>
+
+<!-- -->
+<!-- *** ALL TURRETS DESTROYED *** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>StorageDepot-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:StorageDepot-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>StorageDepot-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:StorageDepot-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>StorageDepot-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:1500]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Storage Depot]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+
+  </EntityComponents>
+</Definitions>

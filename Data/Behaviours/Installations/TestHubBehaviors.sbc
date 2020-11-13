@@ -67,13 +67,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Welcome to Sintec.]
@@ -133,13 +133,13 @@
       
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Dont Press the Button.]
@@ -197,13 +197,13 @@
       
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Oops...]
@@ -331,13 +331,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:5]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Back again?]
@@ -395,13 +395,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:You fell for that?]
@@ -460,13 +460,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Well done.]
@@ -524,13 +524,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:You really don't need to keep on failing.]
@@ -587,13 +587,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:You really don't need to keep on failing.]
@@ -650,13 +650,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:We're so close. You cant fail now.]
@@ -713,13 +713,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Look at you...]
@@ -776,13 +776,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:I thought you'd be faster than this...]
@@ -839,13 +839,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:You're doing a great job...]
@@ -902,13 +902,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:This course was created by humans...]
@@ -965,13 +965,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:To get to the vault...]
@@ -1210,13 +1210,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Do you need real encouragment?]
@@ -1275,13 +1275,13 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:100]
+				[IgnoredAntennaRangeOverride:150]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:3]
 				[MinTime:15]
       
-				[Author:{AntennaName}]
+				[Author:GLaDOS]
 				[Color:Red]
       
 				[ChatMessages:Killing you, is hard.]

@@ -62,7 +62,7 @@
 						<Y>-6.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+					<Behaviour>SuppliesOutpost-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -121,7 +121,7 @@
 						<Y>-6.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+					<Behaviour>SuppliesOutpost-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -179,7 +179,7 @@
 						<Y>-6.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+					<Behaviour>SuppliesOutpost-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -237,7 +237,7 @@
 						<Y>23.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>EasyBase-Behavior</Behaviour>
+					<Behaviour>SurfaceMiningOutpost-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -291,7 +291,7 @@
 						<Y>9.5</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>VeryEasyBase-Behavior</Behaviour>
+					<Behaviour>HabTowerHouse-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -352,7 +352,7 @@
 						<Y>85.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour></Behaviour>
+					<Behaviour>Natilus-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -618,7 +618,7 @@
 						<Y>-4.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>EasyBase-Behavior</Behaviour>
+					<Behaviour>CommsStation-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -697,7 +697,7 @@
 						<Y>-3.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>MediumBase-Behavior</Behaviour>
+					<Behaviour>FuelHangar-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -853,7 +853,7 @@
 						<Y>-50.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>MediumBase-Behavior</Behaviour>
+					<Behaviour>Silo42-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -927,7 +927,7 @@
 						<Y>-50.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>MediumBase-Behavior</Behaviour>
+					<Behaviour>Silo42-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -1018,7 +1018,7 @@
 						<Y>13.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>HardBase-Behavior</Behaviour>
+					<Behaviour>TestFacility-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -1106,7 +1106,7 @@
 						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>HardBase-Behavior</Behaviour>
+					<Behaviour>OrganicsDepot-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -1194,7 +1194,7 @@
 						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>HardBase-Behavior</Behaviour>
+					<Behaviour>StorageDepot-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -1272,7 +1272,7 @@
 						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Behaviour>HardBase-Behavior</Behaviour>
+					<Behaviour>ProcessDepot-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

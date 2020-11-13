@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** EASY BASE INSTALLATION BEHAVIOUR *** -->
+<!-- -->
+
+ <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>SurfaceMiningOutpost-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:SurfaceMiningOutpost-ProximityTrigger-A]
+		[Triggers:SurfaceMiningOutpost-ProximityTrigger-B]
+		[Triggers:SurfaceMiningOutpost-UnderAttack-Trigger]
+		[Triggers:SurfaceMiningOutpost-UnderAttackReply-Trigger]
+		[Triggers:SurfaceMiningOutpost-AtmoDrone-Spawn-Trigger]
+		[Triggers:SurfaceMiningOutpost-TurretsDestroyed-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-ProximityTrigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:2200]
+			[MaxActions:1]
+			[Actions:SurfaceMiningOutpost-ProximityAction-A]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-ProximityAction-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:SurfaceMiningOutpost-ProximityChat-A]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>SurfaceMiningOutpost-ProximityChat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Surface Mining Outpost]
+					[Color:Red]
+				  
+					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Hostiles sighted. Activating defense turrets.]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-ProximityTrigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:TurretTarget]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:SurfaceMiningOutpost-ProximityAction-B]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-ProximityAction-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:SurfaceMiningOutpost-ProximityChat-B]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>SurfaceMiningOutpost-ProximityChat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Surface Mining Outpost]
+					[Color:Red]
+
+					[ChatMessages:Installation turrets locked on hostiles. Engaging]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defensive turrets engaging enemy hostiles!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Target in my sights. Opening fire!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Hostiles within weapon range. Weapons free!]
+					[ChatAudio:TargetEnabled]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>
+	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-UnderAttack-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Damage]
+			[DamageTypes:Any]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[StartsReady:true]
+			[Actions:SurfaceMiningOutpost-UnderAttack-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-UnderAttack-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:SurfaceMiningOutpost-UnderAttack-Chat]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:SurfaceMiningOutpost-UnderAttackReply-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:SurfaceMiningOutpost-UnderAttackReply-Trigger]		
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>SurfaceMiningOutpost-UnderAttack-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Surface Mining Outpost]
+					[Color:Red]
+				  
+					[ChatMessages:HQ we require immediate assistance, we are under fire from unknown hostiles!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:We are taking damage from hostiles, please send re-inforcments ASAP]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-UnderAttackReply-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:5000]
+			[Actions:SurfaceMiningOutpost-UnderAttackReply-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-UnderAttackReply-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:SurfaceMiningOutpost-UnderAttackReply-Chat]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:SurfaceMiningOutpost-AtmoDrone-Spawn-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:SurfaceMiningOutpost-AtmoDrone-Spawn-Trigger]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>SurfaceMiningOutpost-UnderAttackReply-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Roger roger! Drone enroute to your position!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Copy! Defensive drone deployed and enroute!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-AtmoDrone-Spawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MinCooldownMs:6000]
+			[MaxCooldownMs:9000]
+			[MaxActions:1]
+			[Actions:SurfaceMiningOutpost-AtmoDrone-UnderAttackSpawner-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-AtmoDrone-UnderAttackSpawner-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[SpawnEncounter:true]
+				[Spawner:SurfaceMiningOutpost-AtmoDrone-UnderAttack-Spawner]
+				
+			  </Description>
+			</EntityComponent>	
+							
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					  <Id>
+						  <TypeId>Inventory</TypeId>
+						  <SubtypeId>SurfaceMiningOutpost-AtmoDrone-UnderAttack-Spawner</SubtypeId>
+					  </Id>
+					  <Description>
+
+						[RivalAI Spawn]
+					  
+						[UseSpawn:true]
+					  
+						[StartsReady:true]
+						[MaxSpawns:1]
+
+						[SpawnGroups:(NPC-WARP) Siberian Jay]
+						[SpawnGroups:(NPC-WARP) Jackdaw]
+					  
+						[UseRelativeSpawnPosition:false]
+						[MinDistance:1900]
+						[MaxDistance:1400]
+						[MinAltitude:500]
+						[MaxAltitude:800]
+						[IgnoreSafetyChecks:false]
+					  
+					  </Description>
+					</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>SurfaceMiningOutpost-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:SurfaceMiningOutpost-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>SurfaceMiningOutpost-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:SurfaceMiningOutpost-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>SurfaceMiningOutpost-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:Surface Mining Outpost]
+					[Color:Red]
+				  
+					[ChatMessages:Aghhh our defenses have been compromised, evacuating!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+			
+  </EntityComponents>
+</Definitions>					

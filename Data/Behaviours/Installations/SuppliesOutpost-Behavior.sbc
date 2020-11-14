@@ -16,10 +16,16 @@
 	  
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
-
+		
 		[Triggers:SuppliesOutpost-ProximityTrigger-A]
 		[Triggers:SuppliesOutpost-ProximityTrigger-B]
 		[Triggers:SuppliesOutpost-TurretsDestroyed-Trigger]
+
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
 
       </Description>
 	</EntityComponent>
@@ -227,6 +233,7 @@
 
 				  </Description>
 				</EntityComponent>	
-			
+					
+				
   </EntityComponents>
 </Definitions>					

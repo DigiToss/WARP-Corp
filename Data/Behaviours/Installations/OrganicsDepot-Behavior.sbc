@@ -28,6 +28,12 @@
 		[Triggers:OrganicsDepot-DamageCountFull-Trigger]
 		[Triggers:OrganicsDepot-Compromised-B-Trigger]
 		[Triggers:OrganicsDepot-TurretsDestroyed-Trigger]
+
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
 		
       </Description>
 	</EntityComponent>	

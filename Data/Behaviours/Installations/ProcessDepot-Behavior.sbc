@@ -29,6 +29,12 @@
 		[Triggers:ProcessDepot-Compromised-B-Trigger]
 		[Triggers:ProcessDepot-TurretsDestroyed-Trigger]
 		
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
+		
       </Description>
 	</EntityComponent>	
 

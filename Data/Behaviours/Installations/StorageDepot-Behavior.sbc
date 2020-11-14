@@ -28,6 +28,12 @@
 		[Triggers:StorageDepot-DamageCountFull-Trigger]
 		[Triggers:StorageDepot-Compromised-B-Trigger]
 		[Triggers:StorageDepot-TurretsDestroyed-Trigger]
+
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
 		
       </Description>
 	</EntityComponent>	

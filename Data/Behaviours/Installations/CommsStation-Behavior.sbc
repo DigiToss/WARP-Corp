@@ -23,6 +23,12 @@
 		[Triggers:CommsStation-UnderAttackReply-Trigger]
 		[Triggers:CommsStation-AtmoDrone-Spawn-Trigger]
 		[Triggers:CommsStation-TurretsDestroyed-Trigger]
+
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
 		
       </Description>
 	</EntityComponent>

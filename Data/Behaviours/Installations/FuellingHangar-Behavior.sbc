@@ -29,6 +29,12 @@
 		[Triggers:FuelHangar-DamageCountFull-Trigger]
 		[Triggers:FuelHangar-Compromised-B-Trigger]
 		[Triggers:FuelHangar-TurretsDestroyed-Trigger]
+		
+		[TargetData:AntiDrill-Target]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
 	
 
       </Description>

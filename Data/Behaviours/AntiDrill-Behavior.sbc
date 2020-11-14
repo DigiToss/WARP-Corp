@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<EntityComponents>
+
+<!-- -->
+<!-- *** ANTI DRILLING DEFENSE *** -->
+<!-- -->
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	  <Id>
+		  <TypeId>Inventory</TypeId>
+		  <SubtypeId>AntiDrill-Target</SubtypeId>
+	  </Id>
+	  <Description>
+	
+		[RivalAI Target]
+		
+		[UseCustomTargeting:true]
+		[Target:PlayerAndGrid]
+		[MaxDistance:800]
+		[MatchAllFilters:Altitude]
+		[MatchAllFilters:Owner]
+		[MatchAllFilters:Relation]
+		
+		[GetTargetBy:ClosestDistance]
+		[NonBroadcastVisualRange:800]
+		[Owners:Player]
+		[Relations:Enemy]
+		[MinAltitude:-200]
+		[MaxAltitude:-5]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Trigger-A</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:HasTarget]
+			[UseTrigger:true]
+			[TargetDistance:800]
+			[MaxActions:1]
+			[Actions:AntiDrill-Action-A]
+		
+		  </Description>
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Action-A</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:AntiDrill-Chat-A]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-B]
+				[EnableTriggers:true]
+				[EnableTriggerNames:AntiDrill-Trigger-B]
+				[EnableTriggerNames:AntiDrill-Trigger-D]				
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-Trigger-A]
+				
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>AntiDrill-Chat-A</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:900]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP Corp]
+					[Color:Red]
+				  
+					[ChatMessages:***** WARNING! Anti-Tunneling System detected illegal entry. Return to surface IMMEDIATLEY! *****]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+				  </Description>
+				</EntityComponent>
+				
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Trigger-B</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:HasTarget]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MinCooldownMs:5000]
+			[MaxCooldownMs:5500]
+			[MaxActions:1]
+			[Actions:AntiDrill-Action-B]
+		
+		  </Description>
+		</EntityComponent>
+		
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Action-B</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:AntiDrill-Chat-B]
+								
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-C]
+				[EnableTriggers:true]
+				[EnableTriggerNames:AntiDrill-Trigger-C]
+				[EnableTriggerNames:AntiDrill-Trigger-D]
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-Trigger-B]
+				
+			  </Description>
+			</EntityComponent>
+			
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>AntiDrill-Chat-B</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:900]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP Corp]
+					[Color:Red]
+				  
+					[ChatMessages:***** THIS IS YOUR FINAL WARNING. RETURN TO SURFACE *****]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+				  </Description>
+				</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Trigger-C</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:HasTarget]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[TargetDistance:800]
+			[MinCooldownMs:500]
+			[MaxCooldownMs:3000]
+			[MaxActions:-1]
+			[Actions:AntiDrill-Action-C]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Action-C</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:AntiDrill-Chat-C]
+				
+				[CreateLightningAtTarget:true]
+				[LightningDamage:7]
+				[LightningExplosionRadius:40]
+				[LightningColor:{X:100 Y:0 Z:0}]
+					
+				
+			  </Description>
+			</EntityComponent>
+			
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>AntiDrill-Chat-C</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:900]
+					[StartsReady:true]
+					[Chance:5]
+					[MaxChats:-1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP Corp]
+					[Color:Red]
+				  
+					[ChatMessages:***** Anti-Tunneling System... FIRING! *****]
+					[ChatAudio:]
+					[BroadcastChatType:Chat]
+				  
+				  </Description>
+				</EntityComponent>		
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Trigger-D</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoTarget]
+			[UseTrigger:true]
+			[TargetDistance:800]
+			[MaxActions:-1]
+			[Actions:AntiDrill-Action-D]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Action-D</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-C]
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-Trigger-D]					
+				
+			  </Description>
+			</EntityComponent>				
+		
+  </EntityComponents>
+</Definitions>

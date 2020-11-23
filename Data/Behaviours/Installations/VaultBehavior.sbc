@@ -20,13 +20,17 @@
 		[Triggers:Vault-Towers-Trigger]
 		[Triggers:Vault-PerimiterProximity-Trigger]
 		[Triggers:Vault-Compromised-Trigger]
+		[Triggers:Vault-WeldersOn-Trigger]
+		[Trggers:Vault-WeldersOff-Trigger]
 		
 
       </Description>
     </EntityComponent>
 
 
-
+<!-- -->	
+<!-- *** SPAWN PERIMITER TOWERS ON SPAWN *** -->
+<!-- -->
 
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -81,8 +85,8 @@
       
 			</Description>
 			</EntityComponent>
-
-
+		
+			
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
@@ -132,7 +136,7 @@
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:{AntennaName}]
+				[Author:The Vault]
 				[Color:Red]
       
 				[ChatMessages:Perimiter defenses activated!]
@@ -143,7 +147,10 @@
     </EntityComponent>
 
 
-
+<!-- -->
+<!-- *** BASE COMPROMISED SPAWN BOSS WARSHIP  *** -->
+<!-- -->	
+<!--
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
@@ -198,10 +205,10 @@
 				[Chance:100]
 				[MaxChats:1]
 				[BroadcastRandomly:true]
-				[Author:{AntennaName}]
+				[Author:The Vault]
 				[Color:Red]      
 				[ChatMessages:Mayday Mayday! Our facility is being run over, we require immediate assistance!]
-				[ChatAudio:TargetLocked]
+				[ChatAudio:Notify2]
 				[BroadcastChatType:Chat]
 			
       </Description>
@@ -229,6 +236,77 @@
       
 				</Description>
 				</EntityComponent>
+-->
+
+<!-- -->
+<!-- *** WELDERS ON/OFF  *** -->
+<!-- -->				
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-WeldersOn-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:800]
+		[Actions:Vault-WeldersOn-Action]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-WeldersOn-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Welders On]
+			
+		</Description>
+		</EntityComponent>				
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-WeldersOff-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerFar]
+		[UseTrigger:true]
+		[TargetDistance:801]
+		[Actions:Vault-WeldersOff-Action]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-WeldersOff-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Welders Off]
+			
+		</Description>
+		</EntityComponent>						
+				
 				
   </EntityComponents>
 </Definitions>

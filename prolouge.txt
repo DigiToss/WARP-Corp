@@ -1,0 +1,26 @@
+PROLOUGE
+
+The world, known as Terra, is heavily controlled by the WARP Corporation. This mega conglomerate controls all movement and storage of high value resources on the planet. It has developed a technology to allow Faster than light travel, with the use of advanced parts which are guarded heavily. 
+
+There has been a strong uprising gathering momentum amongst other organisations fighting for equal rights and believe that everyone should be allowed access to all resources on the planet. One particular organisation, MLTC is leading this revolution, and is in need of experienced Engineers to bring the fight to WARP Corp.
+
+Situated in the North Sea on one of MLTCs Oilrigs, you will begin your journey. With fellow engineers you will need to cooperate to overcome WARP corps facilities in order to acquire key components. The Primary objective is to locate the WARP HQs and acquire the key components that WARP developed to allow the use of Faster than light travel. With these key components MLTC will be able to finally leave the planet and search for resources in the rest of the Solar System.
+
+
+SOME INFO
+
+When you first join the server, be sure to join the faction MLTC and spawn at Horizon Oilrig Medbay! There are no shields this season! Character Inventory size has been increased from 1200l to 2000l. There are various block limits in place, mainly for balance and to help performance. All limits are PER GRID and are weapons and ship tools. All listed in the info panel in game.
+ALL NPC spawns are passive and will not attack you unless you get too close to them or provoke them, in which case they will defend them selves. When you do venture out to a WARP spawn, be prepared for anything and everything ;)
+
+ 
+
+
+RULES
+
+1 - Spawn Tools on death is DISABLED. Check Lockers/Cargo for tools to get started. 
+2 - Auto-respawn is enabled. On death you will respawn at your closet respawn point.
+3 - Feel free to take a Life Boat to get started. They each have small amount of resources to get started.
+4 - You can build your own base, but you WILL need to work together in order to take over certain facilities
+5 - Block Limits are in place for grids. Check them out in Info section of the control panel.
+6 - Please name ALL your own grids.
+7 - ALL grids you want to keep MUST be powered. Cleanup will run every 4 hours.

@@ -19,6 +19,7 @@
 		
 		[Triggers:EasyCargo-ProximityTrigger-A]
 		[Triggers:EasyCargo-ProximityTrigger-B]
+		[Triggers:EasyCargo-ProximityTrigger-C]
 		[Triggers:EasyCargo-ProximityReply-B-Trigger]
 		[Triggers:EasyCargo-PoximitySpawn-Trigger]
 		[Triggers:EasyCargo-TurretsDestroyed-Trigger]
@@ -37,7 +38,7 @@
 		
 		[Type:PlayerNear]
 		[UseTrigger:true]
-		[TargetDistance:2200]
+		[TargetDistance:1400]
 		[MaxActions:1]
 		[Actions:EasyCargo-ProximityAction-A]
 
@@ -79,7 +80,7 @@
 				[Author:DHL Cargo]
 				[Color:Red]
       
-				[ChatMessages:Please be advised, this Cargo ship is being monitored by HQ. Any hostile actions will not be tolerated]
+				[ChatMessages:Please be advised, this Cargo ship is being monitored by HQ. Please keep your distance or we will be forced to engage]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
@@ -96,9 +97,9 @@
 	
 		[RivalAI Trigger]
 		
-		[Type:PlayerNear]
+		[Type:Damage]
+		[DamageTypes:Any]
 		[UseTrigger:true]
-		[TargetDistance:1000]
 		[MaxActions:1]
 		[Actions:EasyCargo-ProximityAction-B]
 
@@ -145,13 +146,17 @@
 				[Author:DHL Cargo]
 				[Color:Red]
       
-				[ChatMessages:Command, we have a possible hostile on an engagment course. Please advise! ]
+				[ChatMessages:Command, we are taking damage, please send support!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:HQ, we are taking fire from unknown hostiles, requesting support!]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
 			</Description>
 			</EntityComponent>	
-			
+
 			
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
@@ -169,7 +174,6 @@
 			[MinCooldownMs:3000]
 			[MaxCooldownMs:4000]
 			[Actions:EasyCargo-ProximityReply-B-Action]
-			
 			
 		  </Description>
 		</EntityComponent>
@@ -214,7 +218,11 @@
 					[Author:WARP HQ]
 					[Color:Red]
 				  
-					[ChatMessages:Roger roger. Rapid support has been deployed enroute to your position ]
+					[ChatMessages:Roger roger. Rapid support has been deployed to your position ]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+
+					[ChatMessages:Affirmitive. Rapid support has been deployed to your position]
 					[ChatAudio:Notify2]
 					[BroadcastChatType:Chat]
 	
@@ -351,7 +359,70 @@
 
 				  </Description>
 				</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>EasyCargo-ProximityTrigger-C</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:TurretTarget]
+		[UseTrigger:true]
+		[MaxActions:1]
+		[Actions:EasyCargo-ProximityAction-C]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>EasyCargo-ProximityAction-C</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:EasyCargo-ProximityChat-C]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>EasyCargo-ProximityChat-C</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:DHL Cargo]
+				[Color:Red]
+      
+				[ChatMessages:We have a hostile in our sights, engaging!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
 				
+				[ChatMessages:We got a bogey closing in, engaging!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>			
 
   </EntityComponents>
 </Definitions>

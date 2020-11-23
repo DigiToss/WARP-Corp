@@ -286,6 +286,7 @@
 			[Modular Encounters SpawnGroup]
 
 			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:10]
 			[FactionOwner:WARP]
 				
 			[UseRivalAi:true]
@@ -293,7 +294,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:0]
+			[ThreatScoreMinimum:400]
 
 			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
 			[UseContainerTypeAssignment:true]			
@@ -324,7 +325,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>1.0</Frequency>
+			<Frequency>1</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Archangel">
 					<Position>
@@ -349,6 +350,7 @@
 			[Modular Encounters SpawnGroup]
 
 			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:15]
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
@@ -358,7 +360,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:0]
+			[ThreatScoreMinimum:300]
 
 			[UseContainerTypeAssignment:true]			
 			[ContainerTypeAssignBlockName:GatlingCargo]
@@ -400,7 +402,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>1.0</Frequency>
+			<Frequency>0.6</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 1">
 					<Position>
@@ -425,6 +427,7 @@
 			[Modular Encounters SpawnGroup]
 
 			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:15]
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
@@ -434,7 +437,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:0]
+			[ThreatScoreMinimum:300]
 
 			[UseContainerTypeAssignment:true]			
 			[ContainerTypeAssignBlockName:GatlingCargo]
@@ -470,7 +473,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>1.0</Frequency>
+			<Frequency>0.6</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 2">
 					<Position>
@@ -507,7 +510,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:0]
+			[ThreatScoreMinimum:100]
 
 			[UseContainerTypeAssignment:true]			
 			[ContainerTypeAssignBlockName:GatlingCargo]
@@ -532,8 +535,8 @@
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Barge">
 					<Position>
-						<X>600.0</X>
-						<Y>25.0</Y>
+						<X>0.0</X>
+						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>5</Speed>
@@ -642,6 +645,69 @@
 			</Prefabs>
 		</SpawnGroup>
 		
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>TestFacilityTransmissionSpawn</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[AdminSpawnOnly:true]
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:DroneAmmoCargo]
+			[ContainerTypeAssignSubtypeId:DroneAmmoCargo]
+
+			[ContainerTypeAssignBlockName:DroneMissileCargo]
+			[ContainerTypeAssignSubtypeId:DroneMissileCargo]
+			
+			[ContainerTypeAssignBlockName:DroneGatlingCargo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingCargo]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Jackdaw">
+					<Position>
+						<X>50.0</X>
+						<Y>0.0</Y>
+						<Z>20.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallFixedAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Jackdaw">
+					<Position>
+						<X>-50.0</X>
+						<Y>-25.0</Y>
+						<Z>15.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallFixedAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Rook">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>SmallHardAtmoDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		
 
 <!-- -->
 <!-- *** BOSS SPAWNER *** -->
@@ -657,8 +723,8 @@
 
 			[Modular Encounters SpawnGroup]
 			[Territory:WARPHQ]
-			[MinDistanceFromTerritoryCenter:4000]
-			[MaxDistanceFromTerritoryCenter:7000]
+			[MinDistanceFromTerritoryCenter:1]
+			[MaxDistanceFromTerritoryCenter:10000]
 
 			[BossEncounterAtmo:true]
 			[BossEncounterChance:100]
@@ -683,7 +749,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>10.0</Frequency>
+			<Frequency>5.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Boss Spawner">
 					<Position>

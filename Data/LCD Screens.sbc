@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<LCDTextures>
+	
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>YouAreHere</SubtypeId>
+			</Id>
+				<TexturePath>Textures\YouAreHere.dds</TexturePath>
+		</LCDTextureDefinition>
+	
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>KJH</SubtypeId>
+			</Id>
+				<TexturePath>Textures\kjh2.dds</TexturePath>
+		</LCDTextureDefinition>
+
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>Medical-Room</SubtypeId>
+			</Id>
+		<TexturePath>Textures\Medical-Room.dds</TexturePath>
+		</LCDTextureDefinition> 
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>Warp-Corp</SubtypeId>
+			</Id>
+				<TexturePath>Textures\Warp-Corp.dds</TexturePath>
+		</LCDTextureDefinition> 
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>Warp-Corp-2</SubtypeId>
+			</Id>
+				<TexturePath>Textures\Warp-Corp-2.dds</TexturePath>
+		</LCDTextureDefinition> 
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>Warp-corp-3</SubtypeId>
+			</Id>
+				<TexturePath>Textures\Warp-corp-3.dds</TexturePath>
+		</LCDTextureDefinition> 
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>Warp-corp-4</SubtypeId>
+			</Id>
+				<TexturePath>Textures\Warp-corp-4.dds</TexturePath>
+		</LCDTextureDefinition>
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>HotTar</SubtypeId>
+			</Id>
+		<TexturePath>Textures\HotTar.dds</TexturePath>
+		</LCDTextureDefinition> 
+		
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>spider</SubtypeId>
+			</Id>
+		<TexturePath>Textures\spider.dds</TexturePath>
+		</LCDTextureDefinition> 
+
+	</LCDTextures>
+</Definitions>

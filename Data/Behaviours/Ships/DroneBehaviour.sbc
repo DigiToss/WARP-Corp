@@ -200,8 +200,6 @@
 		[RivalAI Chat]
     
 		[UseChat:true]
-		[IgnoreAntennaRequirement:true]
-		[IgnoredAntennaRangeOverride:3000]
 		[StartsReady:true]
 		[Chance:100]
 		[MaxChats:1]
@@ -229,8 +227,6 @@
 		[RivalAI Chat]
     
 		[UseChat:true]
-		[IgnoreAntennaRequirement:true]
-		[IgnoredAntennaRangeOverride:3000]
 		[StartsReady:true]
 		[Chance:100]
 		[MaxChats:1]
@@ -258,10 +254,8 @@
 		[RivalAI Chat]
     
 		[UseChat:true]
-		[IgnoreAntennaRequirement:true]
-		[IgnoredAntennaRangeOverride:3000]
 		[StartsReady:true]
-		[Chance:100]
+		[Chance:60]
 		[MaxChats:1]
 		[BroadcastRandomly:true]
       

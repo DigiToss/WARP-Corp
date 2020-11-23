@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->	
+<!-- *** DEFENSE PERIMITER BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Perimiter1-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[TargetData:AntiDrill-Boss-Target]
+	    	  
+		[Triggers:Tower-Compromised-Trigger]
+		[Triggers:AntiDrill-Trigger-A]
+		[Triggers:AntiDrill-Trigger-B]
+		[Triggers:AntiDrill-Trigger-C]
+		[Triggers:AntiDrill-Trigger-D]
+		
+      </Description>
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	  <Id>
+		  <TypeId>Inventory</TypeId>
+		  <SubtypeId>AntiDrill-Boss-Target</SubtypeId>
+	  </Id>
+	  <Description>
+	
+		[RivalAI Target]
+		
+		[UseCustomTargeting:true]
+		[Target:PlayerAndGrid]
+		[MaxDistance:850]
+		[MatchAllFilters:Altitude]
+		[MatchAllFilters:Owner]
+		[MatchAllFilters:Relation]
+		
+		[GetTargetBy:ClosestDistance]
+		[NonBroadcastVisualRange:850]
+		[Owners:Player]
+		[Relations:Enemy]
+		[MinAltitude:-200]
+		[MaxAltitude:-5]
+		
+	  </Description>
+	</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Tower-Compromised-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Compromised]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:Tower-Compromised-Action]
+	  
+      </Description>    
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Tower-Compromised-Action</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Action]
+		[GenerateExplosion:true]
+		[ExplosionRange:5]
+		[ExplosionDamage:20]
+		[ExplosionIgnoresVoxels:true]
+		[ForceDespawn:true]
+	  
+      </Description>     
+    </EntityComponent>
+
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Perimiter2-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	    	  
+		[Triggers:Tower-Compromised-Trigger]
+
+		
+      </Description>
+    </EntityComponent>
+	
+</EntityComponents>
+</Definitions>

@@ -26,7 +26,13 @@
 		[Triggers:Archangel-Compromised-C-Trigger]
 		[Triggers:Archangel-DamageAddCount-Trigger]
 		[Triggers:Archangel-DamageCountFull-Trigger]
-		[Triggers:Archangel-VaultRoom-Trigger]
+		[Triggers:Archangel-VaultRoom-Trigger-A]
+		[Triggers:Archangel-VaultRoom-Trigger-B]
+		[Triggers:Archangel-VaultRoom-Trigger-C]
+		[Triggers:Archangel-CargoCheck-Trigger-A]
+		[Triggers:Archangel-CargoCheck-Trigger-B]
+		[Triggers:Archangel-CargoCheck-Trigger-C]
+		[Triggers:Archangel-CargoCheck-Trigger-D]
 		[Triggers:Archangel-BombCount1-Trigger]
 		[Triggers:Archangel-BombCount2-Trigger]
 		[Triggers:Archangel-BombCount3-Trigger]
@@ -60,8 +66,8 @@
 		
 		[Type:PlayerNear]
 		[UseTrigger:true]
-		[TargetDistance:900]
-		[MaxActions:-1]
+		[TargetDistance:800]
+		[MaxActions:1]
 		[Actions:Archangel-EnableCounters-Action]
 
 	  </Description>
@@ -79,7 +85,13 @@
 			[EnableTriggers:true]
 			[EnableTriggerNames:Archangel-DamageAddCount-Trigger]
 			[EnableTriggerNames:Archangel-DamageCountFull-Trigger]
-			[EnableTriggerNames:Archangel-VaultRoom-Trigger]
+			[EnableTriggerNames:Archangel-VaultRoom-Trigger-A]
+			[EnableTriggerNames:Archangel-VaultRoom-Trigger-B]
+			[EnableTriggerNames:Archangel-VaultRoom-Trigger-C]
+			[EnableTriggerNames:Archangel-CargoCheck-Trigger-A]
+			[EnableTriggerNames:Archangel-CargoCheck-Trigger-B]
+			[EnableTriggerNames:Archangel-CargoCheck-Trigger-C]
+			[EnableTriggerNames:Archangel-CargoCheck-Trigger-D]
 			[EnableTriggerNames:Archangel-BombCount1-Trigger]
 			[EnableTriggerNames:Archangel-BombCount2-Trigger]
 			[EnableTriggerNames:Archangel-BombCount3-Trigger]
@@ -94,6 +106,7 @@
 			[EnableTriggerNames:Archangel-BombDispose5-Trigger]
 			[EnableTriggerNames:Archangel-BombDispose6-Trigger]
 			[EnableTriggerNames:Archangel-BombDispose7-Trigger]
+			[EnableTriggerNames:Archangel-DisableCounters-Trigger]
 		
 		</Description>
 		</EntityComponent>
@@ -113,9 +126,9 @@
 		[RivalAI Trigger]
 		
 		[Type:PlayerFar]
-		[UseTrigger:true]
-		[TargetDistance:900]
-		[MaxActions:-1]
+		[UseTrigger:false]
+		[TargetDistance:801]
+		[MaxActions:1]
 		[Actions:Archangel-DisableCounters-Action]
 
 	  </Description>
@@ -133,7 +146,13 @@
 			[DisableTriggers:true]
 			[DisableTriggerNames:Archangel-DamageAddCount-Trigger]
 			[DisableTriggerNames:Archangel-DamageCountFull-Trigger]
-			[DisableTriggerNames:Archangel-VaultRoom-Trigger]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-A]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-B]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-C]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-A]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-B]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-C]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-D]
 			[DisableTriggerNames:Archangel-BombCount1-Trigger]
 			[DisableTriggerNames:Archangel-BombCount2-Trigger]
 			[DisableTriggerNames:Archangel-BombCount3-Trigger]
@@ -152,6 +171,10 @@
 		</Description>
 		</EntityComponent>
 
+
+<!-- -->
+<!-- *** PROXIMITY MESSAGES *** -->
+<!-- -->
 		
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -343,7 +366,69 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-VaultRoom-Trigger</SubtypeId>
+          <SubtypeId>Archangel-VaultRoom-Trigger-A</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:0 Y:-21.5 Z:20}]
+		[TargetDistance:3]
+		[UseTrigger:false]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-VaultRoom-Trigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:-2.5 Y:-21.5 Z:20}]
+		[TargetDistance:3]
+		[UseTrigger:false]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-VaultRoom-Trigger-C</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[PlayerNearPositionOffset:{X:2.5 Y:-21.5 Z:20}]
+		[TargetDistance:3]
+		[UseTrigger:false]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+	
+<!-- -->
+<!-- *** CARGO CONTAINER HACK CHECK COUNT *** -->
+<!-- -->
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CargoCheck-Trigger-A</SubtypeId>
       </Id>
       <Description>
 	
@@ -353,12 +438,139 @@
 		[UseTrigger:false]
 		[MinCooldownMs:1000]
 		[MaxCooldownMs:2000]
-		[Conditions:Archangel-VaultRoom-Condition]
+		[Conditions:Archangel-CargoCheck-Condition-A]
 		[MaxActions:1]
 		[Actions:Archangel-VaultRoom-Action]
 
 	  </Description>
 	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CargoCheck-Condition-A</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:SmallCargoIngotsT2]
+			
+		</Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CargoCheck-Trigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-CargoCheck-Condition-B]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CargoCheck-Condition-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:SmallCargoIngotsT1]
+			
+		</Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CargoCheck-Trigger-C</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-CargoCheck-Condition-C]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CargoCheck-Condition-C</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:SmallCargoOresT2]
+			
+		</Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Archangel-CargoCheck-Trigger-D</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Conditions:Archangel-CargoCheck-Condition-D]
+		[MaxActions:1]
+		[Actions:Archangel-VaultRoom-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Archangel-CargoCheck-Condition-D</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Condition]
+			[UseConditions:true]
+			[UseRequiredFunctionalBlocks:true]
+			[RequiredNoneFunctionalBlockNames:SmallCargoPartsT2]
+			
+		</Description>
+	</EntityComponent>
+		
+		
+		
+<!-- -->
+<!-- *** INTRUDER ALARM ACTIVE *** -->
+<!-- -->
+
 			
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
@@ -382,29 +594,20 @@
 			[EnableTriggerNames:Archangel-Compromised-B-Trigger]
 		
 			[DisableTriggers:true]
-			[DisableTriggerNames:Archangel-CounterA-Trigger]
-			[DisableTriggerNames:Archangel-CounterB-Trigger]
 			[DisableTriggerNames:Archangel-CountFull-Trigger]
 			[DisableTriggerNames:Archangel-DamageAddCount-Trigger]
 			[DisableTriggerNames:Archangel-DamageCountFull-Trigger]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-A]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-B]
+			[DisableTriggerNames:Archangel-VaultRoom-Trigger-C]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-A]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-B]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-C]
+			[DisableTriggerNames:Archangel-CargoCheck-Trigger-D]
 			
 		</Description>
 		</EntityComponent>
 		
-				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-				  <Id>
-					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>Archangel-VaultRoom-Condition</SubtypeId>
-				  </Id>
-				  <Description>
-				
-					[RivalAI Condition]
-					[UseConditions:true]
-					[UseRequiredFunctionalBlocks:true]
-					[RequiredNoneFunctionalBlockNames:ConsoleBlockVault]
-					
-				  </Description>
-				</EntityComponent>
 		
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
@@ -427,187 +630,6 @@
 				[Color:Red]
       
 				[ChatMessages:Intruder Alert! Our Vault has been compromised! Defense protocols initiated!]
-				[ChatAudio:Notify2]
-				[BroadcastChatType:Chat]
-     
-			</Description>
-			</EntityComponent>	
-
-<!-- -->
-<!-- *** VAULT DOOR FUNCTION CHECK COUNT *** -->
-<!-- 
-
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-CounterA-Trigger</SubtypeId>
-      </Id>
-      <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:Timer]
-		[UseTrigger:false]
-		[MinCooldownMs:1000]
-		[MaxCooldownMs:2000]
-		[Conditions:Archangel-CounterA-Condition]
-		[MaxActions:1]
-		[Actions:Archangel-BlockCounter-Action]
-
-	  </Description>
-	</EntityComponent>
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-CounterA-Condition</SubtypeId>
-		</Id>
-		<Description>
-		
-			[RivalAI Condition]
-			[UseConditions:true]
-			[UseRequiredFunctionalBlocks:true]
-			[RequiredNoneFunctionalBlockNames:Rotary Airlock Door Vault]
-			
-		</Description>
-		</EntityComponent>
-	
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>Archangel-CounterB-Trigger</SubtypeId>
-      </Id>
-      <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:Timer]
-		[UseTrigger:false]
-		[MinCooldownMs:1000]
-		[MaxCooldownMs:2000]
-		[Conditions:Archangel-CounterB-Condition]
-		[MaxActions:1]
-		[Actions:Archangel-BlockCounter-Action]
-
-	  </Description>
-	</EntityComponent>
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>Archangel-CounterB-Condition</SubtypeId>
-		</Id>
-		<Description>
-		
-			[RivalAI Condition]
-			[UseConditions:true]
-			[UseRequiredFunctionalBlocks:true]
-			[RequiredNoneFunctionalBlockNames:Offset Hatch Vault]
-			
-		</Description>
-		</EntityComponent>
-			
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			  <Id>
-				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>Archangel-BlockCounter-Action</SubtypeId>
-			  </Id>
-			  <Description>
-
-				[RivalAI Action]
-				[IncreaseCounters:Archangel-BlockCount]
-				
-			  </Description>
-			</EntityComponent>
-	
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-	  <Id>
-		  <TypeId>Inventory</TypeId>
-		  <SubtypeId>Archangel-CountFull-Trigger</SubtypeId>
-	  </Id>
-	  <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:Timer]
-		[MinCooldownMs:1000]
-		[MaxCooldownMs:2000]
-		[StartsReady:true]
-		[UseTrigger:false]
-		[MaxActions:1]
-		
-		[Conditions:Archangel-CountFull-Condition]
-		[Actions:Archangel-CountFull-Action]
-		
-	  </Description>
-	</EntityComponent>	
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		  <Id>
-			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>Archangel-CountFull-Condition</SubtypeId>
-		  </Id>
-		  <Description>
-		
-			[RivalAI Condition]
-			
-			[UseConditions:true]
-			[MatchAnyCondition:true]
-			[CheckCustomCounters:true]
-			[CustomCounters:Archangel-BlockCount]
-			[CustomCountersTargets:2]
-			
-		  </Description>
-		</EntityComponent>
-				
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-CountFull-Action</SubtypeId>
-			</Id>
-			<Description>
-			
-				[RivalAI Action]
-				
-				[UseChatBroadcast:true]
-				[ChatData:Archangel-Compromised-Chat]
-				[TriggerTimerBlocks:true]
-				[TimerBlockNames:Timer Block Turrets]
-				[TimerBlockNames:Timer Block Warheads]
-				
-				[DisableTriggers:true]
-				[DisableTriggerNames:Archangel-CounterA-Trigger]
-				[DisableTriggerNames:Archangel-CounterB-Trigger]
-				
-				[ResetCooldownTimeOfTriggers:true]
-				[ResetTriggerCooldownNames:Archangel-Compromised-B-Trigger]
-				[EnableTriggers:true]
-				[EnableTriggerNames:Archangel-Compromised-B-Trigger]					
-		
-			</Description>
-			</EntityComponent>
--->
-
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>Archangel-Compromised-Chat</SubtypeId>
-			</Id>
-			<Description>
-
-				[RivalAI Chat]
-			
-				[UseChat:true]
-				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:1800]
-				[StartsReady:true]
-				[Chance:100]
-				[MaxChats:1]
-      
-				[Author:Archangel]
-				[Color:Red]
-      
-				[ChatMessages:Why would you dis-respect the almighty Clang!?]
 				[ChatAudio:Notify2]
 				[BroadcastChatType:Chat]
      
@@ -681,7 +703,6 @@
 				  </Description>
 				</EntityComponent>	
 				
-
 
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
@@ -833,6 +854,13 @@
 				[DisableTriggers:true]
 				[DisableTriggerNames:Archangel-DamageAddCount-Trigger]
 				[DisableTriggerNames:Archangel-DamageCountFull-Trigger]
+				[DisableTriggerNames:Archangel-VaultRoom-Trigger-A]
+				[DisableTriggerNames:Archangel-VaultRoom-Trigger-B]
+				[DisableTriggerNames:Archangel-VaultRoom-Trigger-C]
+				[DisableTriggerNames:Archangel-CargoCheck-Trigger-A]
+				[DisableTriggerNames:Archangel-CargoCheck-Trigger-B]
+				[DisableTriggerNames:Archangel-CargoCheck-Trigger-C]
+				[DisableTriggerNames:Archangel-CargoCheck-Trigger-D]
 
 			  </Description>
 			</EntityComponent>
@@ -855,12 +883,37 @@
 					
 				  </Description>
 				</EntityComponent>
+				
+					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+					<Id>
+						<TypeId>Inventory</TypeId>
+						<SubtypeId>Archangel-Compromised-Chat</SubtypeId>
+					</Id>
+					<Description>
+
+						[RivalAI Chat]
+					
+						[UseChat:true]
+						[IgnoreAntennaRequirement:true]
+						[IgnoredAntennaRangeOverride:1800]
+						[StartsReady:true]
+						[Chance:100]
+						[MaxChats:1]
+			  
+						[Author:Archangel]
+						[Color:Red]
+			  
+						[ChatMessages:Why would you dis-respect the almighty Clang!?]
+						[ChatAudio:]
+						[BroadcastChatType:Chat]
+			 
+					</Description>
+					</EntityComponent>	
 
 		
 <!-- -->
 <!-- *** WARHEAD FUNCTION CHECK COUNT *** -->
 <!-- -->
-
 
 			
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -1736,7 +1789,7 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 	  <Id>
 		  <TypeId>Inventory</TypeId>
-		  <SubtypeId>Archangel-BombDispose6-Trigger</SubtypeId>
+		  <SubtypeId>Archangel-BombDispose7-Trigger</SubtypeId>
 	  </Id>
 	  <Description>
 	
@@ -1749,8 +1802,8 @@
 		[UseTrigger:false]
 		[MaxActions:1]
 		
-		[Conditions:Archangel-BombDispose6-Condition]
-		[Actions:Archangel-BombDispose6-Action]
+		[Conditions:Archangel-BombDispose7-Condition]
+		[Actions:Archangel-BombDispose7-Action]
 		
 	  </Description>
 	</EntityComponent>	
@@ -1783,7 +1836,9 @@
 				
 				[UseChatBroadcast:true]
 				[ChatData:Archangel-BombDispose7-Chat]
-			
+				[TriggerTimerBlocks:true]
+				[TimerBlockNames:Timer Block Alarm Off]
+				
 				[DisableTriggers:true]
 				[DisableTriggerNames:Archangel-BombDispose7-Trigger]
 				
@@ -1810,14 +1865,12 @@
 					[Author:MLTC Command]
 					[Color:Blue]
 				  
-					[ChatMessages:******* 7 of 7 WARHEADS DISARMED ******* ]
+					[ChatMessages:******* ALL 7 WARHEADS DISARMED. SELF DESTRUCT CANCELLED ******* ]
 					[ChatAudio:Notify1]
 					[BroadcastChatType:Chat]
 
 				  </Description>
 				</EntityComponent>	
-
-				
 
   </EntityComponents>
 </Definitions>

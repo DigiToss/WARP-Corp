@@ -51,6 +51,32 @@
 		</Sounds>
     </SoundCategory>
 	
+	
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>Notify3</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\Notify3.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>Notify3</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="Notify3" SoundName="Notify3" />
+		</Sounds>
+    </SoundCategory>
+	
+	
 	<Sound>
       <Id>
         <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
@@ -74,6 +100,59 @@
 			<SoundDesc Id="TargetEnabled" SoundName="TargetEnabled" />
 		</Sounds>
     </SoundCategory>
+	
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>PriorityMessage</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\PriorityMessage.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>PriorityMessage</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="PriorityMessage" SoundName="PriorityMessage" />
+		</Sounds>
+    </SoundCategory>
+
+
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>CriticalMessage</SubtypeId>
+      </Id>
+		<Category>HUD</Category>
+		<Volume>1</Volume>
+			<Waves>
+				<Wave Type="D2">
+				<Start>Audio\CriticalMessage.xwm</Start>
+				</Wave>
+			</Waves>
+    </Sound>
+ 
+     <SoundCategory>
+      <Id>
+		<TypeId>SoundCategoryDefinition</TypeId>
+		<SubtypeId>CriticalMessage</SubtypeId>
+      </Id>
+		<Sounds>
+			<SoundDesc Id="CriticalMessage" SoundName="CriticalMessage" />
+		</Sounds>
+    </SoundCategory>
+	
+	
+	
 
 	<Sound>
       <Id>

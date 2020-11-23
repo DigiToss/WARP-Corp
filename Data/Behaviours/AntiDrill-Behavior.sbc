@@ -4,7 +4,7 @@
 <EntityComponents>
 
 <!-- -->
-<!-- *** ANTI DRILLING DEFENSE *** -->
+<!-- *** ANTI DRILLING DEFENSE TARGETS*** -->
 <!-- -->
 			
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -33,6 +33,132 @@
 	  </Description>
 	</EntityComponent>
 
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	  <Id>
+		  <TypeId>Inventory</TypeId>
+		  <SubtypeId>Installation-Passive-Target</SubtypeId>
+	  </Id>
+	  <Description>
+	
+		[RivalAI Target]
+		
+		[UseCustomTargeting:true]
+		[Target:PlayerAndGrid]
+		
+		[MaxDistance:900]			
+		[MatchAllFilters:OutsideOfSafezone]
+		[MatchAllFilters:Owner]
+		[MatchAllFilters:Relation]
+		[GetTargetBy:ClosestDistance]
+
+		[Owners:Player]
+		[Relations:Enemy]
+		
+	  </Description>
+	</EntityComponent>
+	
+<!-- -->
+<!-- ***** ENABLE ANTI DRILL TRIGGERS ***** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Enable-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:true]
+			[TargetDistance:900]
+			[MaxActions:1]
+			[Actions:AntiDrill-Enable-Action]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Enable-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[ChangeTargetProfile:true]
+				[NewTargetProfileId:AntiDrill-Target]
+				[RefreshTarget:true]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-A]]
+				[EnableTriggers:true]
+				[EnableTriggerNames:AntiDrill-Trigger-A]
+				[EnableTriggerNames:AntiDrill-Disable-Trigger]
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-Enable-Trigger]				
+				
+			  </Description>
+			</EntityComponent>					
+		
+<!-- -->
+<!-- ***** DISABLE ANTI DRILL TRIGGERS ***** -->
+<!-- -->		
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Disable-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerFar]
+			[UseTrigger:false]
+			[TargetDistance:1000]
+			[MaxActions:1]
+			[Actions:AntiDrill-Disable-Action]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-Disable-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[ChangeTargetProfile:true]
+				[NewTargetProfileId:Installation-Passive-Target]
+				[RefreshTarget:true]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Enable-Trigger]
+				[EnableTriggers:true]
+				[EnableTriggerNames:AntiDrill-Enable-Trigger]
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-Trigger-A]
+				[DisableTriggerNames:AntiDrill-Trigger-B]	
+				[DisableTriggerNames:AntiDrill-Trigger-C]	
+				[DisableTriggerNames:AntiDrill-Trigger-D]
+				[DisableTriggerNames:AntiDrill-Disable-Trigger]				
+				
+			  </Description>
+			</EntityComponent>	
+
+
+<!-- -->
+<!-- *** ANTI DRILLING DEFENSE TRIGGERS*** -->
+<!-- -->
+
+			
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
 			  <TypeId>Inventory</TypeId>
@@ -43,7 +169,7 @@
 			[RivalAI Trigger]
 			
 			[Type:HasTarget]
-			[UseTrigger:true]
+			[UseTrigger:false]
 			[TargetDistance:800]
 			[MaxActions:1]
 			[Actions:AntiDrill-Action-A]
@@ -208,7 +334,7 @@
 				
 				[CreateLightningAtTarget:true]
 				[LightningDamage:7]
-				[LightningExplosionRadius:40]
+				[LightningExplosionRadius:5]
 				[LightningColor:{X:100 Y:0 Z:0}]
 					
 				
@@ -277,5 +403,34 @@
 			  </Description>
 			</EntityComponent>				
 		
+		
+
+
+<!-- -->
+<!-- ***** ANTI-DRILL TRIGGER GROUP ***** -->
+<!-- -->		
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-Trigger-Group</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI TriggerGroup]
+			
+			[Triggers:AntiDrill-Trigger-A]
+			[Triggers:AntiDrill-Trigger-B]
+			[Triggers:AntiDrill-Trigger-C]
+			[Triggers:AntiDrill-Trigger-D]
+			[Triggers:AntiDrill-Enable-Trigger]
+			[Triggers:AntiDrill-Disable-Trigger]
+
+		
+		  </Description>
+		</EntityComponent>
+
+
+
   </EntityComponents>
 </Definitions>

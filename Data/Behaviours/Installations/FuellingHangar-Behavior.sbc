@@ -30,11 +30,7 @@
 		[Triggers:FuelHangar-Compromised-B-Trigger]
 		[Triggers:FuelHangar-TurretsDestroyed-Trigger]
 		
-		[TargetData:AntiDrill-Target]
-		[Triggers:AntiDrill-Trigger-A]
-		[Triggers:AntiDrill-Trigger-B]
-		[Triggers:AntiDrill-Trigger-C]
-		[Triggers:AntiDrill-Trigger-D]
+		[TriggerGroups:AntiDrill-Trigger-Group]
 	
 
       </Description>
@@ -53,6 +49,7 @@
 			[UseTrigger:true]
 			[TargetDistance:2200]
 			[Actions:FuelHangar-ProximityAction-A]
+			[MaxActions:1]
 			
 		  </Description>
 		</EntityComponent>
@@ -443,7 +440,7 @@
 		[RivalAI Trigger]
 		
 		[Type:PlayerFar]
-		[UseTrigger:true]
+		[UseTrigger:false]
 		[TargetDistance:1000]
 		[MaxActions:-1]
 		[MinCooldownMs:4000]

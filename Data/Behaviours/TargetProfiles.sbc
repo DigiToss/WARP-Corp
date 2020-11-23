@@ -51,17 +51,18 @@
 		[TimeUntilTargetAcquisition:3]
 		[TimeUntilNextEvaluation:5]
 
-		[MaxDistance:3000]
+		[MaxDistance:4000]
 
 		[MatchAllFilters:OutsideOfSafezone]
 		[MatchAllFilters:Owner]
 		[MatchAllFilters:Relation]
 
+		[NonBroadcastVisualRange:1200]
 		[MatchNoneFilters:Altitude]
         [MinAltitude:-500]
         [MaxAltitude:-5]
 		
-		[GetTargetBy:Random]
+		[GetTargetBy:ClosestDistance]
 
 		[Owners:Player]
 		[Relations:Enemy]

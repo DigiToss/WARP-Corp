@@ -1159,7 +1159,7 @@
 				<SubtypeId>Cobalt</SubtypeId>
 			</Id>
 		</Item>
-		<Item AmountMin="5000" AmountMax="7000">
+		<Item AmountMin="2000" AmountMax="4000">
 			<Frequency>1</Frequency>
 			<Id>
 			<TypeId>Ingot</TypeId>
@@ -1452,7 +1452,7 @@
         <SubtypeId>UndergroundLargeOres</SubtypeId>
       </Id>
 	  <Items>
-	     <Item AmountMin="3000" AmountMax="6000">
+	     <Item AmountMin="4000" AmountMax="11000">
 			<Frequency>4</Frequency>
 			<Id>
 				<TypeId>Ore</TypeId>
@@ -1493,7 +1493,14 @@
 			<TypeId>Ore</TypeId>
 		<SubtypeId>Silicon</SubtypeId>
 		</Id>
-        </Item>			
+        </Item>
+		<Item AmountMin="2350" AmountMax="3500">
+			<Frequency>1</Frequency>
+			<Id>
+			<TypeId>Ore</TypeId>
+		<SubtypeId>Silver</SubtypeId>
+		</Id>
+        </Item>				
 	</Items>
     </ContainerType>
 
@@ -1827,91 +1834,91 @@
         <SubtypeId>LockerParts</SubtypeId>
       </Id>
       <Items>        
-        <Item AmountMin="15" AmountMax="35">
+        <Item AmountMin="5" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Explosives</SubtypeId>
           </Id>
         </Item>		
-        <Item AmountMin="50" AmountMax="95">
+        <Item AmountMin="15" AmountMax="45">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Construction</SubtypeId>
           </Id>
         </Item>
-        <Item AmountMin="50" AmountMax="95">
+        <Item AmountMin="15" AmountMax="25">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>InteriorPlate</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="35" AmountMax="60">
+		<Item AmountMin="5" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>SmallTube</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="10" AmountMax="15">
+		<Item AmountMin="2" AmountMax="5">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>LargeTube</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="15" AmountMax="35">
+		<Item AmountMin="10" AmountMax="25">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Motor</SubtypeId>
           </Id>
         </Item>
-        <Item AmountMin="10" AmountMax="40">
+        <Item AmountMin="10" AmountMax="30">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Computer</SubtypeId>
           </Id>
         </Item>	
-		<Item AmountMin="10" AmountMax="25">
+		<Item AmountMin="10" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>PowerCell</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="10" AmountMax="20">
+		<Item AmountMin="5" AmountMax="15">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>MetalGrid</SubtypeId>
           </Id>
         </Item>
-	    <Item AmountMin="20" AmountMax="40">
+	    <Item AmountMin="2" AmountMax="7">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Reactor</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="3" AmountMax="6">
+		<Item AmountMin="1" AmountMax="5">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Medical</SubtypeId>
           </Id>
         </Item>		 
-		 <Item AmountMin="15" AmountMax="40">
+		 <Item AmountMin="5" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>SolarCell</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="10" AmountMax="30">
+		<Item AmountMin="10" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
@@ -1928,35 +1935,35 @@
         <SubtypeId>LockerComponents</SubtypeId>
       </Id>
       <Items>        
-        <Item AmountMin="15" AmountMax="35">
+        <Item AmountMin="5" AmountMax="20">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Explosives</SubtypeId>
           </Id>
         </Item>		
-        <Item AmountMin="50" AmountMax="95">
+        <Item AmountMin="35" AmountMax="55">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>Construction</SubtypeId>
           </Id>
         </Item>
-        <Item AmountMin="50" AmountMax="95">
+        <Item AmountMin="25" AmountMax="45">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>SteelPlate</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="35" AmountMax="60">
+		<Item AmountMin="15" AmountMax="25">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>
             <SubtypeId>SmallTube</SubtypeId>
           </Id>
         </Item>
-		<Item AmountMin="10" AmountMax="15">
+		<Item AmountMin="2" AmountMax="5">
           <Frequency>1</Frequency>
           <Id>
             <TypeId>Component</TypeId>

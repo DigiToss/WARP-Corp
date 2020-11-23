@@ -2071,7 +2071,7 @@
               <AccessFlag>READ_AND_WRITE_FACTION</AccessFlag>
               <ChangeInterval>0</ChangeInterval>
               <SelectedImages>
-                <string>KJH</string>
+                <string>HotTar</string>
               </SelectedImages>
               <Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
               <FontSize>1</FontSize>

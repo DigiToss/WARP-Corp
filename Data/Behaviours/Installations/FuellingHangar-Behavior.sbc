@@ -34,7 +34,8 @@
 	
 
       </Description>
-	</EntityComponent>	
+	</EntityComponent>
+	
 
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
@@ -326,6 +327,7 @@
 			[Type:TurretTarget]
 			[UseTrigger:true]
 			[Actions:FuelHangar-ProximityAction-C]
+			[MaxActions:1]
 			
 		  </Description>
 		</EntityComponent>					
@@ -419,7 +421,7 @@
 			[EnableTriggers:true]
 			[EnableTriggerNames:FuelHangar-DamageAddCount-Trigger]
 			[EnableTriggerNames:FuelHangar-DamageCountFull-Trigger]
-			[EnableTriggerNames:HardBase-DisableCounters-Trigger]
+			[EnableTriggerNames:FuelHangar-DisableCounters-Trigger]
 			[DisableTriggers:true]
 			[DisableTriggerNames:FuelHangar-EnableCounters-Trigger]
 		
@@ -443,8 +445,6 @@
 		[UseTrigger:false]
 		[TargetDistance:1000]
 		[MaxActions:-1]
-		[MinCooldownMs:4000]
-		[MaxCooldownMs:5000]
 		[Actions:FuelHangar-DisableCounters-Action]
 
 	  </Description>
@@ -453,7 +453,7 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>FuelHangar-EnableCounters-Action</SubtypeId>
+			<SubtypeId>FuelHangar-DisableCounters-Action</SubtypeId>
 		</Id>
 		<Description>
 		
@@ -486,8 +486,6 @@
 		[TargetDistance:1000]
 		[UseTrigger:false]
 		[MaxActions:-1]
-		[MinCooldownMs:3000]
-		[MaxCooldownMs:4000]
 		[Actions:FuelHangar-ReEnableCounters-Action]
 
 	  </Description>
@@ -585,8 +583,6 @@
 			  <Description>
 			
 				[RivalAI Action]
-	
-				[MaxActions:1]	
 
 				[UseChatBroadcast:true]
 				[ChatData:FuelHangar-Compromised-Chat]

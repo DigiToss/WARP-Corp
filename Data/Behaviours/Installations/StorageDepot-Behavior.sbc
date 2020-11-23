@@ -29,11 +29,7 @@
 		[Triggers:StorageDepot-Compromised-B-Trigger]
 		[Triggers:StorageDepot-TurretsDestroyed-Trigger]
 
-		[TargetData:AntiDrill-Target]
-		[Triggers:AntiDrill-Trigger-A]
-		[Triggers:AntiDrill-Trigger-B]
-		[Triggers:AntiDrill-Trigger-C]
-		[Triggers:AntiDrill-Trigger-D]
+		[TriggerGroups:AntiDrill-Trigger-Group]
 		
       </Description>
 	</EntityComponent>	
@@ -333,8 +329,6 @@
 		[UseTrigger:false]
 		[TargetDistance:1000]
 		[MaxActions:-1]
-		[MinCooldownMs:4000]
-		[MaxCooldownMs:5000]
 		[Actions:StorageDepot-DisableCounters-Action]
 
 	  </Description>
@@ -376,8 +370,6 @@
 		[TargetDistance:1000]
 		[UseTrigger:false]
 		[MaxActions:-1]
-		[MinCooldownMs:3000]
-		[MaxCooldownMs:4000]
 		[Actions:StorageDepot-ReEnableCounters-Action]
 
 	  </Description>

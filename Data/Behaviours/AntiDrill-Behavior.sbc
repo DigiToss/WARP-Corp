@@ -23,6 +23,11 @@
 		[MatchAllFilters:Owner]
 		[MatchAllFilters:Relation]
 		
+		[TimeUntilNextEvaluation:1]
+		[TimeUntilTargetAcquisition:5]
+		[UseTargetRefresh:true]
+		[TimeUntilNextRefresh:5]
+		
 		[GetTargetBy:ClosestDistance]
 		[NonBroadcastVisualRange:800]
 		[Owners:Player]
@@ -43,17 +48,6 @@
 	
 		[RivalAI Target]
 		
-		[UseCustomTargeting:true]
-		[Target:PlayerAndGrid]
-		
-		[MaxDistance:900]			
-		[MatchAllFilters:OutsideOfSafezone]
-		[MatchAllFilters:Owner]
-		[MatchAllFilters:Relation]
-		[GetTargetBy:ClosestDistance]
-
-		[Owners:Player]
-		[Relations:Enemy]
 		
 	  </Description>
 	</EntityComponent>
@@ -73,8 +67,8 @@
 			
 			[Type:PlayerNear]
 			[UseTrigger:true]
-			[TargetDistance:900]
-			[MaxActions:1]
+			[TargetDistance:800]
+			[MaxActions:-1]
 			[Actions:AntiDrill-Enable-Action]
 		
 		  </Description>
@@ -94,7 +88,7 @@
 				[RefreshTarget:true]
 				
 				[ResetCooldownTimeOfTriggers:true]
-				[ResetTriggerCooldownNames:AntiDrill-Trigger-A]]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-A]
 				[EnableTriggers:true]
 				[EnableTriggerNames:AntiDrill-Trigger-A]
 				[EnableTriggerNames:AntiDrill-Disable-Trigger]
@@ -119,8 +113,8 @@
 			
 			[Type:PlayerFar]
 			[UseTrigger:false]
-			[TargetDistance:1000]
-			[MaxActions:1]
+			[TargetDistance:801]
+			[MaxActions:-1]
 			[Actions:AntiDrill-Disable-Action]
 		
 		  </Description>
@@ -140,9 +134,9 @@
 				[RefreshTarget:true]
 				
 				[ResetCooldownTimeOfTriggers:true]
-				[ResetTriggerCooldownNames:AntiDrill-Enable-Trigger]
+				[ResetTriggerCooldownNames:AntiDrill-ReEnable-Trigger]
 				[EnableTriggers:true]
-				[EnableTriggerNames:AntiDrill-Enable-Trigger]
+				[EnableTriggerNames:AntiDrill-ReEnable-Trigger]
 				[DisableTriggers:true]
 				[DisableTriggerNames:AntiDrill-Trigger-A]
 				[DisableTriggerNames:AntiDrill-Trigger-B]	
@@ -152,6 +146,53 @@
 				
 			  </Description>
 			</EntityComponent>	
+			
+<!-- -->
+<!-- ***** RE-ENABLE ANTI DRILL TRIGGERS ***** -->
+<!-- -->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>AntiDrill-ReEnable-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[UseTrigger:false]
+			[TargetDistance:800]
+			[MaxActions:-1]
+			[Actions:AntiDrill-ReEnable-Action]
+		
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>AntiDrill-ReEnable-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[ChangeTargetProfile:true]
+				[NewTargetProfileId:AntiDrill-Target]
+				[RefreshTarget:true]
+				
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:AntiDrill-Trigger-C]
+				[EnableTriggers:true]
+				[EnableTriggerNames:AntiDrill-Trigger-C]
+				[EnableTriggerNames:AntiDrill-Disable-Trigger]
+				[DisableTriggers:true]
+				[DisableTriggerNames:AntiDrill-ReEnable-Trigger]				
+				
+			  </Description>
+			</EntityComponent>		
+			
 
 
 <!-- -->
@@ -312,8 +353,8 @@
 			[UseTrigger:false]
 			[StartsReady:false]
 			[TargetDistance:800]
-			[MinCooldownMs:500]
-			[MaxCooldownMs:3000]
+			[MinCooldownMs:2000]
+			[MaxCooldownMs:7000]
 			[MaxActions:-1]
 			[Actions:AntiDrill-Action-C]
 		
@@ -352,9 +393,9 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:900]
+					[IgnoredAntennaRangeOverride:800]
 					[StartsReady:true]
-					[Chance:5]
+					[Chance:25]
 					[MaxChats:-1]
 					[BroadcastRandomly:true]
 				  
@@ -425,8 +466,8 @@
 			[Triggers:AntiDrill-Trigger-D]
 			[Triggers:AntiDrill-Enable-Trigger]
 			[Triggers:AntiDrill-Disable-Trigger]
+			[Triggers:AntiDrill-ReEnable-Trigger]
 
-		
 		  </Description>
 		</EntityComponent>
 

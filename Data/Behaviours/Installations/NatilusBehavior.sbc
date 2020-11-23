@@ -35,7 +35,7 @@
 		[Type:PlayerNear]
 		[StartsReady:true]
 		[UseTrigger:true]
-		[TargetDistance:2200]
+		[TargetDistance:1600]
 		[MaxActions:1]
 		[Actions:Natilus-Drone-Action]
 

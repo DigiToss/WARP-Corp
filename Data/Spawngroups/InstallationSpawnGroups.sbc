@@ -54,7 +54,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
 			<IsPirate>true</IsPirate>
-			<Frequency>9.0</Frequency>
+			<Frequency>7.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Parts Supplies Outpost">
 					<Position>
@@ -113,7 +113,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
 			<IsPirate>true</IsPirate> 
-			<Frequency>9.0</Frequency>
+			<Frequency>7.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Ingot Supplies Outpost">
 					<Position>
@@ -171,7 +171,7 @@
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
 			<IsPirate>true</IsPirate> 
-			<Frequency>9.0</Frequency>
+			<Frequency>7.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Ores Supplies Outpost">
 					<Position>
@@ -374,7 +374,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:250]
+			[ThreatScoreMinimum:200]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -429,7 +429,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:250]
+			[ThreatScoreMinimum:200]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -572,7 +572,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:100]
+			[ThreatScoreMinimum:75]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -805,7 +805,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:400]
+			[ThreatScoreMinimum:300]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -880,7 +880,7 @@
 
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:400]
+			[ThreatScoreMinimum:300]
 			
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -955,7 +955,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:600]
+			[ThreatScoreMinimum:500]
 			
 			[FactionOwner:WARP]
 			
@@ -1039,7 +1039,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:600]
+			[ThreatScoreMinimum:500]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -1127,7 +1127,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:600]
+			[ThreatScoreMinimum:500]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
@@ -1215,7 +1215,7 @@
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:600]
+			[ThreatScoreMinimum:500]
 	
 			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]

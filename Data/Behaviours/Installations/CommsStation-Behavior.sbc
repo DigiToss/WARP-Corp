@@ -87,15 +87,15 @@
 					[Color:Red]
 				  
 					[ChatMessages:Hostiles detected near our position! Defensive weapons activating.]
-					[ChatAudio:Notify1]
+					[ChatAudio:ABOMINATION-Sounds]
 					[BroadcastChatType:Chat]
 				  
 					[ChatMessages:Detecting hostile signals in the area. Defense protocols initiated.]
-					[ChatAudio:Notify1]
+					[ChatAudio:ABOMINATION-Sounds]
 					[BroadcastChatType:Chat]
 
 					[ChatMessages:Hostiles sighted. Activating defense turrets.]
-					[ChatAudio:Notify1]
+					[ChatAudio:ABOMINATION-Sounds]
 					[BroadcastChatType:Chat]
 
 				  </Description>

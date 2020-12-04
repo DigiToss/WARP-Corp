@@ -21,6 +21,7 @@
 		[Triggers:TestFacility-ProximityTrigger-B]
 		[Triggers:TestFacility-Transmission-Trigger]
 		[Triggers:TestFacility-Transmission-B-Trigger]
+		[Triggers:TestFacility-Warning-Trigger]
 
 		
       </Description>
@@ -147,8 +148,71 @@
 					[Author:MLTC Command]
 					[Color:Blue]
 				  
-					[ChatMessages:The facility appears to be abandonded, but still has power. Caution is advised.]
+					[ChatMessages:The facility appears to be abandonded, but still has power. Enemy hostiles may still be monitoring the area. Caution is advised.]
 					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+				  </Description>
+				</EntityComponent>
+
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>TestFacility-Warning-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:PlayerNear]
+			[PlayerNearPositionOffset:{X:-5 Y:0 Z:30}]
+			[UseTrigger:true]
+			[TargetDistance:2.5]
+			[MaxActions:1]
+			[Actions:TestFacility-Warning-Action]
+			
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>TestFacility-Warning-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:TestFacility-Warning-Chat]
+
+				
+			  </Description>
+			</EntityComponent>	
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>TestFacility-Warning-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:MLTC Command]
+					[Color:Blue]
+				  
+					[ChatMessages:CAREFUL! There could be silent alarms that alert enemy forces! Extreme caution is advised commander!]
+					[ChatAudio:Notify3]
 					[BroadcastChatType:Chat]
 				  
 				  </Description>
@@ -165,7 +229,7 @@
 			[RivalAI Trigger]
 			
 			[Type:PlayerNear]
-			[PlayerNearPositionOffset:{X:-5 Y:0 Z:30}]
+			[PlayerNearPositionOffset:{X:-12.5 Y:0 Z:7.5}]
 			[UseTrigger:true]
 			[TargetDistance:2.5]
 			[MaxActions:1]
@@ -212,9 +276,9 @@
 					[BroadcastRandomly:true]
 				  
 					[Author:MLTC Command]
-					[Color:Red]
+					[Color:Blue]
 				  
-					[ChatMessages:WARNING! We are detecting an incoming WARP squadron, heading straight to your position!]
+					[ChatMessages:DANGER! We are detecting an incoming heavily armed WARP squadron, heading straight to your position!]
 					[ChatAudio:CriticalMessage]
 					[BroadcastChatType:Chat]
 				  
@@ -234,8 +298,8 @@
 			[Type:Timer]
 			[UseTrigger:false]
 			[StartsReady:false]
-			[MinCooldownMs:5000]
-			[MaxCooldownMs:10000]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:15000]
 			[MaxActions:1]
 			[Actions:TestFacility-Transmission-B-Action]
 			
@@ -282,7 +346,7 @@
 					[Author:MLTC Command]
 					[Color:Blue]
 				  
-					[ChatMessages:Confirmed 3 enemy hostiles approaching fast! 3 clicks out!]
+					[ChatMessages:CONFIRMED. 3 Enemy hostiles approaching fast! 3 clicks out!!!]
 					[ChatAudio:Notify2]
 					[BroadcastChatType:Chat]
 				  
@@ -306,7 +370,7 @@
 					  
 						[SpawnGroups:TestFacilityTransmissionSpawn]
 						[UseRelativeSpawnPosition:true]
-						[RelativeSpawnOffset:{X:3500 Y:900 Z:0}]
+						[RelativeSpawnOffset:{X:2500 Y:900 Z:0}]
 						[IgnoreSafetyChecks:true]
 					  
 					  </Description>

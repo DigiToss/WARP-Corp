@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->
+<!-- *** LX-22 RAVAGER BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+		
+		[Triggers:LX22-ProximityTrigger-A]
+		[Triggers:LX22-ProximityReply-Trigger]
+		[Triggers:LX22-ProximityTrigger-B]
+		[Triggers:LX22-ProximityTrigger-D]
+		[Triggers:LX22-TurretsDestroyed-Trigger]
+		[Triggers:LX22-Switch-Trigger]
+
+      </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-ProximityTrigger-A</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:2000]
+		[MaxActions:1]
+		[Actions:LX22-ProximityAction-A]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-ProximityAction-A</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-ProximityChat-A]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-ProximityChat-A</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Detecting enemy bogeys. Requesting Permission to engage HQ. Please confirm.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX22-ProximityReply-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[UseTrigger:false]
+			[StartsReady:false]
+			[MaxActions:1]
+			[MinCooldownMs:4000]
+			[MaxCooldownMs:5000]
+			[Actions:LX22-ProximityReply-Action]
+			
+		  </Description>
+		</EntityComponent>
+	
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>LX22-ProximityReply-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:LX22-ProximityReply-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>LX22-ProximityReply-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:3000]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:WARP HQ]
+					[Color:Red]
+				  
+					[ChatMessages:Negative LX-22. Do not adjust course unless fired upon!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:That is a negative LX-22. Do not adjust course unless threat is hostile to you!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+			
+			
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-ProximityTrigger-B</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:1000]
+		[MaxActions:1]
+		[Actions:LX22-ProximityAction-B]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-ProximityAction-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-ProximityChat-B]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-ProximityChat-B</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:WARNING! Back away now or I will be forced to engage and destroy you!]
+				[ChatAudio:Notify3]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-ProximityTrigger-D</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:TurretTarget]
+		[UseTrigger:true]
+		[MaxActions:1]
+		[Actions:LX22-ProximityAction-D]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-ProximityAction-D</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-ProximityChat-D]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-ProximityChat-D</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Automated Turrets firing! Go on! Dare ye to hit me, and I will unleash the beast!!]
+				[ChatAudio:Notify3]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+		
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX22-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:LX22-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>LX22-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:LX22-TurretsDestroyed-Chat]
+				
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>LX22-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[IgnoreAntennaRequirement:true]
+					[IgnoredAntennaRangeOverride:1500]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:LX-22 Ravager]
+					[Color:Red]
+				  
+					[ChatMessages:Uggghh... defenses gone...we surrender!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Uggghh... our defense system is down, we are sitting ducks!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-Switch-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Damage]
+		[DamageTypes:Any]
+		[UseTrigger:true]
+		[Actions:LX22-Switch-Action]
+		[MaxActions:1]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-Switch-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[SwitchToBehavior:true]
+			[NewBehavior:LX22-Active-Behavior]
+			[PreserveTriggersOnBehaviorSwitch:false]]
+	
+		</Description>
+		</EntityComponent>
+		
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-Active-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:HorseFighter]
+
+        [AutopilotData:Warp-Autopilot-MediumShip-A]
+        [SecondaryAutopilotData:Warp-Autopilot-MediumShip-B]
+		
+		[TargetData:WarpShip-Target]
+		[UseNoTargetTimer:true]
+		[NoTargetTimerTrigger:30]
+		[RetreatDespawnDistance:5000]
+		
+		[Triggers:LX22-ProximityTrigger-C]
+		[Triggers:LX22-TurretsDestroyed-Trigger]
+		[Triggers:LX22-NoTarget-Trigger]
+		[Triggers:LX22-NewTarget-Trigger]
+		[Triggers:LX22-Retreat-Trigger]
+
+      </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-ProximityTrigger-C</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[Actions:LX22-ProximityAction-C]
+		[MaxActions:1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-ProximityAction-C</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-ProximityChat-C]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:LX22-NoTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:LX22-ProximityTrigger-C]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-ProximityChat-C</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:5000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Boom! Rules of engagment satisfied. Time to put you down!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Pew pew pew! Time to unleash the beast!!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+		
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-NoTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:LostTarget]
+		[UseTrigger:false]
+		[Actions:LX22-NoTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-NoTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-NoTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:LX22-NoTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:LX22-NewTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-NoTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:5000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Haha! Looks like the enemy have retreated! Will continue to search the area.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Looks like the enemy has fled! Searching the area for anymore threats.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:HasTarget]
+		[UseTrigger:false]
+		[Actions:LX22-NewTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-NewTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-NewTarget-Chat]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:LX22-NoTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:LX22-NewTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-NewTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Picked up another casualty on my radar, 2km out. Time to take them out!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Contact! 2 clicks out. Party time!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>	
+
+	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-Retreat-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Retreat]
+		[UseTrigger:true]
+		[Actions:LX22-Retreat-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX22-Retreat-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:LX22-Retreat-Chat]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:LX22-NewTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:LX22-Retreat-Trigger]
+			
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:50]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LX22-Retreat-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:8000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:LX-22 Ravager]
+				[Color:Red]
+      
+				[ChatMessages:Looks like its all clearn. Returning to base.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>
+	
+  </EntityComponents>
+</Definitions>

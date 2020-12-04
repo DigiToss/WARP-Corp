@@ -2,27 +2,27 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   
   <EntityComponents>
-  
+
 <!-- -->
-<!-- *** CARGOSHIP BEHAVIOR *** -->
+<!-- *** A-100 BEHAVIOR *** -->
 <!-- -->
 
   	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>EasyCargo-Behavior</SubtypeId>
+          <SubtypeId>A100-Behavior</SubtypeId>
       </Id>
       <Description>
 	  
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
 		
-		[Triggers:EasyCargo-ProximityTrigger-A]
-		[Triggers:EasyCargo-ProximityTrigger-B]
-		[Triggers:EasyCargo-ProximityTrigger-C]
+		[Triggers:A100-ProximityTrigger-A]
+		[Triggers:A100-ProximityTrigger-B]
+		[Triggers:A100-ProximityTrigger-C]
 		[Triggers:EasyCargo-ProximityReply-B-Trigger]
 		[Triggers:EasyCargo-PoximitySpawn-Trigger]
-		[Triggers:EasyCargo-TurretsDestroyed-Trigger]
+		[Triggers:A100-TurretsDestroyed-Trigger]
 
       </Description>
 	</EntityComponent>
@@ -30,7 +30,7 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>EasyCargo-ProximityTrigger-A</SubtypeId>
+          <SubtypeId>A100-ProximityTrigger-A</SubtypeId>
       </Id>
       <Description>
 	
@@ -40,7 +40,7 @@
 		[UseTrigger:true]
 		[TargetDistance:1400]
 		[MaxActions:1]
-		[Actions:EasyCargo-ProximityAction-A]
+		[Actions:A100-ProximityAction-A]
 
 	  </Description>
 	</EntityComponent>
@@ -48,14 +48,14 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>EasyCargo-ProximityAction-A</SubtypeId>
+			<SubtypeId>A100-ProximityAction-A</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
 			
 			[UseChatBroadcast:true]
-			[ChatData:EasyCargo-ProximityChat-A]
+			[ChatData:A100-ProximityChat-A]
 		
 		</Description>
 		</EntityComponent>
@@ -63,7 +63,7 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>EasyCargo-ProximityChat-A</SubtypeId>
+				<SubtypeId>A100-ProximityChat-A</SubtypeId>
 			</Id>
 			<Description>
 
@@ -77,7 +77,7 @@
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:DHL Cargo]
+				[Author:A-100 Albatros]
 				[Color:Red]
       
 				[ChatMessages:Please be advised, this Cargo ship is being monitored by HQ. Please keep your distance or we will be forced to engage]
@@ -91,7 +91,7 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>EasyCargo-ProximityTrigger-B</SubtypeId>
+          <SubtypeId>A100-ProximityTrigger-B</SubtypeId>
       </Id>
       <Description>
 	
@@ -101,7 +101,7 @@
 		[DamageTypes:Any]
 		[UseTrigger:true]
 		[MaxActions:1]
-		[Actions:EasyCargo-ProximityAction-B]
+		[Actions:A100-ProximityAction-B]
 
 	  </Description>
 	</EntityComponent>
@@ -109,14 +109,14 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>EasyCargo-ProximityAction-B</SubtypeId>
+			<SubtypeId>A100-ProximityAction-B</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
 			
 			[UseChatBroadcast:true]
-			[ChatData:EasyCargo-ProximityChat-B]
+			[ChatData:A100-ProximityChat-B]
 
 			[ResetCooldownTimeOfTriggers:true]
 			[ResetTriggerCooldownNames:EasyCargo-ProximityReply-B-Trigger]
@@ -129,7 +129,7 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>EasyCargo-ProximityChat-B</SubtypeId>
+				<SubtypeId>A100-ProximityChat-B</SubtypeId>
 			</Id>
 			<Description>
 
@@ -143,7 +143,7 @@
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:DHL Cargo]
+				[Author:A-100 Albatros]
 				[Color:Red]
       
 				[ChatMessages:Command, we are taking damage, please send support!]
@@ -157,146 +157,11 @@
 			</Description>
 			</EntityComponent>	
 
-			
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		  <Id>
-			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>EasyCargo-ProximityReply-B-Trigger</SubtypeId>
-		  </Id>
-		  <Description>
-		
-			[RivalAI Trigger]
-			
-			[Type:Timer]
-			[UseTrigger:false]
-			[StartsReady:false]
-			[MaxActions:1]
-			[MinCooldownMs:3000]
-			[MaxCooldownMs:4000]
-			[Actions:EasyCargo-ProximityReply-B-Action]
-			
-		  </Description>
-		</EntityComponent>
-	
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			  <Id>
-				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>EasyCargo-ProximityReply-B-Action</SubtypeId>
-			  </Id>
-			  <Description>
-			
-				[RivalAI Action]
-				
-				[UseChatBroadcast:true]
-				[ChatData:EasyCargo-ProximityReply-B-Chat]
-				
-				[ResetCooldownTimeOfTriggers:true]
-				[ResetTriggerCooldownNames:EasyCargo-PoximitySpawn-Trigger]
-				[EnableTriggers:true]
-				[EnableTriggerNames:EasyCargo-PoximitySpawn-Trigger]	
-					
-			  </Description>
-			</EntityComponent>	
-	
-				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-				  <Id>
-					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>EasyCargo-ProximityReply-B-Chat</SubtypeId>
-				  </Id>
-				  <Description>
-
-					[RivalAI Chat]
-				  
-					[UseChat:true]
-					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:3000]
-					[StartsReady:true]
-					[Chance:100]
-					[MaxChats:1]
-					[BroadcastRandomly:true]
-				  
-					[Author:WARP HQ]
-					[Color:Red]
-				  
-					[ChatMessages:Roger roger. Rapid support has been deployed to your position ]
-					[ChatAudio:Notify2]
-					[BroadcastChatType:Chat]
-
-					[ChatMessages:Affirmitive. Rapid support has been deployed to your position]
-					[ChatAudio:Notify2]
-					[BroadcastChatType:Chat]
-	
-
-				  </Description>
-				</EntityComponent>
-				
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		  <Id>
-			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>EasyCargo-PoximitySpawn-Trigger</SubtypeId>
-		  </Id>
-		  <Description>
-		
-			[RivalAI Trigger]
-			
-			[Type:Timer]
-			[UseTrigger:false]
-			[StartsReady:false]
-			[MaxActions:1]
-			[MinCooldownMs:3000]
-			[MaxCooldownMs:4000]
-			[Actions:EasyCargo-PoximitySpawn-Action]	
-			
-		  </Description>
-		</EntityComponent>
-	
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			  <Id>
-				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>EasyCargo-PoximitySpawn-Action</SubtypeId>
-			  </Id>
-			  <Description>
-			
-				[RivalAI Action]
-				
-				[SpawnEncounter:true]
-				[Spawner:EasyCargo-Proximity-Spawner]				
-				
-			  </Description>
-			</EntityComponent>					
-				
-					<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-					  <Id>
-						  <TypeId>Inventory</TypeId>
-						  <SubtypeId>EasyCargo-Proximity-Spawner</SubtypeId>
-					  </Id>
-					  <Description>
-
-						[RivalAI Spawn]
-					  
-						[UseSpawn:true]
-					  
-						[StartsReady:true]
-						[MaxSpawns:1]
-
-						[SpawnGroups:(NPC-WARP) Siberian Jay]
-						[SpawnGroups:(NPC-WARP) Jackdaw]
-						[SpawnGroups:(NPC-WARP) Magpie]
-					  
-						[UseRelativeSpawnPosition:false]
-						[MinDistance:1500]
-						[MaxDistance:2100]
-						[MinAltitude:550]
-						[MaxAltitude:1100]
-						[IgnoreSafetyChecks:false]
-					  
-					  </Description>
-					</EntityComponent>
 
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		  <Id>
 			  <TypeId>Inventory</TypeId>
-			  <SubtypeId>EasyCargo-TurretsDestroyed-Trigger</SubtypeId>
+			  <SubtypeId>A100-TurretsDestroyed-Trigger</SubtypeId>
 		  </Id>
 		  <Description>
 		
@@ -305,7 +170,7 @@
 			[Type:NoWeapon]
 			[UseTrigger:true]
 			[MaxActions:1]
-			[Actions:EasyCargo-TurretsDestroyed-Action]
+			[Actions:A100-TurretsDestroyed-Action]
 			
 		  </Description>
 		</EntityComponent>
@@ -313,14 +178,14 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			  <Id>
 				  <TypeId>Inventory</TypeId>
-				  <SubtypeId>EasyCargo-TurretsDestroyed-Action</SubtypeId>
+				  <SubtypeId>A100-TurretsDestroyed-Action</SubtypeId>
 			  </Id>
 			  <Description>
 			
 				[RivalAI Action]
 				
 				[UseChatBroadcast:true]
-				[ChatData:EasyCargo-TurretsDestroyed-Chat]
+				[ChatData:A100-TurretsDestroyed-Chat]
 				
 			  </Description>
 			</EntityComponent>	
@@ -328,7 +193,7 @@
 				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 				  <Id>
 					  <TypeId>Inventory</TypeId>
-					  <SubtypeId>EasyCargo-TurretsDestroyed-Chat</SubtypeId>
+					  <SubtypeId>A100-TurretsDestroyed-Chat</SubtypeId>
 				  </Id>
 				  <Description>
 
@@ -342,7 +207,7 @@
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:DHL Cargo]
+					[Author:A-100 Albatros]
 					[Color:Red]
 				  
 					[ChatMessages:Uggghh... defenses gone...we surrender!]
@@ -364,7 +229,7 @@
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>EasyCargo-ProximityTrigger-C</SubtypeId>
+          <SubtypeId>A100-ProximityTrigger-C</SubtypeId>
       </Id>
       <Description>
 	
@@ -373,7 +238,7 @@
 		[Type:TurretTarget]
 		[UseTrigger:true]
 		[MaxActions:1]
-		[Actions:EasyCargo-ProximityAction-C]
+		[Actions:A100-ProximityAction-C]
 
 	  </Description>
 	</EntityComponent>
@@ -381,14 +246,17 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>EasyCargo-ProximityAction-C</SubtypeId>
+			<SubtypeId>A100-ProximityAction-C</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
 			
 			[UseChatBroadcast:true]
-			[ChatData:EasyCargo-ProximityChat-C]
+			[ChatData:A100-ProximityChat-C]
+			
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:50]
 	
 		</Description>
 		</EntityComponent>
@@ -396,7 +264,7 @@
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>EasyCargo-ProximityChat-C</SubtypeId>
+				<SubtypeId>A100-ProximityChat-C</SubtypeId>
 			</Id>
 			<Description>
 
@@ -410,19 +278,20 @@
 				[MaxChats:1]
 				[BroadcastRandomly:true]
       
-				[Author:DHL Cargo]
+				[Author:A-100 Albatros]
 				[Color:Red]
       
-				[ChatMessages:We have a hostile in our sights, engaging!]
+				[ChatMessages:We have a hostile in our sights, increase speed and defending ourselves!]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
 				
-				[ChatMessages:We got a bogey closing in, engaging!]
+				[ChatMessages:We got a bogey closing in, increase speed and fire defensive shots!]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
 			</Description>
-		</EntityComponent>			
+		</EntityComponent>
+		
 		
   </EntityComponents>
 </Definitions>

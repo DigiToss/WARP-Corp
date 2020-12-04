@@ -491,9 +491,15 @@
 			[PlanetaryInstallationType:Medium]
 			[ThreatScoreMinimum:150]
 	
-			[UseBlockReplacerProfile:true]
-			[IgnoreGlobalBlockReplacer:true]
-			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
 			
 			[UseContainerTypeAssignment:true]
 			
@@ -807,9 +813,15 @@
 			[ThreatLevelCheckRange:10000]
 			[ThreatScoreMinimum:300]
 	
-			[UseBlockReplacerProfile:true]
-			[IgnoreGlobalBlockReplacer:true]
-			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
 			
 			[UseContainerTypeAssignment:true]
 			[ContainerTypeAssignBlockName:LockerParts]
@@ -882,9 +894,15 @@
 			[ThreatLevelCheckRange:10000]
 			[ThreatScoreMinimum:300]
 			
-			[UseBlockReplacerProfile:true]
-			[IgnoreGlobalBlockReplacer:true]
-			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
 			
 			[UseContainerTypeAssignment:true]
 			[ContainerTypeAssignBlockName:LockerTools]
@@ -959,9 +977,16 @@
 			
 			[FactionOwner:WARP]
 			
-			[UseBlockReplacerProfile:true]
 			[IgnoreGlobalBlockReplacer:true]
-			[BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
 
 			[UseContainerTypeAssignment:true]
 			

@@ -81,10 +81,10 @@
 
 		[RivalAI Action]
 		[GenerateExplosion:true]
-		[ExplosionRange:5]
-		[ExplosionDamage:20]
+		[ExplosionRange:40]
+		[ExplosionDamage:250]
 		[ExplosionIgnoresVoxels:true]
-		[ForceDespawn:true]
+
 	  
       </Description>     
     </EntityComponent>

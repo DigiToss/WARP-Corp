@@ -1268,6 +1268,51 @@
 			
 	   </Items>
     </ContainerType>
+
+   <ContainerType CountMin="5" CountMax="5">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>LargeCargoBoss</SubtypeId>
+      </Id>
+      <Items>
+		<Item AmountMin="200" AmountMax="400">
+          <Frequency>5</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>GravityGenerator</SubtypeId>
+          </Id>
+        </Item>		  
+		<Item AmountMin="50" AmountMax="100">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Detector</SubtypeId>
+          </Id>
+        </Item>
+	    <Item AmountMin="1500" AmountMax="2750">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Reactor</SubtypeId>
+          </Id>
+        </Item>	 
+		<Item AmountMin="2950" AmountMax="4750">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Superconductor</SubtypeId>
+          </Id>
+        </Item>
+		<Item AmountMin="1950" AmountMax="3400">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Thrust</SubtypeId>
+          </Id>
+        </Item>
+			
+	   </Items>
+    </ContainerType>
 	
 	
    <ContainerType CountMin="6" CountMax="10">

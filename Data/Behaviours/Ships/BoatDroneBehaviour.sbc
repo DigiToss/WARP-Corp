@@ -16,6 +16,8 @@
 		[RivalAI Behavior]
 		[BehaviorName:Horsefly]
 		
+		[TargetData:WarpBoatDrone-Target]
+		
 		[Triggers:BoatDrone-TriggerDeath]
 		[Triggers:BoatDrone-TriggerRefuel]
 		

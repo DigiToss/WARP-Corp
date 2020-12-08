@@ -107,7 +107,7 @@
         [FlyLevelWithGravity:true]
         [WaypointTolerance:40]
         [IdealMinSpeed:10]
-        [IdealMaxSpeed:55]
+        [IdealMaxSpeed:60]
         [MaxSpeedTolerance:5]
         [SlowDownOnWaypointApproach:true]
         [ExtraSlowDownDistance:800]
@@ -131,6 +131,140 @@
       </Description>
 
     </EntityComponent>
+	
+	
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>HQPatrol-Autopilot-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [WaypointTolerance:25]
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:150]
+		[RotationMultiplier:0.25]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:2000]
+        [StrafeMaxDurationMs:3000]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>HQPatrol-Autopilot-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [WaypointTolerance:50]
+        [IdealMinSpeed:20]
+        [IdealMaxSpeed:75]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:600]
+		[RotationMultiplier:0.25]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:2000]
+        [StrafeMaxDurationMs:5000]
+
+        [StrafeMinCooldownMs:2000]
+        [StrafeMaxCooldownMs:5000]
+
+        [StrafeMinimumTargetDistance:400]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:150]
+
+        [EngageDistanceSpace:600]
+        [EngageDistancePlanet:600]
+        [DisengageDistanceSpace:700]
+        [DisengageDistancePlanet:700]
+
+      </Description>
+    </EntityComponent>
+	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Boss-Autopilot-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [WaypointTolerance:25]
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:450]
+		[RotationMultiplier:0.25]
+		
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1000]
+        [StrafeMaxDurationMs:2000]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Boss-Autopilot-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [WaypointTolerance:50]
+        [IdealMinSpeed:20]
+        [IdealMaxSpeed:65]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:1000]
+		[RotationMultiplier:0.25]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:3000]
+        [StrafeMaxDurationMs:6000]
+
+        [StrafeMinCooldownMs:7000]
+        [StrafeMaxCooldownMs:14000]
+
+        [StrafeMinimumTargetDistance:500]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:150]
+
+        [EngageDistanceSpace:700]
+        [EngageDistancePlanet:700]
+        [DisengageDistanceSpace:800]
+        [DisengageDistancePlanet:800]
+
+      </Description>
+    </EntityComponent>
+	
 	
  </EntityComponents>
 </Definitions>

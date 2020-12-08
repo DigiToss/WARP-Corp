@@ -16,9 +16,10 @@
 
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
-	    
-		[IdealPlanetAltitude:650]
-		[MinimumPlanetAltitude:250]
+		
+	    [SkipAirDensityCheck:true]
+		[IdealPlanetAltitude:600]
+		[MinimumPlanetAltitude:100]
 	  
 		[Triggers:BossSpawner-SpawnBase-Trigger]
 

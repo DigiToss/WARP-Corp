@@ -18,12 +18,79 @@
 		[BehaviorName:Passive]
 		
 		[Triggers:X300-ProximityTrigger-A]
+		[Triggers:X300-ProximityReply-Trigger]
+		[Triggers:X300-ProximityTrigger-B]
+		[Triggers:X300-ProximityTrigger-D]
 		[Triggers:X300-TurretsDestroyed-Trigger]
 		[Triggers:X300-Switch-Trigger]
+		[Triggers:X300-Travel-Trigger]
 
       </Description>
 	</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Travel-Trigger</SubtypeId>
+      </Id>
+      <Description>
 	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:4000]
+		[MaxCooldownMs:8000]
+		[MaxActions:1]
+		[Actions:X300-Travel-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-Travel-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-Travel-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-Travel-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:10000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:This is a restricted military zone. Leave now or we will destroy you!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
@@ -35,7 +102,7 @@
 		
 		[Type:PlayerNear]
 		[UseTrigger:true]
-		[TargetDistance:4000]
+		[TargetDistance:3000]
 		[MaxActions:1]
 		[Actions:X300-ProximityAction-A]
 
@@ -68,6 +135,49 @@
 			
 				[UseChat:true]
 				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:Detecting enemy signals approaching. This is your final warning! Leave immediatley!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-ProximityAction-B</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-ProximityChat-B]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-ProximityChat-B</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
 				[IgnoredAntennaRangeOverride:5000]
 				[StartsReady:true]
 				[Chance:100]
@@ -77,12 +187,376 @@
 				[Author:X-300 Scutum Patrol]
 				[Color:Red]
       
-				[ChatMessages:Long range radar online. Scanning the area for any targets.]
+				[ChatMessages:Switching to an offensive flight pattern. Search and destroy!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Switch-Trigger</SubtypeId>
+      </Id>
+      <Description>
+			
+		[RivalAI Trigger]
+		
+		[Type:PlayerNear]
+		[UseTrigger:true]
+		[TargetDistance:1500]
+		
+		[SequentialActions:true]
+		[Actions:X300-ProximityAction-B]
+		[Actions:X300-Switch-Action]
+		
+		[MaxActions:2]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-Switch-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[SwitchToBehavior:true]
+			[NewBehavior:X300-Active-Behavior]
+			[PreserveTriggersOnBehaviorSwitch:false]]
+	
+		</Description>
+		</EntityComponent>
+		
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Active-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+        [RivalAI Behavior]
+
+        [BehaviorName:Hunter]
+
+        [AutopilotData:WARP-Autopilot-LargeShip-A]
+        [SecondaryAutopilotData:WARP-Autopilot-LargeShip-B]
+
+        [TargetData:WARP-Target-Main-A]
+        [OverrideTargetData:WARP-Target-Main-B]
+
+		[UseNoTargetTimer:true]
+		[NoTargetTimerTrigger:160]
+		[RetreatDespawnDistance:5000]
+		
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [UseBarrageFire:true]
+		
+		[Triggers:X300-ProximityTrigger-C]
+		[Triggers:X300-TurretsDestroyed-Trigger]
+		[Triggers:X300-NoTarget-Trigger]
+		[Triggers:X300-NewTarget-Trigger]
+		[Triggers:X300-Retreat-Trigger]
+
+      </Description>
+	</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-ProximityTrigger-C</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[Actions:X300-ProximityAction-C]
+		[MaxActions:1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-ProximityAction-C</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-ProximityChat-C]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:X300-NoTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:X300-ProximityTrigger-C]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-ProximityChat-C</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:5000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:Attack pattern Alpha Delta. Preparing rockets! Moving position to fire!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Taking hits. Evasive Manouvres. Loading rockets and preparing to fire!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+		
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-NoTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:LostTarget]
+		[UseTrigger:false]
+		[Actions:X300-NoTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-NoTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-NoTarget-Chat]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Guns In]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:X300-NoTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:X300-NewTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-NoTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:5000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:Looks like the enemy is fleeing. Holding position to confirm.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Enemy has retreated. Will scan the area for any more threats.]
 				[ChatAudio:Notify1]
 				[BroadcastChatType:Chat]
      
 			</Description>
-			</EntityComponent>	
+		</EntityComponent>		
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:HasTarget]
+		[UseTrigger:false]
+		[Actions:X300-NewTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-NewTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-NewTarget-Chat]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Guns Out]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:X300-NoTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:X300-NewTarget-Trigger]
+
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-NewTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:3000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:Picked up another hostile on my radar, 2km out. Will search and destroy!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Contact! 2 clicks out. Engaging!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>	
+
+	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Retreat-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Retreat]
+		[UseTrigger:true]
+		[Actions:X300-Retreat-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-Retreat-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:X300-Retreat-Chat]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Guns In]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:X300-NewTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:X300-Retreat-Trigger]
+			
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:70]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>X300-Retreat-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:8000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:X-300 Scutum Patrol]
+				[Color:Red]
+      
+				[ChatMessages:Area is secure. Heading back to base to assess.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>
 
 
 
@@ -114,7 +588,11 @@
 				
 				[UseChatBroadcast:true]
 				[ChatData:X300-TurretsDestroyed-Chat]
-				
+
+				[SwitchToBehavior:true]
+				[NewBehavior:X300-NoGuns-Behavior]
+				[PreserveTriggersOnBehaviorSwitch:false]]
+					
 			  </Description>
 			</EntityComponent>	
 	
@@ -129,13 +607,13 @@
 				  
 					[UseChat:true]
 					[IgnoreAntennaRequirement:true]
-					[IgnoredAntennaRangeOverride:5000]
+					[IgnoredAntennaRangeOverride:1500]
 					[StartsReady:true]
 					[Chance:100]
 					[MaxChats:1]
 					[BroadcastRandomly:true]
 				  
-					[Author:X300 Scutum]
+					[Author:X-300 Scutum Patrol]
 					[Color:Red]
 				  
 					[ChatMessages:Uggghh... defenses gone...we surrender!]
@@ -152,79 +630,38 @@
 
 				  </Description>
 				</EntityComponent>	
-
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>X300-Switch-Trigger</SubtypeId>
-      </Id>
-      <Description>
-	
-		[RivalAI Trigger]
-		
-		[Type:PlayerNear]
-		[TargetDistance:3500]
-		[UseTrigger:true]
-		[Actions:X300-Switch-Action]
-		[MaxActions:1]
-
-	  </Description>
-	</EntityComponent>
-	
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-		<Id>
-			<TypeId>Inventory</TypeId>
-			<SubtypeId>X300-Switch-Action</SubtypeId>
-		</Id>
-		<Description>
-		
-			[RivalAI Action]
-			
-			[SwitchToBehavior:true]
-			[NewBehavior:X300-Active-Behavior]
-	
-		</Description>
-		</EntityComponent>
-		
+				
 
   	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>X300-Active-Behavior</SubtypeId>
+          <SubtypeId>X300-NoGuns-Behavior</SubtypeId>
       </Id>
       <Description>
 	  
 		[RivalAI Behavior]
-		[BehaviorName:Horsefly]
-		
-        [AutopilotData:Warp-Autopilot-MediumShip-A]
-        [SecondaryAutopilotData:Warp-Autopilot-MediumShip-B]
-		
-		[RemoteControlCode:LX100-Code]
-		[TargetData:WarpShip-Target]
-		[UseNoTargetTimer:true]
-		[NoTargetTimerTrigger:60]
-		[RetreatDespawnDistance:4000]
-		
-		[Triggers:X300-ProximityTrigger-C]
-		[Triggers:X300-TurretsDestroyed-Trigger]
+		[BehaviorName:Passive]
 
+		[Triggers:X300-Stop-Trigger]
+		
       </Description>
 	</EntityComponent>
 	
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>X300-ProximityTrigger-C</SubtypeId>
+          <SubtypeId>X300-Stop-Trigger</SubtypeId>
       </Id>
       <Description>
 	
 		[RivalAI Trigger]
 		
-		[Type:PlayerNear]
-		[TargetDistance:3450]
+		[Type:Timer]
 		[UseTrigger:true]
-		[Actions:X300-ProximityAction-C]
+		[StartsReady:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Actions:X300-Stop-Action]
 		[MaxActions:1]
 		
 	  </Description>
@@ -233,49 +670,17 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>X300-ProximityAction-C</SubtypeId>
+			<SubtypeId>X300-Stop-Action</SubtypeId>
 		</Id>
 		<Description>
 		
 			[RivalAI Action]
+				
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:0]
 			
-			[UseChatBroadcast:true]
-			[ChatData:X300-ProximityChat-C]
-	
 		</Description>
 		</EntityComponent>
-
-			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>X300-ProximityChat-C</SubtypeId>
-			</Id>
-			<Description>
-
-				[RivalAI Chat]
-			
-				[UseChat:true]
-				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:5000]
-				[StartsReady:true]
-				[Chance:100]
-				[MaxChats:1]
-				[BroadcastRandomly:true]
-      
-				[Author:X-300 Scutum]
-				[Color:Red]
-      
-				[ChatMessages:Hostiles spotted! Evasive manouvers, engaging targets!]
-				[ChatAudio:Notify1]
-				[BroadcastChatType:Chat]
-				
-				[ChatMessages:Contact! Enemy on my radar. Adjusting course to engage!]
-				[ChatAudio:Notify1]
-				[BroadcastChatType:Chat]
-     
-			</Description>
-		</EntityComponent>		
-		
-
+	
   </EntityComponents>
 </Definitions>

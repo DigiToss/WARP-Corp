@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->
+<!-- *** S-1000 HUNTER BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-Hunter-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		
+		[BehaviorName:Hunter]
+		
+		[RemoteControlCode:HQPatrol]
+	
+        [AutopilotData:Boss-Autopilot-A]
+        [SecondaryAutopilotData:Boss-Autopilot-B]
+
+        [TargetData:Boss-Target-Main-A]
+        [OverrideTargetData:Boss-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+		
+		[RetreatDespawnDistance:9000]
+
+        [UseBarrageFire:true]		
+
+		[TriggerGroups:VaultBoss-TriggerGroup]
+		[Triggers:S1000-ChangeName-Trigger]
+		[Triggers:S1000-NewTarget-Trigger]
+		[Triggers:S1000-NoTarget-Trigger]
+		[Triggers:S1000-TurretsDestroyed-Trigger]
+		
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-ChangeName-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MinCooldownMs:100]
+		[MaxCooldownMs:101]
+		[MaxActions:1]
+		[Actions:S1000-ChangeName-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>S1000-ChangeName-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[ChangeBlockNames:true]
+			[ChangeBlockNamesFrom:S-1000 Antaios]
+			[ChangeBlockNamesTo:S-1000 Military Support]
+		
+		</Description>
+		</EntityComponent>
+	
+
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:HasTarget]
+		[UseTrigger:true]
+		[Actions:S1000-NewTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>S1000-NewTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:S1000-NewTarget-Chat]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Guns Out]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:S1000-NoTarget-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:S1000-NewTarget-Trigger]
+
+	
+		</Description>
+		</EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-NoTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:LostTarget]
+		[UseTrigger:false]
+		[Actions:S1000-NoTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>S1000-NoTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:S1000-NoTarget-Chat]
+			
+			[TriggerTimerBlocks:true]
+			[TimerBlockNames:Timer Block Guns In]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:S1000-NoTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:S1000-NewTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>	
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>S1000-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:1]
+			[Actions:S1000-TurretsDestroyed-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>S1000-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:S1000-TurretsDestroyed-Chat]
+
+				[SwitchToBehavior:true]
+				[NewBehavior:S1000-NoGuns-Behavior]
+				[PreserveTriggersOnBehaviorSwitch:false]]
+					
+			  </Description>
+			</EntityComponent>	
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>S1000-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Uggghh... defenses gone...we surrender!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Evacuating immediatley. Defenses compromised! Agghhh...]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Uggghh... our defense system is down, we are sitting ducks!]
+					[ChatAudio:Notify1]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+				
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-NoGuns-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+
+		[Triggers:S1000-Stop-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-Stop-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:1000]
+		[MaxCooldownMs:2000]
+		[Actions:S1000-Stop-Action]
+		[MaxActions:1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>S1000-Stop-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+				
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:0]
+			[TerminateBehavior:true]
+			
+		</Description>
+		</EntityComponent>		
+
+	
+  </EntityComponents>
+</Definitions>

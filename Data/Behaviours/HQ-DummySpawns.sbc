@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->	
+<!-- *** LX-22 PATROL DUMMY BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-Dummy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	      
+		[Triggers:LX22-DummySpawn-Trigger]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX22-DummySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[StartsReady:true]
+			[UseTrigger:true]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[ActionExecution:Sequential]
+			[MaxActions:2]
+			[Actions:LX22-DummySpawn-Action]
+			[Actions:LX22-DummyDespawn-Action]
+
+		  </Description>      
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>LX22-DummySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[StartsReady:true]
+				[SpawnEncounter:true]
+				[Spawner:LX22-DummySpawn-Spawn]
+				[MaxSpawns:1]
+
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>LX22-DummyDespawn-Action</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Action]
+					[ForceDespawn:true]
+
+				  </Description>
+				</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX22-DummySpawn-Spawn</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Spawn]
+		  
+			[UseSpawn:true]
+		  
+			[StartsReady:true]
+			[MaxSpawns:1]
+
+			[UseRelativeSpawnPosition:false]
+			[MinDistance:5000]
+			[MaxDistance:10000]
+			[MinAltitude:1200]
+			[MaxAltitude:3000]
+			
+			[SpawnGroups:(NPC-WARP) LX-22 Ravager Patrol]
+		  
+		  </Description>
+		</EntityComponent>
+		
+		
+		
+<!-- -->	
+<!-- *** LX-40 PATROL DUMMY BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX40-Dummy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	      
+		[Triggers:LX40-DummySpawn-Trigger]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX40-DummySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[StartsReady:true]
+			[UseTrigger:true]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[ActionExecution:Sequential]
+			[MaxActions:2]
+			[Actions:LX40-DummySpawn-Action]
+			[Actions:LX40-DummyDespawn-Action]
+
+		  </Description>      
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>LX40-DummySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[StartsReady:true]
+				[SpawnEncounter:true]
+				[Spawner:LX40-DummySpawn-Spawn]
+				[MaxSpawns:1]
+
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>LX40-DummyDespawn-Action</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Action]
+					[ForceDespawn:true]
+
+				  </Description>
+				</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX40-DummySpawn-Spawn</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Spawn]
+		  
+			[UseSpawn:true]
+		  
+			[StartsReady:true]
+			[MaxSpawns:1]
+
+			[UseRelativeSpawnPosition:false]
+			[MinDistance:5000]
+			[MaxDistance:10000]
+			[MinAltitude:1200]
+			[MaxAltitude:3000]
+			
+			[SpawnGroups:(NPC-WARP) LX-40 Gazelle Patrol]
+		  
+		  </Description>
+		</EntityComponent>
+		
+		
+<!-- -->	
+<!-- *** LX-100 PATROL DUMMY BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX100-Dummy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	      
+		[Triggers:LX100-DummySpawn-Trigger]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX100-DummySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[StartsReady:true]
+			[UseTrigger:true]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[ActionExecution:Sequential]
+			[MaxActions:2]
+			[Actions:LX100-DummySpawn-Action]
+			[Actions:LX100-DummyDespawn-Action]
+
+		  </Description>      
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>LX100-DummySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[StartsReady:true]
+				[SpawnEncounter:true]
+				[Spawner:LX100-DummySpawn-Spawn]
+				[MaxSpawns:1]
+
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>LX100-DummyDespawn-Action</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Action]
+					[ForceDespawn:true]
+
+				  </Description>
+				</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>LX100-DummySpawn-Spawn</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Spawn]
+		  
+			[UseSpawn:true]
+		  
+			[StartsReady:true]
+			[MaxSpawns:1]
+
+			[UseRelativeSpawnPosition:false]
+			[MinDistance:5000]
+			[MaxDistance:10000]
+			[MinAltitude:1200]
+			[MaxAltitude:3000]
+			
+			[SpawnGroups:(NPC-WARP) LX-100 Bastion Patrol]
+		  
+		  </Description>
+		</EntityComponent>
+
+<!-- -->	
+<!-- *** X-300 PATROL DUMMY BEHAVIOUR *** -->
+<!-- -->	
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Dummy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Passive]
+	      
+		[Triggers:X300-DummySpawn-Trigger]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>X300-DummySpawn-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+			
+			[Type:Timer]
+			[StartsReady:true]
+			[UseTrigger:true]
+			[MinCooldownMs:1000]
+			[MaxCooldownMs:2000]
+			[ActionExecution:Sequential]
+			[MaxActions:2]
+			[Actions:X300-DummySpawn-Action]
+			[Actions:X300-DummyDespawn-Action]
+
+		  </Description>      
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>X300-DummySpawn-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[StartsReady:true]
+				[SpawnEncounter:true]
+				[Spawner:X300-DummySpawn-Spawn]
+				[MaxSpawns:1]
+
+			  </Description>
+			</EntityComponent>
+
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>X300-DummyDespawn-Action</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Action]
+					[ForceDespawn:true]
+
+				  </Description>
+				</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>X300-DummySpawn-Spawn</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Spawn]
+		  
+			[UseSpawn:true]
+		  
+			[StartsReady:true]
+			[MaxSpawns:1]
+
+			[UseRelativeSpawnPosition:false]
+			[MinDistance:5000]
+			[MaxDistance:10000]
+			[MinAltitude:1200]
+			[MaxAltitude:3000]
+			
+			[SpawnGroups:(NPC-WARP) X-300 Scutum Patrol]
+		  
+		  </Description>
+		</EntityComponent>
+		
+		
+	
+  </EntityComponents>
+</Definitions>

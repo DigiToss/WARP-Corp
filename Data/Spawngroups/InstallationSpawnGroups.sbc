@@ -1318,12 +1318,13 @@
 			
 			[FactionOwner:WARP]
 			
-			[PlanetaryInstallation:true]			
+			[PlanetaryInstallation:true]
+			[InstallationSpawnsOnDryLand:true]			
 			[InstallationSpawnsOnDryLand:true]
 			[CutVoxelsAtAirtightCells:true]
 			[IgnoreCleanupRules:true]
 			[AdminSpawnOnly:true]
-
+	
 			[RivalAiSpawn:true]
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -1495,7 +1496,7 @@
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-BOSS) Perimiter Tower">
 					<Position>
-						<X>900.0</X>
+						<X>600.0</X>
 						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
@@ -1503,7 +1504,7 @@
 				</Prefab>
 				<Prefab SubtypeId="(NPC-BOSS) Perimiter Tower">
 					<Position>
-						<X>-900.0</X>
+						<X>-600.0</X>
 						<Y>-5.0</Y>
 						<Z>0</Z>
 					</Position>
@@ -1513,7 +1514,7 @@
 					<Position>
 						<X>0.0</X>
 						<Y>-5.0</Y>
-						<Z>900.0</Z>
+						<Z>600.0</Z>
 					</Position>
 					<Behaviour>Perimiter1-Behavior</Behaviour>
 				</Prefab>
@@ -1521,39 +1522,39 @@
 					<Position>
 						<X>0.0</X>
 						<Y>-5.0</Y>
-						<Z>-900.0</Z>
+						<Z>-600.0</Z>
 					</Position>
 					<Behaviour>Perimiter1-Behavior</Behaviour>
 				</Prefab>
 				<Prefab SubtypeId="(NPC-BOSS) SAM">
 					<Position>
-						<X>700.0</X>
+						<X>450.0</X>
 						<Y>-5.0</Y>
-						<Z>700.0</Z>
+						<Z>450.0</Z>
 					</Position>
 					<Behaviour>Perimiter2-Behavior</Behaviour>
 				</Prefab>
 				<Prefab SubtypeId="(NPC-BOSS) SAM">
 					<Position>
-						<X>700.0</X>
+						<X>450.0</X>
 						<Y>-5.0</Y>
-						<Z>-700.0</Z>
+						<Z>-450.0</Z>
 					</Position>
 					<Behaviour>Perimiter2-Behavior</Behaviour>
 				</Prefab>
 				<Prefab SubtypeId="(NPC-BOSS) SAM">
 					<Position>
-						<X>-700.0</X>
+						<X>-450.0</X>
 						<Y>-5.0</Y>
-						<Z>700.0</Z>
+						<Z>450.0</Z>
 					</Position>
 					<Behaviour>Perimiter2-Behavior</Behaviour>
 				</Prefab>
 				<Prefab SubtypeId="(NPC-BOSS) SAM">
 					<Position>
-						<X>-700.0</X>
+						<X>-450.0</X>
 						<Y>-5.0</Y>
-						<Z>-700.0</Z>
+						<Z>-450.0</Z>
 					</Position>
 					<Behaviour>Perimiter2-Behavior</Behaviour>
 				</Prefab>

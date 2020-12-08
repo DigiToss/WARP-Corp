@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->
+<!-- *** LX-100 BASTION HUNTER BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX100-Hunter-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		
+		[BehaviorName:Hunter]
+		
+		[RemoteControlCode:HQPatrol]
+	
+        [AutopilotData:HQPatrol-Autopilot-A]
+        [SecondaryAutopilotData:HQPatrol-Autopilot-B]
+
+        [TargetData:HQPatrol-Target-Main-A]
+        [OverrideTargetData:HQPatrol-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+		
+		[RetreatDespawnDistance:5000]
+        [UseBarrageFire:true]		
+
+		[TriggerGroups:HQPatrol-TriggerGroup]
+		[Triggers:LX100-ChangeName-Trigger]
+		
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX100-ChangeName-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MinCooldownMs:100]
+		[MaxCooldownMs:101]
+		[MaxActions:1]
+		[Actions:LX100-ChangeName-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>LX100-ChangeName-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[ChangeBlockNames:true]
+			[ChangeBlockNamesFrom:LX-100 Bastion]
+			[ChangeBlockNamesTo:LX-100 Bastion Security Patrol]
+		
+		</Description>
+		</EntityComponent>
+	
+  </EntityComponents>
+</Definitions>

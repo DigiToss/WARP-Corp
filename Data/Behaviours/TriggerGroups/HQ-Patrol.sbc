@@ -1,0 +1,978 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+<!-- -->
+<!-- *** HQ PATROL TRIGGERS *** -->
+<!-- -->
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	<Id>
+	  <TypeId>Inventory</TypeId>
+	  <SubtypeId>HQPatrol-TriggerGroup</SubtypeId>
+	</Id>
+	<Description>
+
+	[RivalAI TriggerGroup]
+
+	[Triggers:HQPatrol-Arrival-Trigger]
+	[Triggers:HQPatrol-NewTarget-Trigger]
+	[Triggers:HQPatrol-Damage-Trigger]
+	[Triggers:HQPatrol-ReceiveTarget-Trigger]
+	[Triggers:HQPatrol-RefreshNear-Trigger]
+	[Triggers:HQPatrol-RefreshFar-Trigger]
+	[Triggers:HQPatrol-Grind-Trigger]
+	[Triggers:HQPatrol-TurretsDestroyed-Trigger]
+	[Triggers:HQPatrol-NoTarget-Trigger]
+	[Triggers:HQPatrol-LostTarget-Trigger]	
+	[Triggers:HQPatrol-HasTarget-Trigger]
+	[Triggers:HQPatrol-Retreat-Trigger]
+	[Triggers:HQPatrol-Compromised-Trigger]
+
+	</Description>
+	</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	<Id>
+	  <TypeId>Inventory</TypeId>
+	  <SubtypeId>VaultBoss-TriggerGroup</SubtypeId>
+	</Id>
+	<Description>
+
+	[RivalAI TriggerGroup]
+
+	[Triggers:VaultBoss-Arrival-Trigger]
+	[Triggers:VaultBoss-NewTarget-Trigger]
+	[Triggers:HQPatrol-Damage-Trigger]
+	[Triggers:HQPatrol-ReceiveTarget-Trigger]
+	[Triggers:HQPatrol-RefreshNear-Trigger]
+	[Triggers:HQPatrol-RefreshFar-Trigger]
+	[Triggers:HQPatrol-Grind-Trigger]
+	[Triggers:HQPatrol-TurretsDestroyed-Trigger]
+	[Triggers:HQPatrol-NoTarget-Trigger]
+	[Triggers:HQPatrol-LostTarget-Trigger]	
+	[Triggers:HQPatrol-HasTarget-Trigger]
+	[Triggers:HQPatrol-Retreat-Trigger]
+	[Triggers:HQPatrol-Compromised-Trigger]
+
+	</Description>
+	</EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-Arrival-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:2000]
+		[MaxCooldownMs:8000]
+		[MaxActions:1]
+		[Actions:HQPatrol-Arrival-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-Arrival-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-Arrival-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-Arrival-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:This is the {AntennaName} Vessel. Scanning WARP HQ Airspace for any unauthorized vessels!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+			
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>HQPatrol-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerA]
+        [MinCooldownMs:100000]
+        [MaxCooldownMs:100001]
+        [StartsReady:true]
+        [MaxActions:-1]
+        [Actions:HQPatrol-NewTarget-Action]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-NewTarget-Action</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-NewTarget-Chat]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-NewTarget-Chat</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:{AntennaName}]
+				[Color:Red]
+
+				[ChatMessages:Detected a hostile target! Increasing speed to engage!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Contact! Unauthorized hostile detected. Adjusting course to eliminate!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+
+			  </Description>
+			</EntityComponent>
+
+
+    <!--GeneralDamage-->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-Damage-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+
+			[UseTrigger:true]
+			[Type:Damage]
+			
+			[DamageTypes:Any]
+			[ExcludedDamageTypes:Environment]
+			[ExcludedDamageTypes:Deformation]
+			
+			[MinCooldownMs:15000]
+			[MaxCooldownMs:15001]
+			[StartsReady:true]
+			[MaxActions:-1]
+			[Actions:HQPatrol-Damage-Action]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-Damage-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[BehaviorSpecificEventA:true]
+				[BroadcastSendCode:HQPatrolTargetSharingCode]
+				[BroadcastDamagerTarget:true]
+
+			  </Description>
+			</EntityComponent>
+
+
+    <!--ReceiveTarget-->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-ReceiveTarget-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+
+			[UseTrigger:true]
+			[Type:CommandReceived]
+			[CommandReceiveCode:HQPatrolTargetSharingCode]
+
+			[MinCooldownMs:11000]
+			[MaxCooldownMs:15000]
+			[StartsReady:true]
+			[MaxActions:-1]
+			[Actions:HQPatrol-ReceiveTarget-Action]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-ReceiveTarget-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[BehaviorSpecificEventA:true]
+				[InheritLastAttackerFromCommand:true]
+
+			  </Description>
+			</EntityComponent>
+
+
+    <!--Refresh Near-->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-RefreshNear-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+
+			[UseTrigger:true]
+			[Type:PlayerNear]
+			[TargetDistance:1000]
+			[MinCooldownMs:7000]
+			[MaxCooldownMs:12000]
+			[MaxActions:-1]
+			[Actions:HQPatrol-RefreshNear-Action]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-RefreshNear-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[RefreshTarget:true]
+
+				[EnableTriggers:true]
+				[EnableTriggerNames:HQPatrol-RefreshFar-Trigger]
+
+			  </Description>
+			</EntityComponent>
+
+
+    <!--Refresh Far-->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-RefreshFar-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+
+			[UseTrigger:false]
+			[Type:PlayerFar]
+			[TargetDistance:2000]
+			[MinCooldownMs:8000]
+			[MaxCooldownMs:12000]
+			[MaxActions:-1]
+			[Actions:HQPatrol-RefreshFar-Action]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-RefreshFar-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[RefreshTarget:true]
+
+				[DisableTriggers:true]
+				[DisableTriggerNames:HQPatrol-RefreshFar-Trigger]
+
+			  </Description>
+			</EntityComponent>
+
+
+    <!--Grind Damage-->
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-Grind-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Trigger]
+
+			[UseTrigger:true]
+			[Type:Damage]
+			[DamageTypes:Grind]
+			[MinCooldownMs:14000]
+			[MaxCooldownMs:20000]
+			[StartsReady:true]
+			[MaxActions:3]
+			[Actions:HQPatrol-Grind-Action]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-Grind-Action</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Action]
+
+				[BarrelRoll:true]
+				[UseChatBroadcast:true]
+				[ChatData:HQPatrol-Grind-Chat]
+				
+
+			  </Description>
+			</EntityComponent>
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-Grind-Chat</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+				[Author:{AntennaName}]
+				[Color:Red]
+
+				[ChatMessages:Hullbreach!! Evasive maneuvers!!]
+				[ChatAudio:Notify3]
+				[BroadcastChatType:Chat]
+
+			  </Description>
+			</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HQPatrol-TurretsDestroyed-Trigger</SubtypeId>
+		  </Id>
+		  <Description>
+		
+			[RivalAI Trigger]
+			
+			[Type:NoWeapon]
+			[UseTrigger:true]
+			[MaxActions:2]
+			[Actions:HQPatrol-TurretsDestroyed-Action]
+			[Actions:HQPatrol-Explosion-Action]
+			
+		  </Description>
+		</EntityComponent>
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HQPatrol-TurretsDestroyed-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[UseChatBroadcast:true]
+				[ChatData:HQPatrol-TurretsDestroyed-Chat]
+				
+				[Retreat:true]
+				[ChangeAutopilotSpeed:true]
+				[NewAutopilotSpeed:20]
+				
+			  </Description>
+			</EntityComponent>	
+			
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HQPatrol-Explosion-Action</SubtypeId>
+			  </Id>
+			  <Description>
+			
+				[RivalAI Action]
+				
+				[Chance:25]
+				
+				[GenerateExplosion:true]
+				[ExplosionDamage:100]
+				[ExplosionRange:50]
+				[ExplosionIgnoresVoxels:true]
+				
+			  </Description>
+			</EntityComponent>
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>HQPatrol-TurretsDestroyed-Chat</SubtypeId>
+				  </Id>
+				  <Description>
+
+					[RivalAI Chat]
+				  
+					[UseChat:true]
+					[StartsReady:true]
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:{AntennaName}]
+					[Color:Red]
+				  
+					[ChatMessages:Uggghh... defenses gone...attempting to get home!]
+					[ChatAudio:Notify3]
+					[BroadcastChatType:Chat]
+				  
+					[ChatMessages:Defenses compromised! Agghhh... Autopilot set to home base]
+					[ChatAudio:Notify3]
+					[BroadcastChatType:Chat]
+					
+					[ChatMessages:Uggghh... our defense system is down! Initiated escape autopilot!]
+					[ChatAudio:Notify3]
+					[BroadcastChatType:Chat]
+
+				  </Description>
+				</EntityComponent>	
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-HasTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:BehaviorTriggerD]
+		[UseTrigger:true]
+		[Actions:HQPatrol-HasTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-HasTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-HasTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:HQPatrol-HasTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:HQPatrol-NoTarget-Trigger]
+
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-HasTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+				
+				[ChatMessages: ---- Target locked! ----]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Notify]
+     
+			</Description>
+		</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-LostTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:BehaviorTriggerB]
+		[UseTrigger:false]
+		[Actions:HQPatrol-LostTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-LostTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-LostTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:HQPatrol-LostTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:HQPatrol-HasTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-LostTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Target gone off radar. Searching the area]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Enemy missing from radar. Checking the area.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-NoTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:BehaviorTriggerC]
+		[UseTrigger:false]
+		[Actions:HQPatrol-NoTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-NoTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-NoTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:HQPatrol-NoTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:HQPatrol-HasTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-NoTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Lost target. Searching the area.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Enemy missing. Scanning the area.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-Retreat-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Retreat]
+		[UseTrigger:false]
+		[Actions:HQPatrol-Retreat-Action]
+		[MaxActions:1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>HQPatrol-Retreat-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-Retreat-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:HQPatrol-Retreat-Trigger]
+			
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:50]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>HQPatrol-Retreat-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Looks like the area is all clear. Returning to base.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HQPatrol-Compromised-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Compromised]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:HQPatrol-Compromised-Action-A]
+		[Actions:HQPatrol-Compromised-Action-B]
+	  
+      </Description>    
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HQPatrol-Compromised-Action-A</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-Compromised-Chat]
+		    [Chance:10]
+			[GenerateExplosion:true]
+			[ExplosionRange:10]
+			[ExplosionDamage:400]
+			[ExplosionIgnoresVoxels:true]
+			[TerminateBehavior:true]
+		  
+		  </Description>     
+		</EntityComponent>
+		
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>HQPatrol-Compromised-Action-B</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+			[UseChatBroadcast:true]
+			[ChatData:HQPatrol-Compromised-Chat]
+		    [Chance:25]
+			[BarrelRoll:true]
+			[GenerateExplosion:true]
+			[ExplosionRange:10]
+			[ExplosionDamage:400]
+			[ExplosionIgnoresVoxels:true]
+			[TerminateBehavior:true]
+		  
+		  </Description>     
+		</EntityComponent>
+		
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				  <TypeId>Inventory</TypeId>
+				  <SubtypeId>HQPatrol-Compromised-Chat</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+			  
+				[Author:{AntennaName}]
+				[Color:Red]
+			  
+				[ChatMessages:Systems critical! Aggghhh!]
+				[ChatAudio:Notify3]
+				[BroadcastChatType:Chat]
+
+			  </Description>	
+			</EntityComponent>
+		
+		
+<!-- -->
+<!-- VAULT BOSS SPECIFIC TRIGGERS -->
+<!-- -->
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>VaultBoss-Arrival-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:2000]
+		[MaxCooldownMs:8000]
+		[MaxActions:1]
+		[Actions:VaultBoss-Arrival-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>VaultBoss-Arrival-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:VaultBoss-Arrival-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>VaultBoss-Arrival-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:This is the {AntennaName} Vessel. Enroute for immediate assistance!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+			
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>VaultBoss-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerA]
+        [MinCooldownMs:100000]
+        [MaxCooldownMs:100001]
+        [StartsReady:true]
+        [MaxActions:-1]
+        [Actions:VaultBoss-NewTarget-Action]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>VaultBoss-NewTarget-Action</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+
+			[UseChatBroadcast:true]
+			[ChatData:VaultBoss-NewTarget-Chat]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>VaultBoss-NewTarget-Chat</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:{AntennaName}]
+				[Color:Red]
+
+				[ChatMessages:Got multiple targets. Engaging!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Contact! Moving to engage targets!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+
+			  </Description>
+			</EntityComponent>
+  </EntityComponents>
+</Definitions>

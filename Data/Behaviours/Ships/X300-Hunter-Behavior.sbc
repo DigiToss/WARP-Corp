@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->
+<!-- *** X-300 HUNTER BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-Hunter-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		
+		[BehaviorName:Hunter]
+		
+		[RemoteControlCode:HQPatrol]
+	
+        [AutopilotData:HQPatrol-Autopilot-A]
+        [SecondaryAutopilotData:HQPatrol-Autopilot-B]
+
+        [TargetData:HQPatrol-Target-Main-A]
+        [OverrideTargetData:HQPatrol-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+		[RetreatDespawnDistance:5000]
+        [UseBarrageFire:true]		
+
+		[TriggerGroups:HQPatrol-TriggerGroup]
+		[Triggers:X300-ChangeName-Trigger]
+		
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>X300-ChangeName-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MinCooldownMs:100]
+		[MaxCooldownMs:101]
+		[MaxActions:1]
+		[Actions:X300-ChangeName-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>X300-ChangeName-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[ChangeBlockNames:true]
+			[ChangeBlockNamesFrom:X-300 Scutum Patrol]
+			[ChangeBlockNamesTo:X-300 Military Patrol]
+		
+		</Description>
+		</EntityComponent>
+	
+  </EntityComponents>
+</Definitions>

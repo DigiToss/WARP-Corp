@@ -450,7 +450,7 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>Silo42-EnableCounters-Action</SubtypeId>
+			<SubtypeId>Silo42-DisableCounters-Action</SubtypeId>
 		</Id>
 		<Description>
 		

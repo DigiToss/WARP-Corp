@@ -16,12 +16,17 @@
 
 		[RivalAI Behavior]
 		[BehaviorName:Passive]
+		
+		[RemoteControlCode:HQPatrol]
 	    	  
 		[Triggers:Vault-Towers-Trigger]
 		[Triggers:Vault-PerimiterProximity-Trigger]
 		[Triggers:Vault-Compromised-Trigger]
 		[Triggers:Vault-WeldersOn-Trigger]
-		[Trggers:Vault-WeldersOff-Trigger]
+		[Triggers:Vault-WeldersOff-Trigger]
+		
+		[Triggers:Vault-EnableSpawns-Trigger]
+		[Triggers:Vault-SpawnDrones-Trigger]
 		
 
       </Description>
@@ -100,6 +105,7 @@
 		[UseTrigger:true]
 		[TargetDistance:2400]
 		[Actions:Vault-PerimiterProximity-Action]
+		[MaxActions:1]
 		
 	  </Description>
 	</EntityComponent>
@@ -129,8 +135,6 @@
 				[RivalAI Chat]
       
 				[UseChat:true]
-				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
 				[StartsReady:true]
 				[Chance:100]
 				[MaxChats:1]
@@ -139,32 +143,33 @@
 				[Author:The Vault]
 				[Color:Red]
       
-				[ChatMessages:Perimiter defenses activated!]
-				[ChatAudio:ProximityWarning]
+				[ChatMessages:ENEMY HOSTILES DETECTED! DEFENSE PROTOCOL ACTIVATED]
+				[ChatAudio:Notify2]
 				[BroadcastChatType:Chat]
 			
       </Description>
     </EntityComponent>
 
 
-<!-- -->
-<!-- *** BASE COMPROMISED SPAWN BOSS WARSHIP  *** -->
 <!-- -->	
-<!--
+<!-- *** DEFENSE DRONE SPAWNS *** -->
+<!-- -->
+
+
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>Vault-Compromised-Trigger</SubtypeId>
+          <SubtypeId>Vault-EnableSpawns-Trigger</SubtypeId>
       </Id>
       <Description>
 	
 		[RivalAI Trigger]
 		
-		[Type:Compromised]
+		[Type:PlayerNear]
 		[UseTrigger:true]
-		[StartsReady:true]
+		[TargetDistance:1000]
 		[MaxActions:1]
-		[Actions:Vault-Compromised-Action]
+		[Actions:Vault-EnableSpawns-Action]
 		
 	  </Description>
 	</EntityComponent>
@@ -172,71 +177,105 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 		<Id>
 			<TypeId>Inventory</TypeId>
-			<SubtypeId>Vault-Compromised-Action</SubtypeId>
+			<SubtypeId>Vault-EnableSpawns-Action</SubtypeId>
+		</Id>
+		<Description>
+	
+			[RivalAI Action]
+			
+			[EnableTriggers:true]
+			[EnableTriggerNames:Vault-SpawnDrones-Trigger]
+			[DisableTriggers:true]
+			[DisableTriggerNames:Vault-EnableSpawns-Trigger]
+			
+		</Description>
+		</EntityComponent>
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-SpawnDrones-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[StartsReady:true]
+		[UseTrigger:false]
+		[MinCooldownMs:240000]
+		[MaxCooldownMs:340000]
+		[MaxActions:5]
+		[Actions:Vault-SpawnDrones-Action]
+
+      </Description>      
+    </EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-SpawnDrones-Action</SubtypeId>
 		</Id>
 		<Description>
 
 			[RivalAI Action]
-
-			[UseChatBroadcast:true]
-			[ChatData:Vault-Compromised-Chat]
 			
-			[StartsReady:true]
 			[SpawnEncounter:true]
-			[Spawner:Vault-Warship-Spawn]
-			[MaxSpawns:1]
+			[Spawner:Vault-SpawnDrones-Spawn]
+			[UseChatBroadcast:true]
+			[ChatData:Vault-SpawnDrones-Chat]
 
-		</Description>      
-		</EntityComponent>	
-
+		</Description>
+		</EntityComponent>
+		
+		
 			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>Vault-Compromised-Chat</SubtypeId>
+				<SubtypeId>Vault-SpawnDrones-Spawn</SubtypeId>
 			</Id>
 			<Description>
 
-				[RivalAI Chat]
-      
-				[UseChat:true]
-				[IgnoreAntennaRequirement:true]
-				[IgnoredAntennaRangeOverride:3000]
-				[StartsReady:true]
-				[Chance:100]
-				[MaxChats:1]
-				[BroadcastRandomly:true]
-				[Author:The Vault]
-				[Color:Red]      
-				[ChatMessages:Mayday Mayday! Our facility is being run over, we require immediate assistance!]
-				[ChatAudio:Notify2]
-				[BroadcastChatType:Chat]
+				[RivalAI Spawn]
+				
+				[UseSpawn:true]
+				[SpawnGroups:TestFacilityTransmissionSpawn]
+				[UseRelativeSpawnPosition:false]
+				[MinDistance:1700]
+				[MaxDistance:2400]
+				[MinAltitude:400]
+				[MaxAltitude:1600]
+				[IgnoreSafetyChecks:false]
+		
+			</Description>
+			</EntityComponent>
 			
-      </Description>
-    </EntityComponent>
-	
 				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-				<Id>
-					<TypeId>Inventory</TypeId>
-					<SubtypeId>Vault-Warship-Spawn</SubtypeId>
-				</Id>
-				<Description>
+				  <Id>
+					  <TypeId>Inventory</TypeId>
+					  <SubtypeId>Vault-SpawnDrones-Chat</SubtypeId>
+				  </Id>
+				  <Description>
 
-					[RivalAI Spawn]
-      
-					[UseSpawn:true]      
+					[RivalAI Chat]
+				  
+					[UseChat:true]
 					[StartsReady:true]
-					[MaxSpawns:1]     
-					[SpawnGroups:Vault Warship]
-					[UseRelativeSpawnPosition:false]
-					[MinDistance:5500]
-					[MaxDistance:7500]
-					[MinAltitude:1400]
-					[MaxAltitude:2000]
-					[IgnoreSafetyChecks:false]
-      
-				</Description>
+					[Chance:100]
+					[MaxChats:1]
+					[BroadcastRandomly:true]
+				  
+					[Author:The Vault]
+					[Color:Red]
+				  
+					[ChatMessage:DEFENSE DRONES LAUNCHED AND INTERCEPTING HOSTILES!]
+					[ChatAudio:Notify2]
+					[BroadcastChatType:Chat]
+				  
+				  </Description>
 				</EntityComponent>
--->
+				
 
 <!-- -->
 <!-- *** WELDERS ON/OFF  *** -->
@@ -306,7 +345,96 @@
 			
 		</Description>
 		</EntityComponent>						
-				
-				
+			
+			
+<!-- -->
+<!-- *** BASE COMPROMISED SPAWN BOSS WARSHIP  *** -->
+<!-- -->	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Vault-Compromised-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Compromised]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:Vault-Compromised-Action]
+		
+	  </Description>
+	</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>Vault-Compromised-Action</SubtypeId>
+		</Id>
+		<Description>
+
+			[RivalAI Action]
+
+			[UseChatBroadcast:true]
+			[ChatData:Vault-Compromised-Chat]
+			
+			[SpawnEncounter:true]
+			[Spawner:Vault-Warship-Spawn]
+			[MaxSpawns:1]
+
+		</Description>      
+		</EntityComponent>	
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Vault-Compromised-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+      
+				[UseChat:true]
+				[IgnoreAntennaRequirement:true]
+				[IgnoredAntennaRangeOverride:40000]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:The Vault]
+				[Color:Red]      
+				[ChatMessages:Mayday Mayday! Our facility is being run over, we require immediate assistance!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+			
+			  </Description>
+			</EntityComponent>
+	
+				<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+				<Id>
+					<TypeId>Inventory</TypeId>
+					<SubtypeId>Vault-Warship-Spawn</SubtypeId>
+				</Id>
+				<Description>
+
+					[RivalAI Spawn]
+      
+					[UseSpawn:true]      
+					[MaxSpawns:1]     
+					[SpawnGroups:(NPC-WARP) S-1000 Antaios Patrol]
+					[UseRelativeSpawnPosition:false]
+					[MinDistance:6500]
+					[MaxDistance:8500]
+					[MinAltitude:1100]
+					[MaxAltitude:3000]
+					[IgnoreSafetyChecks:false]
+      
+				</Description>
+				</EntityComponent>
+
+	
   </EntityComponents>
 </Definitions>

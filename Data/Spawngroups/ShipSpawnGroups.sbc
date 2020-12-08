@@ -288,6 +288,7 @@
 			[AtmosphericCargoShip:true]
 			[AtmosphericCargoShipChance:10]
 			[FactionOwner:WARP]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -360,10 +361,11 @@
 			[Modular Encounters SpawnGroup]
 
 			[AtmosphericCargoShip:true]
-			[AtmosphericCargoShipChance:15]
+			[AtmosphericCargoShipChance:25]
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -441,10 +443,11 @@
 			[Modular Encounters SpawnGroup]
 
 			[AtmosphericCargoShip:true]
-			[AtmosphericCargoShipChance:15]
+			[AtmosphericCargoShipChance:25]
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -520,6 +523,7 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -588,6 +592,7 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -651,6 +656,7 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 				
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -716,6 +722,7 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -770,6 +777,7 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
@@ -834,17 +842,14 @@
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
-
-			[UseRemoteControlCodeRestrictions:true]
-			[RemoteControlCode:LX100-Code]
-			[RemoteControlCodeMinDistance:25000]
+			[DisableDampeners:false]
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:400]
+			[ThreatScoreMinimum:450]
 
 			[IgnoreGlobalBlockReplacer:true]
             [UseBlockReplacerProfile:true]
@@ -899,28 +904,25 @@
 			</Prefabs>
 		</SpawnGroup>
 
-<!--
+
+<!-- Vault Boss -->
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId>
-				<SubtypeId>(NPC-WARP) S-1000 Antaios</SubtypeId>
+				<SubtypeId>(NPC-WARP) S-1000 Antaios Patrol</SubtypeId>
 			</Id>
 			<Description>
 
 			[Modular Encounters SpawnGroup]
 
-			[AtmosphericCargoShip:true]
-			[AtmosphericCargoShipChance:40]
 			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
+			[DisableDampeners:false]
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
-			
-			[UseThreatLevelCheck:true]
-			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:400]
+			[AdminSpawnOnly:true]
 
 			[IgnoreGlobalBlockReplacer:true]
             [UseBlockReplacerProfile:true]
@@ -961,8 +963,8 @@
 			[ContainerTypeAssignBlockName:LargeCargoIngotsT3]
 			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT3]
 			
-			[ContainerTypeAssignBlockName:LargeCargoOresT3]
-			[ContainerTypeAssignSubtypeId:LargeCargoOresT3]
+			[ContainerTypeAssignBlockName:LargeCargoBoss]
+			[ContainerTypeAssignSubtypeId:LargeCargoBoss]
 			
 			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
 			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
@@ -987,42 +989,287 @@
 				<Prefab SubtypeId="(NPC-WARP) S-1000 Antaios">
 					<Position>
 						<X>0.0</X>
-						<Y>2500.0</Y>
+						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>20</Speed>
-					<Behaviour>S1000-Behavior</Behaviour>
+					<Behaviour>S1000-Hunter-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
-		-->	
 		
 
 <!-- WARP HQ SPAWN ONLY -->	
 		<SpawnGroup>
 			<Id>
-				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>(NPC-WARP) X-300 Scutum Patrol</SubtypeId>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>LX-22 Patrol Dummy Spawn</SubtypeId>
 			</Id>
 			<Description>
 
 			[Modular Encounters SpawnGroup]
 
-			[AtmosphericCargoShip:true]
-			[AtmosphericCargoShipChance:75]
-			[RivalAiSpawn:true]
 			[FactionOwner:WARP]
-			[ReplenishSystems:false]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+
+			[UseRemoteControlCodeRestrictions:true]
+			[RemoteControlCode:HQPatrol]
+			[RemoteControlCodeMinDistance:8000]
+			
 			[Territory:WARPHQ]
 			[MinDistanceFromTerritoryCenter:1]
-			[MaxDistanceFromTerritoryCenter:35000]
-				
+			[MaxDistanceFromTerritoryCenter:25000]
+			
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 			
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
-			[ThreatScoreMinimum:200]
+			[ThreatScoreMinimum:0]
+	
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>50.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="RCDummySpawn">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>LX22-Dummy-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-22 Ravager Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[AdminSpawnOnly:true]
+			
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:SmallAmmoCargo]
+			[ContainerTypeAssignSubtypeId:SmallAmmoCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+						
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-22 Ravager">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX22-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>LX-40 Patrol Dummy Spawn</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+
+			[UseRemoteControlCodeRestrictions:true]
+			[RemoteControlCode:HQPatrol]
+			[RemoteControlCodeMinDistance:8000]
+			
+			[Territory:WARPHQ]
+			[MinDistanceFromTerritoryCenter:1]
+			[MaxDistanceFromTerritoryCenter:25000]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>50.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="RCDummySpawn">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>LX40-Dummy-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-40 Gazelle Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[AdminSpawnOnly:true]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-40 Gazelle">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX40-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+	
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>LX-100 Patrol Dummy Spawn</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRemoteControlCodeRestrictions:true]
+			[RemoteControlCode:HQPatrol]
+			[RemoteControlCodeMinDistance:8000]
+			
+			[Territory:WARPHQ]
+			[MinDistanceFromTerritoryCenter:1]
+			[MaxDistanceFromTerritoryCenter:25000]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>50.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="RCDummySpawn">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>LX100-Dummy-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-100 Bastion Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[AdminSpawnOnly:true]
 
 			[IgnoreGlobalBlockReplacer:true]
             [UseBlockReplacerProfile:true]
@@ -1034,6 +1281,140 @@
 
 			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
 			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-100 Bastion">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX100-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+
+
+	
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>X-300 Patrol Dummy Spawn</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[FactionOwner:WARP]
+			
+			[InstallationSpawnsOnDryLand:true]
+			[PlanetaryInstallation:true]
+			[PlanetaryInstallationType:Small]
+			
+			[UseRemoteControlCodeRestrictions:true]
+			[RemoteControlCode:HQPatrol]
+			[RemoteControlCodeMinDistance:8000]
+			
+			[Territory:WARPHQ]
+			[MinDistanceFromTerritoryCenter:1]
+			[MaxDistanceFromTerritoryCenter:25000]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:0]
+	
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon> 
+			<IsPirate>true</IsPirate> 
+			<Frequency>50.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="RCDummySpawn">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Behaviour>X300-Dummy-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) X-300 Scutum Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]	
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[AdminSpawnOnly:true]
+			
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockLargeThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridLarge]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockSmallThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridSmall]
+			
+			[ReplaceBlockOld:MyObjectBuilder_GravityGenerator/GravityGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_GravityGenerator/WARPGravGen]
+
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
 			
 			[UseContainerTypeAssignment:true]			
 			[ContainerTypeAssignBlockName:GatlingCargo]
@@ -1054,11 +1435,13 @@
 			[ContainerTypeAssignBlockName:LockerWeapons]
 			[ContainerTypeAssignSubtypeId:LockerWeapons]
 			
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
 			
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>10</Frequency>
+			<Frequency>1</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) X-300 Scutum Patrol">
 					<Position>
@@ -1066,8 +1449,8 @@
 						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
-					<Speed>25</Speed>
-					<Behaviour>X300-Behavior</Behaviour>
+					<Speed>20</Speed>
+					<Behaviour>X300-Hunter-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -1309,9 +1692,12 @@
 			<Description>
 
 			[Modular Encounters SpawnGroup]
+			
 			[Territory:WARPHQ]
 			[MinDistanceFromTerritoryCenter:1]
 			[MaxDistanceFromTerritoryCenter:10000]
+			[MinAirDensity:0.2]
+			[MinGravity:0.5]
 
 			[BossEncounterAtmo:true]
 			[BossEncounterChance:100]
@@ -1319,24 +1705,19 @@
 			[BossCustomAnnounceAuthor:MLTC Command]
 			[BossCustomAnnounceMessage:Our intel suggests a WARP Corp. high-security installation with rare components is located in this area.]
 			[BossCustomGPSLabel:High-Security Installation]
-			
-			
-			[SpaceCargoShip:false]
-			[LunarCargoShip:false]
-			[SpaceRandomEncounter:false]
-			[AtmosphericCargoShip:false]
-			[PlanetaryInstallation:false]
-			[RivalAiSpawn:true]
+
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
-				
+			[SkipAirDensityCheck:true]
+			
+			[RivalAiAnySpawn:true]
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
 			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
+			<Frequency>20.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="(NPC-WARP) Boss Spawner">
 					<Position>

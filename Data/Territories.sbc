@@ -11,9 +11,10 @@
 			[Modular Encounters Territory]
 			[Name:WARPHQ]
 			[Type:Planetary]
+			[PlanetGeneratorName:TerraAqua]
 			[Active:true]
 			
-			[Radius:35000]
+			[Radius:25000]
 			[CoordsX:0.102275158968565]
 			[CoordsY:0.993280718475313]
 			[CoordsZ:-0.0541590820003535]
@@ -21,7 +22,6 @@
 			[AnnounceArriveDepart:true]
 			[CustomArriveMessage:YOU HAVE ENTERED WARP CORP RESTRICTED AIR ZONE. BEWARE THERE IS A LARGE MILITARY PRESENCE IN THIS AREA!]
 			[CustomDepartMessage:YOU HAVE LEFT WARP CORPS RESTRICTED AIR ZONE]
-			[PlanetGeneratorName:TerraAqua]
 
 			</Description>
 			<Icon>Textures\GUI\Icons\Fake.dds</Icon>

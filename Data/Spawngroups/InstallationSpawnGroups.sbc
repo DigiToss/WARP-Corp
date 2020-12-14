@@ -337,7 +337,7 @@
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
 			
 			[FactionOwner:WARP]
-			
+			[PlanetBlacklist:Pertam]
 			[InstallationSpawnsOnDryLand:false]
 			[InstallationSpawnsUnderwater:true]			
 
@@ -540,7 +540,7 @@
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
 			
 			[FactionOwner:WARP]
-			
+			[PlanetBlacklist:Pertam]
 			[InstallationSpawnsOnDryLand:false]
 			[InstallationSpawnsUnderwater:true]
 			[MinWaterDepth:37]
@@ -768,7 +768,7 @@
 			[ContainerTypeAssignSubtypeId:GatlingCargo]
 			
 			[FactionOwner:WARP]
-			
+			[PlanetBlacklist:Pertam]
 			[InstallationSpawnsOnDryLand:false]
 			[InstallationSpawnsUnderwater:true]
 			[MinWaterDepth:37]

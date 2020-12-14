@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RespawnShips>
+	
+<!-- Water Planet Pod -->
+	<Ship>
+      <Id>
+        <TypeId>RespawnShipDefinition</TypeId>
+        <SubtypeId>RespawnWaterPlanetPod</SubtypeId>
+      </Id>
+      <DisplayName>Respawn Water Pod</DisplayName>
+      <Icon>Textures\RespawnPlanetPod.png</Icon>
+      <CooldownSeconds>300</CooldownSeconds>
+      <Prefab>Drop Pod</Prefab>
+	  
+	  <PlanetTypes>
+       <PlanetType>TerraAqua</PlanetType>
+	  </PlanetTypes>
+	  
+      <MinimalAirDensity>0.6</MinimalAirDensity>
+      <PlanetDeployAltitude>2000</PlanetDeployAltitude>
+      <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+
+      <InitialLinearVelocity x="0" y="0" z="0" />
+      <InitialAngularVelocity x="0" y="0" z="0" />
+      <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
+    </Ship>
+	
+  </RespawnShips>
+</Definitions>

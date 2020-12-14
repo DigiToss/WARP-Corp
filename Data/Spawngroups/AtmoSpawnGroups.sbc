@@ -1,0 +1,665 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+	
+<!-- -->
+<!-- *** ATMO CARGO SHIPS *** -->
+<!-- -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Archangel</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:10]
+			[FactionOwner:WARP]
+			[DisableDampeners:false]
+			[PlanetBlacklist:Pertam]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:400]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>0.5</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Archangel">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>15</Speed>
+					<Behaviour>Archangel-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) DHL Cargo 1</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:25]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[PlanetBlacklist:Pertam]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:150]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoOresT1]
+			[ContainerTypeAssignSubtypeId:LargeCargoOresT1]
+
+			[ContainerTypeAssignBlockName:LargeCargoIce]
+			[ContainerTypeAssignSubtypeId:LargeCargoIce]
+
+			[ContainerTypeAssignBlockName:SmallCargoOresT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]	
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 1">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>EasyCargo-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) DHL Cargo 2</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:25]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[PlanetBlacklist:Pertam]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:150]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT1]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ContainerTypeAssignBlockName:CrateItems1]
+			[ContainerTypeAssignSubtypeId:CrateItems1]
+			
+			[ContainerTypeAssignBlockName:CrateItems2]
+			[ContainerTypeAssignSubtypeId:CrateItems2]
+
+			[ContainerTypeAssignBlockName:CrateItems3]
+			[ContainerTypeAssignSubtypeId:CrateItems3]
+
+			[ContainerTypeAssignBlockName:CrateItems4]
+			[ContainerTypeAssignSubtypeId:CrateItems4]	
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) DHL Cargo 2">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>EasyCargo-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) A-100 Albatros</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:75]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[PlanetBlacklist:Pertam]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoOresT1]
+			[ContainerTypeAssignSubtypeId:LargeCargoOresT1]
+			
+			[ContainerTypeAssignBlockName:LargeCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT1]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT1]
+			
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) A-100 Albatros">
+					<Position>
+						<X>0.0</X>
+						<Y>500.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>A100-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) A-50 Clipper</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:75]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) A-50 Clipper">
+					<Position>
+						<X>0.0</X>
+						<Y>200.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>A50-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+
+<!-- Has fixed weapons -->
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) S-300 Exuma</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:75]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:75]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:150]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) S-300 Exuma">
+					<Position>
+						<X>0.0</X>
+						<Y>1000.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>S300-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-40 Gazelle</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:75]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:75]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+						
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-40 Gazelle">
+					<Position>
+						<X>0.0</X>
+						<Y>1800.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX40-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-22 Ravager</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:60]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:75]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:300]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:SmallAmmoCargo]
+			[ContainerTypeAssignSubtypeId:SmallAmmoCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+						
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-22 Ravager">
+					<Position>
+						<X>0.0</X>
+						<Y>1800.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX22-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-100 Bastion</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[AtmosphericCargoShip:true]
+			[AtmosphericCargoShipChance:60]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:75]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:450]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-100 Bastion">
+					<Position>
+						<X>0.0</X>
+						<Y>1900.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX100-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	
+				
+	</SpawnGroups>
+</Definitions>

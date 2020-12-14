@@ -75,6 +75,56 @@
       </Description>
     </EntityComponent>
 
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>SmallFixedSpaceDroneLead-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Fighter]
+		
+		[TargetData:WarpDroneSpace-Target]
+	    
+		[UseNoTargetTimer:true]
+		[NoTargetTimerTrigger:360]
+		
+		[StrafeSpeedCutOff:75]
+	  
+		[Triggers:SmallEasyAtmoDrone-TriggerDeath]
+		[Triggers:SmallEasyAtmoDrone-TriggerRefuel]
+		[Triggers:DroneOnSpawnSpace-Trigger]
+		[Triggers:DroneSpace-HasTarget-Trigger]
+		[Triggers:DroneSpace-LostTarget-Trigger]
+		[Triggers:DroneSpace-Retreat-Trigger]
+
+      </Description>
+    </EntityComponent>
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>SmallFixedSpaceDrone-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Behavior]
+		[BehaviorName:Fighter]
+		
+		[TargetData:WarpDroneSpace-Target]
+
+		[UseNoTargetTimer:true]
+		[NoTargetTimerTrigger:360]
+	    
+		[StrafeSpeedCutOff:75]
+	  
+		[Triggers:SmallEasyAtmoDrone-TriggerDeath]
+		[Triggers:SmallEasyAtmoDrone-TriggerRefuel]
+		[Triggers:DroneSpace-Retreat-Trigger]
+		
+      </Description>
+    </EntityComponent>
 
 <!-- -->
 <!-- *** ATMOSPHERIC DRONE TRIGGERS *** -->
@@ -132,6 +182,26 @@
 		[Actions:DroneOnSpawn-Action]
 
       </Description>      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawnSpace-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Trigger]
+		[Type:Timer]
+		[MaxActions:1]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:2000]
+		[MaxCooldownMs:4000]
+		[Actions:DroneOnSpawnSpace-Action]
+
+      </Description>      
     </EntityComponent>	
 
 <!-- -->
@@ -185,6 +255,21 @@
 
 		[UseChatBroadcast:true]
 		[ChatData:DroneOnSpawn-Chat]
+	 
+      </Description>
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawnSpace-Action</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Action]
+
+		[UseChatBroadcast:true]
+		[ChatData:DroneOnSpawnSpace-Chat]
 	 
       </Description>
     </EntityComponent>
@@ -276,6 +361,231 @@
 
       </Description>	
     </EntityComponent>
+	
 
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneOnSpawnSpace-Chat</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Chat]
+    
+		[UseChat:true]
+		[StartsReady:true]
+		[Chance:100]
+		[MaxChats:1]
+		[BroadcastRandomly:true]
+      
+		[Author:{AntennaName}]
+		[Color:Red]
+      
+		[ChatMessages:Scout Party searching the area!]
+		[ChatAudio:ArcHudGPSNotification2]
+		[BroadcastChatType:Chat]
+		
+		[ChatMessages:Drone party on the hunt!]
+		[ChatAudio:ArcHudGPSNotification2]
+		[BroadcastChatType:Chat]
+
+      </Description>	
+    </EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneSpace-HasTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:HasTarget]
+		[UseTrigger:true]
+		[Actions:DroneSpace-HasTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>DroneSpace-HasTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:DroneSpace-HasTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:DroneSpace-HasTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:DroneSpace-LostTarget-Trigger]
+
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>DroneSpace-HasTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+				
+				[ChatMessages:Hostile detected, setting course to engage!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Notify]
+     
+			</Description>
+		</EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneSpace-LostTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:LostTarget]
+		[UseTrigger:false]
+		[Actions:DroneSpace-LostTarget-Action]
+		[MaxActions:-1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>DroneSpace-LostTarget-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:DroneSpace-LostTarget-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:DroneSpace-LostTarget-Trigger]
+			[EnableTriggers:true]
+			[EnableTriggerNames:DroneSpace-HasTarget-Trigger]
+	
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>DroneSpace-LostTarget-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Target gone off radar. Searching the area]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Lost my enemy target on the radar. Checking the area.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>		
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>DroneSpace-Retreat-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Retreat]
+		[UseTrigger:false]
+		[Actions:DroneSpace-Retreat-Action]
+		[MaxActions:1]
+		
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>DroneSpace-Retreat-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:DroneSpace-Retreat-Chat]
+			
+			[DisableTriggers:true]
+			[DisableTriggerNames:DroneSpace-Retreat-Trigger]
+			
+			[ChangeAutopilotSpeed:true]	
+			[NewAutopilotSpeed:80]
+			
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>DroneSpace-Retreat-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:-1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:Bingo Fuel. Returning to base.]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+		</EntityComponent>
+		
+		
   </EntityComponents>
 </Definitions>

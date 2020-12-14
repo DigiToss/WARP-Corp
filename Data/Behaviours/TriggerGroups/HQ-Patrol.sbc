@@ -534,6 +534,7 @@
 			[DisableTriggerNames:HQPatrol-HasTarget-Trigger]
 			[EnableTriggers:true]
 			[EnableTriggerNames:HQPatrol-NoTarget-Trigger]
+			[EnableTriggerNames:HQPatrol-LostTarget-Trigger]
 
 		</Description>
 		</EntityComponent>

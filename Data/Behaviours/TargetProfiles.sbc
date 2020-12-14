@@ -39,6 +39,45 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
+          <SubtypeId>WarpDroneSpace-Target</SubtypeId>
+      </Id>
+      <Description>
+
+		[RivalAI Target]
+
+		[UseCustomTargeting:true]
+		[Target:PlayerAndGrid]
+
+		[TimeUntilTargetAcquisition:3]
+		[TimeUntilNextEvaluation:5]
+
+		[MaxDistance:4000]
+
+		[MatchAllFilters:OutsideOfSafezone]
+		[MatchAllFilters:Owner]
+		[MatchAllFilters:Relation]
+
+        [MatchAnyFilters:Broadcasting]
+        [MatchAnyFilters:MovementScore]
+        [MatchAnyFilters:LineOfSight]
+
+        [NonBroadcastVisualRange:1600]
+        [MinMovementScore:1000]
+        [MaxMovementDetectableDistance:3000]
+        [MaxLineOfSight:1600]
+		
+		[GetTargetBy:ClosestDistance]
+
+		[Owners:Player]
+		[Relations:Enemy]
+
+      </Description>
+    </EntityComponent>
+	
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
           <SubtypeId>WarpBoatDrone-Target</SubtypeId>
       </Id>
       <Description>
@@ -100,21 +139,20 @@
 		[Relations:Enemy]
 
       </Description>
-      
     </EntityComponent>
-	
+
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>WarpShip-PlayerAndGrid-Target</SubtypeId>
+          <SubtypeId>WarpShipSpace-Target</SubtypeId>
       </Id>
       <Description>
 
 		[RivalAI Target]
 
 		[UseCustomTargeting:true]
-		[Target:PlayerAndGrid]
+		[Target:Player]
 		[PrioritizePlayerControlled:true]
 		[TimeUntilTargetAcquisition:3]
 		[TimeUntilNextEvaluation:5]
@@ -125,22 +163,23 @@
 		[MatchAllFilters:Owner]
 		[MatchAllFilters:Relation]
 
-		[NonBroadcastVisualRange:1200]
-		[MatchNoneFilters:Altitude]
-        [MinAltitude:-500]
-        [MaxAltitude:-5]
-		
+        [MatchAnyFilters:Broadcasting]
+        [MatchAnyFilters:MovementScore]
+        [MatchAnyFilters:LineOfSight]
+
+        [NonBroadcastVisualRange:1600]
+        [MinMovementScore:1000]
+        [MaxMovementDetectableDistance:1800]
+        [MaxLineOfSight:1600]
+			
 		[GetTargetBy:ClosestDistance]
 
 		[Owners:Player]
 		[Relations:Enemy]
 
       </Description>
-      
     </EntityComponent>
-	
-	
-	
+
 	
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -232,7 +271,7 @@
 
         [MaxDistance:8000]
 
-        [TimeUntilTargetAcquisition:10]
+        [TimeUntilTargetAcquisition:7]
         [TimeUntilNextEvaluation:3]
 
         [MatchAllFilters:OutsideOfSafezone]
@@ -244,10 +283,10 @@
         [MatchAnyFilters:MovementScore]
         [MatchAnyFilters:LineOfSight]
 
-        [NonBroadcastVisualRange:2000]
+        [NonBroadcastVisualRange:1800]
         [MinMovementScore:1000]
-        [MaxMovementDetectableDistance:5000]
-        [MaxLineOfSight:2000]
+        [MaxMovementDetectableDistance:4000]
+        [MaxLineOfSight:1800]
 
         [Owners:Player]
         [Relations:Enemy]
@@ -269,9 +308,9 @@
         [UseCustomTargeting:true]
         [Target:PlayerAndGrid]
 
-        [MaxDistance:8000]
+        [MaxDistance:5000]
 
-        [TimeUntilTargetAcquisition:10]
+        [TimeUntilTargetAcquisition:6]
         [TimeUntilNextEvaluation:3]
 
         [MatchAllFilters:OutsideOfSafezone]
@@ -289,7 +328,7 @@
 	
 
 <!-- -->
-<!-- *** WARP HQ PATROL SHIPS *** -->
+<!-- *** WARP HQ BOSS SHIPS *** -->
 <!-- -->	
 	
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

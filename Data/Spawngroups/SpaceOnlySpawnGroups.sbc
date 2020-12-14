@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+
+<!-- -->
+<!-- *** SPACE ONLY SPAWNS *** -->
+<!-- -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) A-50 Clipper Space</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:75]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:100]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:LargeCargoIngotsT2]
+			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT2]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT2]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>2</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) A-50 Clipper">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>A50-Space-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+<!-- DRONE SCOUT PARTY -->
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) Drone Scout Party</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+			
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[UseContainerTypeAssignment:true]
+			[ContainerTypeAssignBlockName:DroneGatlingCargo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingCargo]
+
+			[ContainerTypeAssignBlockName:DroneGatlingAmmo]
+			[ContainerTypeAssignSubtypeId:DroneGatlingAmmo]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Crow Ion">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>30</Speed>
+					<Behaviour>SmallFixedSpaceDroneLead-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Jackdaw Ion">
+					<Position>
+						<X>100.0</X>
+						<Y>50.0</Y>
+						<Z>-20.0</Z>
+					</Position>
+					<Speed>30</Speed>
+					<Behaviour>SmallFixedSpaceDrone-Behavior</Behaviour>
+				</Prefab>
+				<Prefab SubtypeId="(NPC-WARP) Jackdaw Ion">
+					<Position>
+						<X>-125.0</X>
+						<Y>-40.0</Y>
+						<Z>30.0</Z>
+					</Position>
+					<Speed>30</Speed>
+					<Behaviour>SmallFixedSpaceDrone-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+	</SpawnGroups>
+</Definitions>
+		
+		

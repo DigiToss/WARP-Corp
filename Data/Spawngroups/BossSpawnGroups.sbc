@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+<!-- Vault Boss -->
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) S-1000 Antaios Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[AdminSpawnOnly:true]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockLargeThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridLarge]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockSmallThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridSmall]
+			
+			[ReplaceBlockOld:MyObjectBuilder_GravityGenerator/GravityGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_GravityGenerator/WARPGravGen]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallAmmoCargo]
+			[ContainerTypeAssignSubtypeId:SmallAmmoCargo]
+
+			[ContainerTypeAssignBlockName:LargeCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:LargeCargoPartsT3]
+
+			[ContainerTypeAssignBlockName:LargeCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LargeCargoBoss]
+			[ContainerTypeAssignSubtypeId:LargeCargoBoss]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) S-1000 Antaios">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>S1000-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+
+<!-- -->
+<!-- *** BOSS SPAWNER *** -->
+<!-- -->
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>BossSpawnerDrone</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			
+			[Territory:WARPHQ]
+			[MinDistanceFromTerritoryCenter:1]
+			[MaxDistanceFromTerritoryCenter:10000]
+			[MinAirDensity:0.2]
+			[MinGravity:0.5]
+
+			[BossEncounterAtmo:true]
+			[BossEncounterChance:100]
+			[BossCustomAnnounceEnable:true]
+			[BossCustomAnnounceAuthor:MLTC Command]
+			[BossCustomAnnounceMessage:Our intel suggests a WARP Corp. high-security installation with rare components is located in this area.]
+			[BossCustomGPSLabel:High-Security Installation]
+
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[SkipAirDensityCheck:true]
+			
+			[RivalAiAnySpawn:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>20.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) Boss Spawner">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>25</Speed>
+					<Behaviour>BossSpawner-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+	</SpawnGroups>
+</Definitions>		

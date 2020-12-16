@@ -51,7 +51,7 @@
 		[TimeUntilTargetAcquisition:3]
 		[TimeUntilNextEvaluation:5]
 
-		[MaxDistance:4000]
+		[MaxDistance:2000]
 
 		[MatchAllFilters:OutsideOfSafezone]
 		[MatchAllFilters:Owner]
@@ -63,7 +63,7 @@
 
         [NonBroadcastVisualRange:1600]
         [MinMovementScore:1000]
-        [MaxMovementDetectableDistance:3000]
+        [MaxMovementDetectableDistance:2000]
         [MaxLineOfSight:1600]
 		
 		[GetTargetBy:ClosestDistance]
@@ -327,6 +327,79 @@
     </EntityComponent>
 	
 
+<!-- -->
+<!-- *** WARP HQ PATROL SHIPS *** -->
+<!-- -->	
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Security-Target-Main-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Target]
+
+        [UseCustomTargeting:true]
+        [Target:PlayerAndGrid]
+
+        [MaxDistance:3000]
+        [GetTargetBy:ClosestDistance]
+		
+        [TimeUntilTargetAcquisition:7]
+        [TimeUntilNextEvaluation:3]
+
+        [MatchAllFilters:Owner]
+        [MatchAllFilters:Relation]
+        [MatchAllFilters:Powered]
+        [MatchAllFilters:OutsideOfSafezone]
+
+        [Owners:Player]
+        [Relations:Enemy]
+
+        [MatchAnyFilters:MovementScore]
+        [MatchAnyFilters:Broadcasting]
+        [MatchAnyFilters:LineOfSight]
+
+        [MinMovementScore:1000]
+        [MaxMovementDetectableDistance:3000]
+        [MaxLineOfSight:1400]
+        [NonBroadcastVisualRange:1400]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Security-Target-Main-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Target]
+
+        [UseCustomTargeting:true]
+        [Target:PlayerAndGrid]
+
+        [MaxDistance:2000]
+
+        [TimeUntilTargetAcquisition:6]
+        [TimeUntilNextEvaluation:3]
+
+        [MatchAllFilters:OutsideOfSafezone]
+        [MatchAllFilters:Owner]
+        [MatchAllFilters:Relation]
+        [MatchAllFilters:Powered]
+
+        [Owners:Player]
+        [Relations:Enemy]
+
+        [GetTargetBy:ClosestDistance]
+
+      </Description>
+    </EntityComponent>
+	
+	
 <!-- -->
 <!-- *** WARP HQ BOSS SHIPS *** -->
 <!-- -->	

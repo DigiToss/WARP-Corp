@@ -193,7 +193,7 @@
 
 				[SwitchToBehavior:true]
 				[NewBehavior:S1000-NoGuns-Behavior]
-				[PreserveTriggersOnBehaviorSwitch:false]]
+				[PreserveTriggersOnBehaviorSwitch:false]
 					
 			  </Description>
 			</EntityComponent>	

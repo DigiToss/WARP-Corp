@@ -65,6 +65,73 @@
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
+
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:150]
+			
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:SmallAmmoCargo]
+			[ContainerTypeAssignSubtypeId:SmallAmmoCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+						
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-22 Ravager">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX22-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-22 Ravager Space Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
 			[SpaceCargoShip:true]
 			[SpaceCargoShipChance:25]
 			[LunarCargoShip:true]
@@ -113,11 +180,12 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>20</Speed>
-					<Behaviour>LX22-Hunter-Behavior</Behaviour>
+					<Behaviour>LX22-SpaceHunter-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
 		
+	
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId>
@@ -177,10 +245,6 @@
 			[FactionOwner:WARP]
 			[ReplenishSystems:false]
 			[DisableDampeners:false]
-			[SpaceCargoShip:true]
-			[SpaceCargoShipChance:25]
-			[LunarCargoShip:true]
-			[LunarCargoShipChance:5]
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
 			[ThreatScoreMinimum:150]
@@ -222,6 +286,65 @@
 			</Prefabs>
 		</SpawnGroup>	
 	
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-40 Gazelle Space Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:25]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:150]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoOresT2]
+			[ContainerTypeAssignSubtypeId:SmallCargoOresT2]
+
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-40 Gazelle">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX40-SpaceHunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+		
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId>
@@ -284,10 +407,6 @@
 
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
-			[SpaceCargoShip:true]
-			[SpaceCargoShipChance:25]
-			[LunarCargoShip:true]
-			[LunarCargoShipChance:5]
 			[UseThreatLevelCheck:true]
 			[ThreatLevelCheckRange:10000]
 			[ThreatScoreMinimum:200]
@@ -348,7 +467,87 @@
 			</Prefabs>
 		</SpawnGroup>	
 
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) LX-100 Bastion Space Patrol</SubtypeId>
+			</Id>
+			<Description>
 
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[SpaceCargoShip:true]
+			[SpaceCargoShipChance:25]
+			[LunarCargoShip:true]
+			[LunarCargoShipChance:5]
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) LX-100 Bastion">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>LX100-SpaceHunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>	
+		
 	
 		<SpawnGroup>
 			<Id>
@@ -410,6 +609,89 @@
 			[ReplenishSystems:false]
 			[DisableDampeners:false]	
 				
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[UseThreatLevelCheck:true]
+			[ThreatLevelCheckRange:10000]
+			[ThreatScoreMinimum:200]
+			
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockLargeThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridLarge]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockSmallThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridSmall]
+			
+			[ReplaceBlockOld:MyObjectBuilder_GravityGenerator/GravityGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_GravityGenerator/WARPGravGen]
+
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+
+			[ContainerTypeAssignBlockName:SmallCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoPartsT3]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			[ShiftBlockColorsHue:true]
+			[RandomHueShift:true]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  <!--Do Not Edit-->
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) X-300 Scutum Patrol">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>X300-Hunter-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>(NPC-WARP) X-300 Scutum Space Patrol</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]	
+			[UseAutoPilotInSpace:true]
+		
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 			[SpaceCargoShip:true]
@@ -477,10 +759,11 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>20</Speed>
-					<Behaviour>X300-Hunter-Behavior</Behaviour>
+					<Behaviour>X300-SpaceHunter-Behavior</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
+
 		
 	</SpawnGroups>
 </Definitions>

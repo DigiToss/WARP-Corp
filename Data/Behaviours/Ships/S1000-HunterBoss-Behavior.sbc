@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <EntityComponents>
+
+<!-- -->
+<!-- *** S-1000 HUNTER BEHAVIOR *** -->
+<!-- -->
+
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-HunterBoss-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		
+		[BehaviorName:Hunter]
+		
+		[RemoteControlCode:HQPatrol]
+	
+        [AutopilotData:Boss-Autopilot-A]
+        [SecondaryAutopilotData:Boss-Autopilot-B]
+
+        [TargetData:Boss-Target-Main-A]
+        [OverrideTargetData:Boss-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+		
+		[RetreatDespawnDistance:9000]
+
+        [UseBarrageFire:true]		
+
+		[TriggerGroups:SpaceBoss-TriggerGroup]
+		[Triggers:S1000-SpaceChangeName-Trigger]
+		[Triggers:S1000-NewTarget-Trigger]
+		[Triggers:S1000-NoTarget-Trigger]
+		[Triggers:S1000-TurretsDestroyed-Trigger]
+		
+      </Description>
+	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>S1000-SpaceChangeName-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:true]
+		[MinCooldownMs:100]
+		[MaxCooldownMs:101]
+		[MaxActions:1]
+		[Actions:S1000-SpaceChangeName-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>S1000-SpaceChangeName-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[ChangeBlockNames:true]
+			[ChangeBlockNamesFrom:S-1000 Antaios]
+			[ChangeBlockNamesTo:S-1000 Military Assault]
+		
+		</Description>
+		</EntityComponent>
+	
+
+	
+  </EntityComponents>
+</Definitions>

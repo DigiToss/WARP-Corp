@@ -95,7 +95,108 @@
 			</Prefabs>
 		</SpawnGroup>
 		
+		
+<!-- Space Boss -->
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>(NPC-WARP) S-1000 Antaios Space Boss</SubtypeId>
+			</Id>
+			<Description>
 
+			[Modular Encounters SpawnGroup]
+
+			[RivalAiSpawn:true]
+			[FactionOwner:WARP]
+			[ReplenishSystems:false]
+			[DisableDampeners:false]
+			[UseAutoPilotInSpace:true]
+
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			[BossEncounterSpace:true]
+			[BossEncounterChance:20]
+			[BossCustomAnnounceEnable:true]
+			[BossCustomAnnounceAuthor:MLTC Command]
+			[BossCustomAnnounceMessage:Our intel suggests a high-security WARP Co Assault ship in the area. Caution is advised!]
+			[BossCustomGPSLabel:Military Assault Ship]
+			
+			[IgnoreGlobalBlockReplacer:true]
+            [UseBlockReplacerProfile:true]
+            [BlockReplacerProfileNames:MES-ProprietaryCompRichBlocks]
+
+			[UseBlockReplacer:true]
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockSmallGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockSmallGenerator]
+
+			[ReplaceBlockOld:MyObjectBuilder_Reactor/LargeBlockLargeGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_Reactor/WARPLargeBlockLargeGenerator]
+			
+			[ReplaceBlockOld:MyObjectBuilder_JumpDrive/LargeJumpDrive]
+			[ReplaceBlockNew:MyObjectBuilder_JumpDrive/WARPLargeJumpDrive]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockLargeThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridLarge]
+			
+			[ReplaceBlockOld:MyObjectBuilder_Thrust/LargeBlockSmallThrust]
+			[ReplaceBlockNew:MyObjectBuilder_Thrust/WARPThrustIonLargeGridSmall]
+			
+			[ReplaceBlockOld:MyObjectBuilder_GravityGenerator/GravityGenerator]
+			[ReplaceBlockNew:MyObjectBuilder_GravityGenerator/WARPGravGen]
+			
+			[UseContainerTypeAssignment:true]			
+			[ContainerTypeAssignBlockName:GatlingCargo]
+			[ContainerTypeAssignSubtypeId:GatlingCargo]
+			
+			[ContainerTypeAssignBlockName:MissileCargo]
+			[ContainerTypeAssignSubtypeId:MissileCargo]
+
+			[ContainerTypeAssignBlockName:SmallAmmoCargo]
+			[ContainerTypeAssignSubtypeId:SmallAmmoCargo]
+
+			[ContainerTypeAssignBlockName:LargeCargoPartsT3]
+			[ContainerTypeAssignSubtypeId:LargeCargoPartsT3]
+
+			[ContainerTypeAssignBlockName:LargeCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:LargeCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LargeCargoBoss]
+			[ContainerTypeAssignSubtypeId:LargeCargoBoss]
+			
+			[ContainerTypeAssignBlockName:SmallCargoIngotsT3]
+			[ContainerTypeAssignSubtypeId:SmallCargoIngotsT3]
+			
+			[ContainerTypeAssignBlockName:LockerTools]
+			[ContainerTypeAssignSubtypeId:LockerTools]
+			
+			[ContainerTypeAssignBlockName:LockerComponents]
+			[ContainerTypeAssignSubtypeId:LockerComponents]
+			
+			[ContainerTypeAssignBlockName:LockerParts]
+			[ContainerTypeAssignSubtypeId:LockerParts]
+			
+			[ContainerTypeAssignBlockName:LockerWeapons]
+			[ContainerTypeAssignSubtypeId:LockerWeapons]
+			
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>
+			<IsPirate>true</IsPirate>
+			<Frequency>1</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="(NPC-WARP) S-1000 Antaios">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>20</Speed>
+					<Behaviour>S1000-HunterBoss-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		
 <!-- -->
 <!-- *** BOSS SPAWNER *** -->
 <!-- -->

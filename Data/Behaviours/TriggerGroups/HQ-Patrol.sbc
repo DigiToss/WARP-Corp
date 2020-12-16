@@ -58,6 +58,32 @@
 
 	</Description>
 	</EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+	<Id>
+	  <TypeId>Inventory</TypeId>
+	  <SubtypeId>SpaceBoss-TriggerGroup</SubtypeId>
+	</Id>
+	<Description>
+
+	[RivalAI TriggerGroup]
+
+	[Triggers:SpaceBoss-Arrival-Trigger]
+	[Triggers:SpaceBoss-NewTarget-Trigger]
+	[Triggers:HQPatrol-Damage-Trigger]
+	[Triggers:HQPatrol-ReceiveTarget-Trigger]
+	[Triggers:HQPatrol-RefreshNear-Trigger]
+	[Triggers:HQPatrol-RefreshFar-Trigger]
+	[Triggers:HQPatrol-Grind-Trigger]
+	[Triggers:HQPatrol-TurretsDestroyed-Trigger]
+	[Triggers:HQPatrol-NoTarget-Trigger]
+	[Triggers:HQPatrol-LostTarget-Trigger]	
+	[Triggers:HQPatrol-HasTarget-Trigger]
+	[Triggers:HQPatrol-Retreat-Trigger]
+	[Triggers:HQPatrol-Compromised-Trigger]
+
+	</Description>
+	</EntityComponent>	
 	
 	
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -975,5 +1001,137 @@
 
 			  </Description>
 			</EntityComponent>
+			
+<!-- -->
+<!-- SPACE BOSS SPECIFIC TRIGGERS -->
+<!-- -->
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>SpaceBoss-Arrival-Trigger</SubtypeId>
+      </Id>
+      <Description>
+	
+		[RivalAI Trigger]
+		
+		[Type:Timer]
+		[UseTrigger:true]
+		[StartsReady:false]
+		[MinCooldownMs:2000]
+		[MaxCooldownMs:8000]
+		[MaxActions:1]
+		[Actions:SpaceBoss-Arrival-Action]
+
+	  </Description>
+	</EntityComponent>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		<Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>SpaceBoss-Arrival-Action</SubtypeId>
+		</Id>
+		<Description>
+		
+			[RivalAI Action]
+			
+			[UseChatBroadcast:true]
+			[ChatData:SpaceBoss-Arrival-Chat]
+		
+		</Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>SpaceBoss-Arrival-Chat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+			
+				[UseChat:true]
+				[StartsReady:true]
+				[Chance:100]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+      
+				[Author:{AntennaName}]
+				[Color:Red]
+      
+				[ChatMessages:This is the {AntennaName} Vessel. On course to wipe out any hostiles!]
+				[ChatAudio:Notify1]
+				[BroadcastChatType:Chat]
+     
+			</Description>
+			</EntityComponent>
+			
+			
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>SpaceBoss-NewTarget-Trigger</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerA]
+        [MinCooldownMs:100000]
+        [MaxCooldownMs:100001]
+        [StartsReady:true]
+        [MaxActions:-1]
+        [Actions:SpaceBoss-NewTarget-Action]
+
+      </Description>
+    </EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			<TypeId>Inventory</TypeId>
+			<SubtypeId>SpaceBoss-NewTarget-Action</SubtypeId>
+		  </Id>
+		  <Description>
+
+			[RivalAI Action]
+
+			[UseChatBroadcast:true]
+			[ChatData:SpaceBoss-NewTarget-Chat]
+			[DisableTriggers:true]
+			[DisableTriggerNames:SpaceBoss-NewTarget-Trigger]
+
+		  </Description>
+		</EntityComponent>
+
+			<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			  <Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>SpaceBoss-NewTarget-Chat</SubtypeId>
+			  </Id>
+			  <Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:{AntennaName}]
+				[Color:Red]
+
+				[ChatMessages:Got multiple targets. Engaging!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+				
+				[ChatMessages:Contact! Moving to engage targets!]
+				[ChatAudio:Notify2]
+				[BroadcastChatType:Chat]
+
+			  </Description>
+			</EntityComponent>
+			
+			
   </EntityComponents>
 </Definitions>

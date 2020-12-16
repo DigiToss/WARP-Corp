@@ -86,7 +86,13 @@
 		[BehaviorName:Fighter]
 		
 		[TargetData:WarpDroneSpace-Target]
-	    
+
+		[IdealMaxSpeed:60]
+		[IdealMinSpeed:20]
+		[MaxSpeedTolerance:5]
+		[UseNoTargetTimer:true]
+		[NoTargetTimerTrigger:360]
+		
 		[UseNoTargetTimer:true]
 		[NoTargetTimerTrigger:360]
 		
@@ -114,6 +120,9 @@
 		
 		[TargetData:WarpDroneSpace-Target]
 
+		[IdealMaxSpeed:60]
+		[IdealMinSpeed:20]
+		[MaxSpeedTolerance:5]
 		[UseNoTargetTimer:true]
 		[NoTargetTimerTrigger:360]
 	    

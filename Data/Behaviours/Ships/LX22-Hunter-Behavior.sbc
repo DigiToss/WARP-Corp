@@ -37,6 +37,38 @@
 		
       </Description>
 	</EntityComponent>
+	
+  	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>LX22-SpaceHunter-Behavior</SubtypeId>
+      </Id>
+      <Description>
+	  
+		[RivalAI Behavior]
+		
+		[BehaviorName:Hunter]
+		
+		[RemoteControlCode:HQPatrol]
+	
+        [AutopilotData:HQPatrol-Autopilot-A]
+        [SecondaryAutopilotData:HQPatrol-Autopilot-B]
+
+        [TargetData:SecurityPatrol-Target-Main-A]
+        [OverrideTargetData:SecurityPatrol-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [UseBarrageFire:true]		
+		[RetreatDespawnDistance:5000]
+		
+		[TriggerGroups:HQPatrol-TriggerGroup]
+		[Triggers:LX22-ChangeName-Trigger]
+		
+      </Description>
+	</EntityComponent>
+	
 
 	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>

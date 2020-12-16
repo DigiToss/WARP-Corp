@@ -10,7 +10,7 @@
   	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>A50-Space-Space-Behavior</SubtypeId>
+          <SubtypeId>A50-Space-Behavior</SubtypeId>
       </Id>
       <Description>
 	  
